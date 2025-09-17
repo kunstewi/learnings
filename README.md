@@ -1,6 +1,5 @@
-Whatever this is, it's mine.
-Gonna be a crazy ride for these few months.
+this codebase is all about doing the things that matters 
 
-Week 1 : Advanced Javascript
+starting with the things today
 
 
