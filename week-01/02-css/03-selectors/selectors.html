@@ -6,29 +6,116 @@
     <title>CSS Selectors Example</title>
     <style>
       /* There are mainly 12 type of selectors in css that we need to know */
-      
+
       /* 1. Universal Selector */
 
-      *{
+      * {
         margin: 0;
         padding: 0;
+        color: green;
+        box-sizing: border-box;
       }
 
       /* 2. Type Selector */
-      /* 3. Class Selector */
-      /* 4. ID Selector */
-      /* 5. Attribute Selector */
-      /* 6. Descendant Selector */
-      /* 7. Child Selector */
-      /* 8. Adjacent Sibling Selector */
-      /* 9. General Sibling Selector */
-      /* 10. Pseudo-class Selector */
-      /* 11. Pseudo-element Selector */
-      /* 12. Grouping Selector */
+
+      /* html{
+        background-color: orange;
+      }
 
       body{
-        background-color: #1e1e1e;
-        color: white;
+        background-color: white;
+      } */
+
+      p {
+        color: red;
+        /* margin: 10px 20px 25px 30px;
+        padding: 15px 25px 30px 35px; */
+        margin-bottom: 10px;
+      }
+
+      /* 3. Class Selector */
+
+      .highlight {
+        background-color: orange;
+      }
+
+      /* 4. ID Selector */
+
+      #header {
+        background-color: #ff0000;
+      }
+
+      /* 5. Attribute Selector */
+
+      input[type="text"] {
+        border: 3px dotted orange;
+      }
+
+      /* 6. Descendant Selector */
+
+      article p {
+        /* all p which are descendant of article */
+        background-color: rgb(127, 127, 251);
+      }
+      /* 7. Child Selector */
+
+      .child-selector-tutorial > p {
+        background-color: green;
+      }
+
+      /* .child-selector-tutorial section{
+        background-color: yellow;
+      } */
+
+      /* 8. Adjacent Sibling Selector */
+
+      h1 + p {
+        background-color: yellow; /* only p gets this background color that comes after h2 not the h2 itself, other p won't get this background color if they don't come after h2*/
+      }
+
+      /* 9. General Sibling Selector */
+
+      h2 ~ p {
+        /* select all elements p that are siblings of h2 */
+        background-color: hsl(300, 84%, 80%);
+        font-weight: bold;
+      }
+
+      /* 10. Pseudo-class Selector */
+
+      a:hover {
+        background-color: indianred;
+        font-size: 20px;
+      }
+
+      input:focus {
+        border: 3px solid green;
+      }
+
+      /* 11. Pseudo-element Selector */
+
+      p::before {
+        content: "Note";
+        color: red;
+      }
+
+      p::after {
+        content: "done";
+        color: green;
+      }
+
+      p::first-letter {
+        font-size: 2em;
+        color: blue;
+      }
+
+      /* 12. Grouping Selector */
+
+      h1,
+      h2,
+      h3 {
+        color: darkblue;
+        font-family: Arial, sans-serif;
       }
     </style>
   </head>
@@ -63,7 +150,7 @@
       </div>
     </article>
 
-    <div>
+    <div class="child-selector-tutorial">
       <p>I am a Child</p>
       <p>I am a Child</p>
       <section>
