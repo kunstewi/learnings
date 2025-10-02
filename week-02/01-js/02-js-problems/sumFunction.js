@@ -6,19 +6,19 @@
 
 // Write a function that finds the sum of two numbers.
 function sum(a, b) {
-    return a + b;
+  return a + b;
 }
 
 // Write another function that displays the sum function result in a pretty format.
 function prettyPrintSum(a, b) {
-    const result = sum(a, b);
-    console.log(`The sum of ${a} and ${b} is ${result}.`);
+  const result = sum(a, b);
+  console.log(`The sum of ${a} and ${b} is ${result}.`);
 }
 
 // Write another function that takes this sum and prints it in passive tense.
 function printSumInPassiveTense(a, b) {
-    const result = sum(a, b);
-    console.log(`The sum of ${a} and ${b} has been calculated as ${result}.`);
+  const result = sum(a, b);
+  console.log(`The sum of ${a} and ${b} has been calculated as ${result}.`);
 }
 
 // Example usage:

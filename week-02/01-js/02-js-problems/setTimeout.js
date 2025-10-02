@@ -9,7 +9,7 @@
 
 // Example of setInterval
 function greet() {
-    console.log("Hello, World!");
+  console.log("Hello, World!");
 }
 
 // Execute greet() every 2000 milliseconds (2 seconds)
@@ -19,7 +19,7 @@ setInterval(greet, 2000);
 
 // Example of setTimeout
 function greet() {
-    console.log("Hello, World!");
+  console.log("Hello, World!");
 }
 
 // Execute greet() after 2000 milliseconds (2 seconds)

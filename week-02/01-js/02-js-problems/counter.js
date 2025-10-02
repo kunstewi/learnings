@@ -3,11 +3,11 @@
 let counter = 30;
 
 function countdown() {
-    console.log(counter);
-    counter--;
-    if (counter < 0) {
-        clearInterval(intervalId);
-    }
+  console.log(counter);
+  counter--;
+  if (counter < 0) {
+    clearInterval(intervalId);
+  }
 }
 
 const intervalId = setInterval(countdown, 1000);
