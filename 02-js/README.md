@@ -518,4 +518,36 @@ menu = {
 ```
 Create a function multiplyNumeric(obj) that multiplies all numeric property values of obj by 2.
 
+154. What is the fundamental difference between objects and primitives in terms of storing and copying ?
 
+155. How an object is stored in memory ?
+
+156. What actually happens when an object variable is copied, what actually gets copied ?
+
+157. When we consider two objects to be equal ?
+
+158. How const objects can be modified ?
+
+159. How do we create a duplicate of an object ? Give an example by duplicatin an object in a new empty object variable using for in loop.
+
+160. Explain the syntax of Object.assign and how is it used to clone objects ? Give example.
+
+161. What if a copied property name already exists while using Object.assign ? 
+
+161. Can you explain how objects can be cloned using the ... spread syntax ? Give one example.
+
+162. Explain the concept of nested cloning of and what it means ?
+
+163. Explain the difference between shallow cloning and deep cloning / structured cloning ?
+
+164. What happnes when you clone a complex object which has othere objects as properties to a new empty object variable using Object.assign ? What happens to those property objects ? What are the drawbacks of this cloning ?
+
+165. How to implement structured cloning ? Give example.
+
+166. How structuredClone(object) method works ? State the syntax ? How to use it ?
+
+167. What is the difference in using Object.assign and structuredClone ?
+
+168. What do you mean by circular reference in objects ?
+
+169. For what kind of properties structuredClone() method fails ?
