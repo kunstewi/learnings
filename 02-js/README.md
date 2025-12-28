@@ -700,5 +700,18 @@ alert(accumulator.value); // shows the sum of these values
 
 205. Explain optional chaining in js. Give an example.
 
+206. What do you mean by non existing property problem ? How optional chaining solves that ?
 
+207. Explain some other inelegant ways to achieve undefined for a non existent object property and null for a non existing html element ?
 
+208. Why we shouldn't overuse the optional chaining ?
+
+209. What do you mean by short circuiting ? give an example.
+
+210. Is the optional chaining an operator or something else ?
+
+211. Where ?.() is used ?
+
+212. Where ?.[] is used ?
+
+213. Can we use ?. with delete ? eg. delete User.name
