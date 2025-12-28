@@ -715,3 +715,54 @@ alert(accumulator.value); // shows the sum of these values
 212. Where ?.[] is used ?
 
 213. Can we use ?. with delete ? eg. delete User.name
+
+214. By specification, only two primitive types may serve as object property keys: What are they ?
+
+215. What if some other data type is used for keys such as number or boolean ?
+
+216. What do you mean by Symbol data type ? What it represents ? Explain the syntax of Symbol.
+
+217. What is symbol name ?
+
+218. What is the speciality of symbols ?
+
+219. What if we create multiple symbols with the exactly the same description will they be equal ? Is it possible to have equal symbols ?
+
+220. What do you mean by description of a Symbol ?
+
+221. Can Symbols be auto converted to strings ? Why ?
+
+222. If we really want to show a symbol what do we need to do ?
+
+223. How to show the description only of a Symbol ?
+
+224. What do you mean by hidden property of an object ?
+
+225. How can we use symbols to create hidden property of an object ? Give example.
+
+226. What's the benifit of using Symbol("id") instaed of using string "id" ?
+
+227. What is object literal and how to use Symbol in object literal ?
+
+228. Can the for in loop access symbol keys ?
+
+229. When we copy an Object using Object.assign(), are the symbols copied ?
+
+230. What do you mean by global symbols and when do we need global symbols ? What is global symbol registry ?
+
+231. How to read a symbol from the global symbol registry ?
+
+232. Give an example of global symbol and using it ?
+
+233. For what symbol.keyFor is used ? Give an example.
+
+234. What symbol.for(key) returns for global symbols ? and what for non global symbols ?
+
+235. Why symbol.for(key) doesn't work for non global symbols ?
+
+236. Which property all symbols have ?
+
+237. What do you mean by system symbols ?
+
+
+
