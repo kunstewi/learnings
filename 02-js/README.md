@@ -786,4 +786,7 @@ alert(accumulator.value); // shows the sum of these values
 
 248. How all objects implement default conversion, and what's different with Date object ?
 
-249. 
+249. How javascript convert objects to primitive can you explain the high level of it ?
+
+250. What are built in symbol methods, explain the built in symbol Symbol.toPrimitive.
+
