@@ -75,8 +75,8 @@ const patterns = {
     familiar: [
         /^⚠️\s+\d+\./m,           // ⚠️ 1. Question
         /^\[FAMILIAR\]\s+\d+\./m, // [FAMILIAR] 1. Question
-        /^\[~\]\s+\d+\./m,        // [~] 1. Question
-        /^- \[~\]\s+\d+\./m,      // - [~] 1. Question
+        /^\[f\]\s+\d+\./m,        // [~] 1. Question
+        /^- \[f\]\s+\d+\./m,      // - [~] 1. Question
     ],
     todo: [
         /^❌\s+\d+\./m,           // ❌ 1. Question

@@ -3,14 +3,14 @@
 - [x] 1. What is HTML? What does HTML stand for?
 - [x] 2. What is the purpose of HTML in web development?
 - [x] 3. What is the difference between HTML and HTML5?
-- [x] 4. What are HTML elements? What are HTML tags?
-- [x] 5. What is the difference between an opening tag and a closing tag?
-- [~] 6. What are self-closing tags? Give 5 examples.
-- [~] 7. What is the basic structure of an HTML document?
-- [~] 8. What is the purpose of the `<!DOCTYPE html>` declaration?
-- [~] 9. What happens if you don't include `<!DOCTYPE html>`?
-- [~] 10. What is the `<html>` tag and what attribute should it have?
-- [~] 11. What is the purpose of the `<head>` section?
+- [ ] 4. What are HTML elements? What are HTML tags?
+- [ ] 5. What is the difference between an opening tag and a closing tag?
+- [ ] 6. What are self-closing tags? Give 5 examples.
+- [ ] 7. What is the basic structure of an HTML document?
+- [ ] 8. What is the purpose of the `<!DOCTYPE html>` declaration?
+- [ ] 9. What happens if you don't include `<!DOCTYPE html>`?
+- [ ] 10. What is the `<html>` tag and what attribute should it have?
+- [ ] 11. What is the purpose of the `<head>` section?
 - [ ] 12. What is the purpose of the `<body>` section?
 - [ ] 13. What is the `<meta>` tag used for? Give 3 examples.
 - [ ] 14. What is the viewport meta tag and why is it important for responsive design?

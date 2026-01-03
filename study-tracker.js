@@ -131,7 +131,7 @@ function displayProgress() {
     console.log('\n💡 STUDY INSIGHTS\n');
 
     // Calculate estimated completion time
-    const questionsPerDay = 100; // Adjust based on your pace
+    const questionsPerDay = 200; // Adjust based on your pace
     const daysRemaining = Math.ceil(
         (stats.totalQuestions - stats.totalCompleted) / questionsPerDay
     );
