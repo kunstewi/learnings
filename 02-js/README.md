@@ -804,4 +804,163 @@ alert(accumulator.value); // shows the sum of these values
 
 257. Explain the object to primitive conversion algorithm summary.
 
-258. 
+### Data Types
+
+258. JavaScript allows us to work with primitives (strings, numbers, etc.) as if they were objects. They also provide methods to call as such - explain this statement and how and why it works ?
+
+259. Are primitives object too ?
+
+260. How many primitives types are there ?
+
+261. Are functions object too ?
+
+262. Why objects are heavier than primitives ?
+
+263. Primitives are fast and lightweight as possible and they also can be accessed using methods like an object - How this solution was implemented by the creators of JS, give high level overview.
+
+264. What do you mean by object wrapper when it comes into the picture for the primitives to act like objects and have methods ?
+
+265. Can you explain what's happening here ? and how under the hood ?
+
+```js
+let str = "Hello";
+
+alert( str.toUpperCase() ); // HELLO
+```
+
+266. Does null and undefined primitives have methods ?
+
+267. Can I add a string property such as objects ?
+
+```js
+let str = "Hello";
+
+str.test = 5;
+
+alert(str.test);
+```
+
+268. How many types of Number is available in JS ?
+
+269. What do you mean by double precision floating point numbers ?
+
+270. What BigInt represent and when are they needed ?
+
+271. Explain how can we use e to write big numbers like 7.3 billion in short and 0.000073 in short ?
+
+272. Explain Hex, Binary and Octal numbers ? And where are they used ?
+
+273. Explain what num.toString(base) does and returns ? What is the range of base it can have ?
+
+274. Convert 123456 in the base 36.
+
+275. What are the different in built functions available in js for rounding off numbers ?
+
+276. Explain the difference and usage between Math.floor, Math.ceil, Math.round, Math.trunc with examples ?
+
+277. For instance, we have 1.2345 and want to round it to 2 digits, getting only 1.23. How could we do this ?
+
+278. What is the drawback of using toFixed(n) for rounding off ? What Math.method it uses to round off ?
+
+279. How internally in js a number is represented ? How many bits are the number in js ? What do you mean by 32 bits or 64 bits number ?
+
+280. in 64 bits, break down how many bits are used for the number, how many for the decimal points and how many for the sign ?
+
+281. What if we try to console.log a very big number ?
+
+281. Explain what do you mean by loss of precision with an example.
+
+282. alert( 0.1 + 0.2 == 0.3 ); // false can you explain it why it happens ?
+
+283. alert( 0.1 + 0.2 ); what would be the value of it ?
+
+284. How fractions like 0.1 and 0.2 are stored in memory ? 
+
+285. alert( 0.1.toFixed(20) ); Explain this what is it doing and what would be the output ?
+
+286. What is the workaround the problem of the loss precision ?
+
+287. alert( 9999999999999999 ); // shows 10000000000000000 why ?
+
+288. Explain Infinity, -Infinity and NaN. And what type do they belong to ?
+
+289. What isNaN(value) does ? And why do we need it ?
+
+290. But do we need this function? Can’t we just use the comparison === NaN?
+
+291. alert( NaN === NaN ); // false Why ?
+
+292. What isFinite(value) does ? And why do we need it ? Where do we need it ?
+
+293. an empty or a space-only string is treated as ....... in all numeric functions in js ?
+
+294. Explain the difference between Number.isNaN(), Number.isFinite() and isNaN() and isFinite().
+
+295. alert( Number.isNaN("str") ); // false, because "str" belongs to the string type, not the number type : explain why ?
+
+296. alert( isNaN("str") ); // true, because isNaN converts string "str" into a number and gets NaN as a result of this conversion : explain why ?
+
+297. When Number.isNan(value) returns true and when false ?
+
+298. When Number.isFinite(value) returns true and when false ?
+
+299. When isNaN(value) returns true and when false ?
+
+300. when isFinite(value) returns true and when false ?
+
+301. What Object.is() method is ? What is does ? When is it used ? How it works ?
+
+302. What +value an Number(value) returns if the value is not exactly a number ? What are the things that are ignored in the conversion ?
+
+303. Explain how parseInt(value) works and how is it different compared to Number() or +value ? When they are used ?
+
+304. Explain how parseFloat(value) works and how is it differnt comparexd to Number(value) or +value ? When they ar used ?
+
+305. Explain what they will produce ?
+```js
+alert( parseInt('100px') ); 
+alert( parseFloat('12.5em') ); 
+
+alert( parseInt('12.3') );
+alert( parseFloat('12.3.4') );
+```
+
+306. When ParseInt(value) and ParseFloat(value) returns NaN ?
+
+307. What is the optional second arguement of ParseInt(value, second-arguement) ?
+
+308. Explain What Math.random() does and does it take any arguements ? How Math.random() works ? give example.
+
+309. Math.max(a, b, c...) and Math.min(a, b, c...) Explain what they do and how they work ? give example.
+
+310. Math.pow(n, power) explain what they do and how they work ? give example.
+
+311. Create a script that prompts the visitor to enter two numbers and then shows their sum.
+
+312. Why 6.35.toFixed(1) === 6.3. in the example alert( 1.35.toFixed(1) ); // 1.4 but why alert( 6.35.toFixed(1) ); // 6.3 ?
+
+313. How to round 6.35 the right way ?
+
+314. Create a function readNumber which prompts for a number until the visitor enters a valid numeric value. The resulting value must be returned as a number. The visitor can also stop the process by entering an empty line or pressing “CANCEL”. In that case, the function should return null.
+
+315. This loop is infinite. It never ends. Why?
+```js
+let i = 0;
+while (i != 10) {
+  i += 0.2;
+}
+```
+
+316. The built-in function Math.random() creates a random value from 0 to 1 (not including 1). Write the function random(min, max) to generate a random floating-point number from min to max (not including max). Examples of its work:
+```js
+alert( random(1, 5) ); // 1.2345623452
+alert( random(1, 5) ); // 3.7894332423
+alert( random(1, 5) ); // 4.3435234525
+```
+
+317. Create a function randomInteger(min, max) that generates a random integer number from min to max including both min and max as possible values. Any number from the interval min..max must appear with the same probability. Examples of its work:
+```js
+alert( randomInteger(1, 5) ); // 1
+alert( randomInteger(1, 5) ); // 3
+alert( randomInteger(1, 5) ); // 5
+```
