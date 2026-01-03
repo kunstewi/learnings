@@ -18,34 +18,34 @@ This project involves building a complete stock exchange platform similar to Zer
 
 By building this project, you will master:
 
-1. **Microservices Architecture**: Building scalable, distributed systems
-2. **Real-time Communication**: WebSockets, Server-Sent Events
-3. **Message Queues**: Apache Kafka for event streaming
-4. **High-Performance Systems**: Order matching engines, caching strategies
-5. **DevOps**: Docker, Kubernetes, CI/CD, monitoring
-6. **Database Design**: PostgreSQL, TimescaleDB, Redis
-7. **Frontend Excellence**: Next.js, React, real-time UI updates
-8. **Security**: Authentication, authorization, rate limiting, DDoS protection
-9. **Payment Integration**: Razorpay/Stripe integration
-10. **System Design**: Capacity estimation, horizontal scaling
+- [ ] 1. **Microservices Architecture**: Building scalable, distributed systems
+- [ ] 2. **Real-time Communication**: WebSockets, Server-Sent Events
+- [ ] 3. **Message Queues**: Apache Kafka for event streaming
+- [ ] 4. **High-Performance Systems**: Order matching engines, caching strategies
+- [ ] 5. **DevOps**: Docker, Kubernetes, CI/CD, monitoring
+- [ ] 6. **Database Design**: PostgreSQL, TimescaleDB, Redis
+- [ ] 7. **Frontend Excellence**: Next.js, React, real-time UI updates
+- [ ] 8. **Security**: Authentication, authorization, rate limiting, DDoS protection
+- [ ] 9. **Payment Integration**: Razorpay/Stripe integration
+- [ ] 10. **System Design**: Capacity estimation, horizontal scaling
 
 ## 📚 Complete Documentation
 
 ### 📖 Essential Reading (Start Here!)
 
-1. **[SUMMARY.md](./SUMMARY.md)** ⭐ - Complete project summary, next steps, and motivation
-2. **[QUICK_REFERENCE.md](./QUICK_REFERENCE.md)** ⭐ - At-a-glance guide with checklists and quick info
-3. **[TECH_STACK_AND_IMPLEMENTATION.md](./TECH_STACK_AND_IMPLEMENTATION.md)** ⭐⭐⭐ - **MOST IMPORTANT** - Complete tech stack and 7-phase implementation guide
+- [ ] 1. **[SUMMARY.md](./SUMMARY.md)** ⭐ - Complete project summary, next steps, and motivation
+- [ ] 2. **[QUICK_REFERENCE.md](./QUICK_REFERENCE.md)** ⭐ - At-a-glance guide with checklists and quick info
+- [ ] 3. **[TECH_STACK_AND_IMPLEMENTATION.md](./TECH_STACK_AND_IMPLEMENTATION.md)** ⭐⭐⭐ - **MOST IMPORTANT** - Complete tech stack and 7-phase implementation guide
 
 ### 🏗️ Architecture & Design
 
-4. **[ARCHITECTURE_DIAGRAMS.md](./ARCHITECTURE_DIAGRAMS.md)** - Visual system architecture with ASCII diagrams
-5. **[PROJECT_STRUCTURE.md](./PROJECT_STRUCTURE.md)** - Complete monorepo structure and organization
-6. **[DATABASE_SCHEMA.md](./DATABASE_SCHEMA.md)** - Comprehensive database design (PostgreSQL, TimescaleDB, Redis, MongoDB)
+- [ ] 4. **[ARCHITECTURE_DIAGRAMS.md](./ARCHITECTURE_DIAGRAMS.md)** - Visual system architecture with ASCII diagrams
+- [ ] 5. **[PROJECT_STRUCTURE.md](./PROJECT_STRUCTURE.md)** - Complete monorepo structure and organization
+- [ ] 6. **[DATABASE_SCHEMA.md](./DATABASE_SCHEMA.md)** - Comprehensive database design (PostgreSQL, TimescaleDB, Redis, MongoDB)
 
 ### 🔌 API Documentation
 
-7. **[API_SPECIFICATION.md](./API_SPECIFICATION.md)** - Complete REST API and WebSocket endpoint specifications
+- [ ] 7. **[API_SPECIFICATION.md](./API_SPECIFICATION.md)** - Complete REST API and WebSocket endpoint specifications
 
 ---
 
@@ -53,14 +53,14 @@ By building this project, you will master:
 
 **New to this project? Follow this reading order:**
 
-1. **Day 1**: Read [SUMMARY.md](./SUMMARY.md) (30 mins)
-2. **Day 2**: Read [QUICK_REFERENCE.md](./QUICK_REFERENCE.md) (1 hour)
-3. **Day 3-4**: Deep dive into [TECH_STACK_AND_IMPLEMENTATION.md](./TECH_STACK_AND_IMPLEMENTATION.md) (3-4 hours)
-4. **Day 5**: Study [ARCHITECTURE_DIAGRAMS.md](./ARCHITECTURE_DIAGRAMS.md) (1 hour)
-5. **Day 6**: Review [DATABASE_SCHEMA.md](./DATABASE_SCHEMA.md) (1 hour)
-6. **Day 7**: Study [PROJECT_STRUCTURE.md](./PROJECT_STRUCTURE.md) (1 hour)
-7. **Day 8**: Review [API_SPECIFICATION.md](./API_SPECIFICATION.md) (2 hours)
-8. **Day 9+**: Start coding! 🎉
+- [ ] 1. **Day 1**: Read [SUMMARY.md](./SUMMARY.md) (30 mins)
+- [ ] 2. **Day 2**: Read [QUICK_REFERENCE.md](./QUICK_REFERENCE.md) (1 hour)
+- [ ] 3. **Day 3-4**: Deep dive into [TECH_STACK_AND_IMPLEMENTATION.md](./TECH_STACK_AND_IMPLEMENTATION.md) (3-4 hours)
+- [ ] 4. **Day 5**: Study [ARCHITECTURE_DIAGRAMS.md](./ARCHITECTURE_DIAGRAMS.md) (1 hour)
+- [ ] 5. **Day 6**: Review [DATABASE_SCHEMA.md](./DATABASE_SCHEMA.md) (1 hour)
+- [ ] 6. **Day 7**: Study [PROJECT_STRUCTURE.md](./PROJECT_STRUCTURE.md) (1 hour)
+- [ ] 7. **Day 8**: Review [API_SPECIFICATION.md](./API_SPECIFICATION.md) (2 hours)
+- [ ] 8. **Day 9+**: Start coding! 🎉
 
 ---
 
@@ -332,11 +332,11 @@ npm run dev
 
 ## ⚠️ Important Notes
 
-1. **Regulatory Compliance**: Stock trading platforms require regulatory approval (SEBI in India, SEC in US)
-2. **Real Money**: This is a learning project. Do NOT use real money without proper licenses
-3. **Testing**: Thoroughly test all components before any production use
-4. **Security**: Implement all security best practices
-5. **Scalability**: Design for 10x growth from day one
+- [ ] 1. **Regulatory Compliance**: Stock trading platforms require regulatory approval (SEBI in India, SEC in US)
+- [ ] 2. **Real Money**: This is a learning project. Do NOT use real money without proper licenses
+- [ ] 3. **Testing**: Thoroughly test all components before any production use
+- [ ] 4. **Security**: Implement all security best practices
+- [ ] 5. **Scalability**: Design for 10x growth from day one
 
 ## 🎯 Success Criteria
 
