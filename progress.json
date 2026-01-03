@@ -1,0 +1,118 @@
+{
+  "01-html-css": {
+    "completed": 0,
+    "inProgress": 0
+  },
+  "02-js": {
+    "completed": 0,
+    "inProgress": 0
+  },
+  "03-node-express": {
+    "completed": 0,
+    "inProgress": 0
+  },
+  "04-databases": {
+    "completed": 0,
+    "inProgress": 0
+  },
+  "04.5-browser-dom": {
+    "completed": 0,
+    "inProgress": 0
+  },
+  "05-react": {
+    "completed": 0,
+    "inProgress": 0
+  },
+  "06-tailwind": {
+    "completed": 0,
+    "inProgress": 0
+  },
+  "07-typescript": {
+    "completed": 0,
+    "inProgress": 0
+  },
+  "08-postgres-prisma": {
+    "completed": 0,
+    "inProgress": 0
+  },
+  "09-serverless": {
+    "completed": 0,
+    "inProgress": 0
+  },
+  "10-advance-db-deployments": {
+    "completed": 0,
+    "inProgress": 0
+  },
+  "11-next-js": {
+    "completed": 0,
+    "inProgress": 0
+  },
+  "12-docker": {
+    "completed": 0,
+    "inProgress": 0
+  },
+  "13-monorepos": {
+    "completed": 0,
+    "inProgress": 0
+  },
+  "14-advance-concepts": {
+    "completed": 0,
+    "inProgress": 0
+  },
+  "14.5-ci-cd": {
+    "completed": 0,
+    "inProgress": 0
+  },
+  "15-open-api": {
+    "completed": 0,
+    "inProgress": 0
+  },
+  "15.5-advanced-backend": {
+    "completed": 0,
+    "inProgress": 0
+  },
+  "16-ddos-rate-limiting": {
+    "completed": 0,
+    "inProgress": 0
+  },
+  "17-grpc-testing": {
+    "completed": 0,
+    "inProgress": 0
+  },
+  "18-webrtc": {
+    "completed": 0,
+    "inProgress": 0
+  },
+  "19-nginx-scaling": {
+    "completed": 0,
+    "inProgress": 0
+  },
+  "20-monitoring-logging": {
+    "completed": 0,
+    "inProgress": 0
+  },
+  "21-kubernetes": {
+    "completed": 0,
+    "inProgress": 0
+  },
+  "22-exchange-project": {
+    "completed": 0,
+    "inProgress": 0
+  },
+  "23-kafka": {
+    "completed": 0,
+    "inProgress": 0
+  },
+  "24-zapier-project": {
+    "completed": 0,
+    "inProgress": 0
+  },
+  "25-operating-systems": {
+    "completed": 0,
+    "inProgress": 0
+  },
+  "26-computer-networks": {
+    "completed": 0,
+    "inProgress": 0
+  }
+}

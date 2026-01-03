@@ -44,17 +44,7 @@ const topics = [
 ];
 
 // Progress tracking (you'll update this manually or via a progress.json file)
-const progress = {
-    '01-html-css': { completed: 0, inProgress: 0 },
-    '02-js': { completed: 0, inProgress: 0 },
-    '03-node-express': { completed: 0, inProgress: 0 },
-    '04-databases': { completed: 0, inProgress: 0 },
-    '05-react': { completed: 0, inProgress: 0 },
-    '07-typescript': { completed: 0, inProgress: 0 },
-    '11-next-js': { completed: 0, inProgress: 0 },
-    '25-operating-systems': { completed: 0, inProgress: 0 },
-    '26-computer-networks': { completed: 0, inProgress: 0 },
-};
+const progress = {};
 
 // Load progress from file if exists
 const progressFile = path.join(__dirname, 'progress.json');
@@ -140,7 +130,7 @@ function displayProgress() {
     console.log('\n💡 STUDY INSIGHTS\n');
 
     // Calculate estimated completion time
-    const questionsPerDay = 50; // Adjust based on your pace
+    const questionsPerDay = 100; // Adjust based on your pace
     const daysRemaining = Math.ceil(
         (stats.totalQuestions - stats.totalCompleted) / questionsPerDay
     );

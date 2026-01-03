@@ -80,3 +80,135 @@
 - [ ] Zerodha end to end
 - [ ] Zapier end to end
 - [ ] Real world open source projects
+
+---
+
+## 📊 Progress Tracking
+
+Track your learning progress with these tools:
+
+### Quick Commands
+
+```bash
+# Update your daily progress (easiest way)
+node daily-update.js
+
+# View your progress dashboard
+node study-tracker.js
+
+# Quick command-line update
+node update-progress.js <topic> +<number>
+```
+
+### Available Scripts
+
+#### 1. **`daily-update.js`** ⭐ Recommended for Daily Use
+
+The simplest way to update your progress each day.
+
+```bash
+node daily-update.js
+```
+
+**Features:**
+- Interactive prompts
+- Topic shortcuts (type `js` instead of `02-js`)
+- Automatically adds to your total
+- Shows updated progress immediately
+
+**Shortcuts:**
+- `js` → 02-js
+- `react` → 05-react
+- `node` → 03-node-express
+- `ts` → 07-typescript
+- `docker` → 12-docker
+- `k8s` → 21-kubernetes
+- `os` → 25-operating-systems
+- `networks` → 26-computer-networks
+
+#### 2. **`update-progress.js`** - Power User Mode
+
+Quick command-line updates for faster workflow.
+
+```bash
+# Add 30 questions to JavaScript
+node update-progress.js 02-js +30
+
+# Add 30 completed, 10 in progress
+node update-progress.js 02-js +30 +10
+
+# Set exact numbers (50 completed, 10 in progress)
+node update-progress.js 02-js 50 10
+
+# Interactive mode with numbered list
+node update-progress.js
+
+# Show help
+node update-progress.js --help
+```
+
+#### 3. **`study-tracker.js`** - Progress Dashboard
+
+View your complete learning progress with beautiful visualization.
+
+```bash
+# View progress dashboard
+node study-tracker.js
+
+# Update progress (interactive)
+node study-tracker.js update
+```
+
+**Shows:**
+- Total questions: 17,501 across 28 topics
+- Completion percentage
+- Visual progress bar
+- Topic-by-topic breakdown
+- Estimated completion date
+- Next milestone
+
+### Progress Data
+
+All progress is stored in `progress.json` and automatically loaded by the scripts.
+
+### Documentation
+
+- **`PROGRESS_QUICK_REF.md`** - Quick reference guide
+- **`PROGRESS_TRACKING.md`** - Complete documentation
+- **`STUDY_APPROACH.md`** - Learning strategy and study system
+- **`QUICK_START.md`** - Getting started guide
+- **`ROADMAP.md`** - Visual 12-month learning timeline
+
+### Daily Workflow
+
+```bash
+# 1. Study your topics
+# 2. At end of session, update progress:
+node daily-update.js
+
+# 3. Commit your progress:
+git add progress.json
+git commit -m "Day X: Completed Y questions"
+git push
+```
+
+### Optional: Create Aliases
+
+Add to your `~/.zshrc` or `~/.bashrc`:
+
+```bash
+alias study-update='cd /Users/kanai/Projects/lock-in && node daily-update.js'
+alias study-progress='cd /Users/kanai/Projects/lock-in && node study-tracker.js'
+```
+
+Then simply run:
+```bash
+study-update    # Update progress
+study-progress  # View dashboard
+```
+
+---
+
+**Total Questions: 17,501 | Estimated Time: ~6 months at 100 Q/day**
+
+Start tracking your progress today! 🚀
