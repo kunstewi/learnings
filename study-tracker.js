@@ -12,13 +12,14 @@ const path = require('path');
 
 // Topic configuration
 const topics = [
-    { name: '01-html-css', totalQuestions: 915 },
+    { name: '01-html', totalQuestions: 300 },
+    { name: '01-css', totalQuestions: 615 },
     { name: '02-js', totalQuestions: 966 },
     { name: '03-node-express', totalQuestions: 200 },
     { name: '04-databases', totalQuestions: 350 },
     { name: '04.5-browser-dom', totalQuestions: 0 },
     { name: '05-react', totalQuestions: 420 },
-    { name: '06-tailwind', totalQuestions: 600},
+    { name: '06-tailwind', totalQuestions: 600 },
     { name: '07-typescript', totalQuestions: 250 },
     { name: '08-postgres-prisma', totalQuestions: 730 },
     { name: '09-serverless', totalQuestions: 720 },

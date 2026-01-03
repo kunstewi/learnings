@@ -1,5 +1,9 @@
 {
-  "01-html-css": {
+  "01-html": {
+    "completed": 5,
+    "inProgress": 6
+  },
+  "01-css": {
     "completed": 0,
     "inProgress": 0
   },

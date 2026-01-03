@@ -30,7 +30,8 @@ const path = require('path');
 
 // Topic directories to scan
 const topics = [
-    { name: '01-html-css', dir: '01-html-css' },
+    { name: '01-html', dir: '01-html-css/01-html' },
+    { name: '01-css', dir: '01-html-css/02-css' },
     { name: '02-js', dir: '02-js' },
     { name: '03-node-express', dir: '03-node-express' },
     { name: '04-databases', dir: '04-databases' },
