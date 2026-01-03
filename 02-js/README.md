@@ -46,7 +46,7 @@ which js will run ?
 
 - [ ] 19. Difference between typeof(x) and typeof x syntax ?
 
-20. 
+- [ ] 20. 
 ```js
 let name = "Ilya"; 
 alert(`hello ${"name"}`);
@@ -81,13 +81,13 @@ what's the output ?
 
 - [ ] 34. What if + binary operator is applied to strings ? what if only one is string and other is number ?
 
-35. 
+- [ ] 35. 
 ```js
 alert('1' + 2 + 2);
 ```
 what would be the result ?
 
-36. 
+- [ ] 36. 
 ```js
 alert(2 + 2 + '1');
 ```
@@ -99,7 +99,7 @@ what would be the result ?
 
 - [ ] 39. What the unary + does ?
 
-40. 
+- [ ] 40. 
 ```js
 let apples = "2"; 
 let oranges = "3"; 
@@ -115,7 +115,7 @@ what would be the result ?
 
 - [ ] 44. Explain how assignment operators work ?
 
-45. 
+- [ ] 45. 
 ```js
 let a = 1; 
 let b = 2; 
@@ -131,7 +131,7 @@ what would be the result of a, b, c ?
 
 - [ ] 49. What is the difference between ++, -- being placed at the beginning of a variable and at the end of the variable, like count++, ++count ?
 
-50. 
+- [ ] 50. 
 ```js
 let counter = 1; 
 let a = ++counter;
@@ -145,7 +145,7 @@ difference between these two.
 
 - [ ] 52. What is the comma operator and what it does ? give me one example where it's used ? why we shouldn't use it ?
 
-53. 
+- [ ] 53. 
 ```js
 let a = 1, b = 1; 
 let c = ++a; 
@@ -153,7 +153,7 @@ let d = b++;
 ```
 final value of a,b,c,d ?
 
-54. 
+- [ ] 54. 
 ```js
 let a = 2; 
 let x = 1 + (a *= 2);
@@ -302,7 +302,7 @@ would they give different result or same ?
 
 - [ ] 95. Write code to output prime numbers from 2 to n.
 
-96.
+- [ ] 96.
 ```js
 switch (browser) {
   case 'Edge':
@@ -322,7 +322,7 @@ switch (browser) {
 ``` 
 rewrite using if else.
 
-97. 
+- [ ] 97. 
 ```js
 let a = +prompt('a?', '');
 
@@ -363,7 +363,7 @@ rewrite this if loop using switch.
 
 - [ ] 109. What a function with empty return or withot it returns ?
 
-110. 
+- [ ] 110. 
 ```js
 function checkAge(age) {
   if (age > 18) {
@@ -487,7 +487,7 @@ alert( user.key ) // undefined
 
 - [ ] 151. Write the function isEmpty(obj) which returns true if the object has no properties, false otherwise.
 
-152. 
+- [ ] 152. 
 ```js
 let salaries = {
   John: 100,
@@ -498,7 +498,7 @@ let salaries = {
 Write the code to sum all salaries and store in the variable sum. Should be 390 in the example above.
 If salaries is empty, then the result must be 0.
 
-153. 
+- [ ] 153. 
 ```js
 // before the call
 let menu = {
@@ -596,7 +596,7 @@ Create a function multiplyNumeric(obj) that multiplies all numeric property valu
 
 - [ ] 191. What does it mean by dynamic this and lexical this ?
 
-192. 
+- [ ] 192. 
 ```js
 function makeUser() {
   return {

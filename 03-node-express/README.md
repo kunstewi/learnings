@@ -109,7 +109,7 @@
 
 ### Code Snippets & Practical Questions
 
-86. 
+- [ ] 86. 
 ```js
 const express = require('express');
 const app = express();
@@ -119,7 +119,7 @@ app.get('/user/:id', (req, res) => {
 ```
 What will be the output if you visit `/user/42?name=admin`?
 
-87.
+- [ ] 87.
 ```js
 const fs = require('fs');
 console.log('Start');
@@ -130,7 +130,7 @@ console.log('End');
 ```
 Assuming the file read takes some time, what is the most likely order of logs?
 
-88.
+- [ ] 88.
 ```js
 app.get('/test', (req, res, next) => {
   console.log('Step 1');
@@ -142,7 +142,7 @@ app.get('/test', (req, res, next) => {
 ```
 What is logged in the console when `/test` is visited?
 
-89.
+- [ ] 89.
 ```js
 app.use((req, res, next) => {
   const err = new Error('Not Found');
@@ -156,14 +156,14 @@ app.use((err, req, res, next) => {
 ```
 Explain what this code block does.
 
-90.
+- [ ] 90.
 ```js
 const buffer = Buffer.from('Node');
 console.log(buffer.toJSON());
 ```
 What will be the output format of `buffer.toJSON()`?
 
-91. 
+- [ ] 91. 
 ```js
 const fs = require('fs');
 
@@ -180,7 +180,7 @@ In this specific case (inside an I/O callback), which one will always run first 
 
 - [ ] 94. How do you implement a "Global Error Handler" in Express?
 
-95. 
+- [ ] 95. 
 ```js
 const eventEmitter = require('events');
 const myEmitter = new eventEmitter();
@@ -199,7 +199,7 @@ What is the output of this code?
 
 - [ ] 98. What is the role of the `cluster.isMaster` (or `cluster.isPrimary`) property?
 
-99. 
+- [ ] 99. 
 ```js
 const path = require('path');
 console.log(path.join('/a', 'b', 'c/d', '..'));
