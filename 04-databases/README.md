@@ -1,7 +1,7 @@
 ### Database Fundamentals
 
-- [ ] 1. What is a Database? What is the difference between a Database and a DBMS (Database Management System)?
-- [ ] 2. What are the main differences between SQL and NoSQL databases? When would you use each?
+- [f] 1. What is a Database? What is the difference between a Database and a DBMS (Database Management System)?
+- [f] 2. What are the main differences between SQL and NoSQL databases? When would you use each?
 - [ ] 3. What is ACID in databases? Explain each property (Atomicity, Consistency, Isolation, Durability).
 - [ ] 4. What is BASE in NoSQL databases? How does it differ from ACID?
 - [ ] 5. Explain the CAP theorem. What does it mean for distributed databases?

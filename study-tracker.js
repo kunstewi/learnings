@@ -42,6 +42,7 @@ const topics = [
     { name: '24-zapier-project', totalQuestions: 0 },
     { name: '25-operating-systems', totalQuestions: 500 },
     { name: '26-computer-networks', totalQuestions: 500 },
+    { name: '27-dsa', totalQuestions: 1000 },
 ];
 
 // Progress tracking (you'll update this manually or via a progress.json file)
@@ -133,7 +134,7 @@ function displayProgress() {
     console.log('\n💡 STUDY INSIGHTS\n');
 
     // Calculate estimated completion time
-    const questionsPerDay = 200; // Adjust based on your pace
+    const questionsPerDay = 100; // Adjust based on your pace
     const daysRemaining = Math.ceil(
         (stats.totalQuestions - stats.totalCompleted) / questionsPerDay
     );
