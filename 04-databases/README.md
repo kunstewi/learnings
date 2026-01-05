@@ -1,7 +1,7 @@
 ### Database Fundamentals
 
 - [f] 1. What is a Database? What is the difference between a Database and a DBMS (Database Management System)?
-- [f] 2. What are the main differences between SQL and NoSQL databases? When would you use each?
+- [f] 2. What are the main differences between SQL and NoSQL databases? When would you use each? 
 - [ ] 3. What is ACID in databases? Explain each property (Atomicity, Consistency, Isolation, Durability).
 - [ ] 4. What is BASE in NoSQL databases? How does it differ from ACID?
 - [ ] 5. Explain the CAP theorem. What does it mean for distributed databases?
@@ -315,7 +315,7 @@
 
 ### Code Snippets & Practical Questions
 
-261. 
+- [ ] 261. 
 ```js
 const mysql = require('mysql2');
 const connection = mysql.createConnection({
@@ -331,7 +331,7 @@ connection.query('SELECT * FROM users WHERE id = ' + userId, (err, results) => {
 ```
 What is the security vulnerability in this code? How would you fix it?
 
-262.
+- [ ] 262.
 ```js
 const { MongoClient } = require('mongodb');
 const client = new MongoClient('mongodb://localhost:27017');
@@ -345,7 +345,7 @@ async function findUser(username) {
 ```
 What is missing in this code? What happens if this function is called multiple times?
 
-263.
+- [ ] 263.
 ```js
 const User = require('./models/User');
 
@@ -357,7 +357,7 @@ app.post('/register', async (req, res) => {
 ```
 What is the security vulnerability in this code (Mass Assignment)? How would you fix it?
 
-264.
+- [ ] 264.
 ```js
 const pool = mysql.createPool({
   host: 'localhost',
@@ -371,7 +371,7 @@ const pool = mysql.createPool({
 ```
 Explain what each configuration option does.
 
-265.
+- [ ] 265.
 ```js
 User.findById(userId)
   .then(user => {
@@ -398,7 +398,7 @@ How would you optimize this code to avoid the N+1 problem using Mongoose populat
 
 - [ ] 270. How do you implement pagination in MongoDB? Write an example using `skip()` and `limit()`.
 
-271.
+- [ ] 271.
 ```js
 const schema = new mongoose.Schema({
   name: String,
@@ -420,7 +420,7 @@ What is this code doing? When will the console.log execute?
 
 - [ ] 275. How do you create a compound index in MongoDB on `{ email: 1, createdAt: -1 }`? Write the code.
 
-276.
+- [ ] 276.
 ```js
 const result = await User.findByIdAndUpdate(
   userId,
@@ -434,7 +434,7 @@ Explain what this code does. What does `$inc` do? What does `new: true` do?
 
 - [ ] 278. Write a Mongoose middleware that automatically hashes a user's password before saving to the database.
 
-279.
+- [ ] 279.
 ```js
 const users = await User.find({ age: { $gte: 18 } }).lean();
 ```
@@ -442,7 +442,7 @@ What does `.lean()` do? When should you use it?
 
 - [ ] 280. Write a PostgreSQL query using a CTE (Common Table Expression) to find employees and their managers.
 
-281.
+- [ ] 281.
 ```js
 db.collection('orders').aggregate([
   { $match: { status: 'completed' } },
