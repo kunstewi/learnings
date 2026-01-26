@@ -1,0 +1,1030 @@
+## 🟢 Part 1: The Foundation (001 - 200)
+
+### Section 1: Introduction, Variables & Operators (001-050)
+- [ ] 001. **[Theory]** How is Python code executed? Explain Interpreted vs Compiled.
+- [ ] 002. **[Theory]** What is the Python Global Interpreter Lock (GIL)?
+- [ ] 003. **[Theory]** Explain PEP 8 and why it matters.
+- [ ] 004. **[Theory]** What are Python's built-in immutable vs mutable data types?
+- [ ] 005. **[Practice]** Install Python 3.x and check the version via CLI.
+- [ ] 006. **[Practice]** Create a virtual environment using `venv`.
+- [ ] 007. **[Practice]** Activate and deactivate the virtual environment.
+- [ ] 008. **[Practice]** Write a script that behaves differently when run directly vs imported (`if __name__ == "__main__":`).
+- [ ] 009. **[Practice]** Swap two variables without using a temporary variable.
+- [ ] 010. **[Theory]** What is dynamic typing in Python?
+- [ ] 011. **[Practice]** Use `type()` and `isinstance()` to check variable types.
+- [ ] 012. **[Practice]** Demonstrate integer overflow (or lack thereof) in Python.
+- [ ] 013. **[Theory]** Explain the difference between `is` and `==`.
+- [ ] 014. **[Practice]** Implement a script that accepts CLI arguments using `sys.argv`.
+- [ ] 015. **[Practice]** Use the `input()` function to take user data and cast it to `int`.
+- [ ] 016. **[Theory]** What are Docstrings? How do they differ from comments?
+- [ ] 017. **[Practice]** Write a single-line comment and a multi-line docstring.
+- [ ] 018. **[Practice]** Perform floor division `//` and exponentiation `**`.
+- [ ] 019. **[Practice]** Calculate the area of a circle using `math.pi`.
+- [ ] 020. **[Theory]** What are reserved keywords in Python? List 5.
+- [ ] 021. **[Practice]** Use f-strings to format a string with variables.
+- [ ] 022. **[Practice]** Use `.format()` method for string interpolation.
+- [ ] 023. **[Practice]** Use `%` operator for string formatting (legacy).
+- [ ] 024. **[Theory]** Explain the concept of "truthiness" and "falsiness".
+- [ ] 025. **[Practice]** Check if an empty list is truthy or falsy.
+- [ ] 026. **[Practice]** Use `id()` to print the memory address of a variable.
+- [ ] 027. **[Theory]** How does Python handle memory management (reference counting)?
+- [ ] 028. **[Practice]** Create a complex number and print its real and imaginary parts.
+- [ ] 029. **[Practice]** Convert a float to an int and explain the rounding behavior.
+- [ ] 030. **[Practice]** Use `round()` with negative precision.
+- [ ] 031. **[Theory]** What is `NoneType`?
+- [ ] 032. **[Practice]** Assign `None` to a variable and check if it `is None`.
+- [ ] 033. **[Practice]** Use `del` to remove a variable from scope.
+- [ ] 034. **[Practice]** Create a multi-line string using triple quotes.
+- [ ] 035. **[Theory]** What is an escape sequence?
+- [ ] 036. **[Practice]** Print a string containing a newline `\n` and tabs `\t`.
+- [ ] 037. **[Practice]** Print a raw string `r"..."` to ignore escape sequences.
+- [ ] 038. **[Practice]** Use `help()` on the `str` class.
+- [ ] 039. **[Practice]** Use `dir()` to list attributes of an integer.
+- [ ] 040. **[Theory]** What is a "Traceback"?
+- [ ] 041. **[Practice]** Trigger a `NameError`.
+- [ ] 042. **[Practice]** Trigger a `TypeError` by adding a string and an integer.
+- [ ] 043. **[Practice]** Trigger a `SyntaxError`.
+- [ ] 044. **[Practice]** Use bitwise AND (`&`) and OR (`|`) operators.
+- [ ] 045. **[Practice]** Use bitwise shifts `<<` and `>>`.
+- [ ] 046. **[Theory]** Explain operator precedence (PEMDAS in Python).
+- [ ] 047. **[Practice]** Use `walrus` operator `:=` (Python 3.8+).
+- [ ] 048. **[Practice]** Chain comparison operators (e.g., `1 < x < 10`).
+- [ ] 049. **[Theory]** What is `__debug__`?
+- [ ] 050. **[Practice]** Use `assert` to check a condition.
+
+### Section 2: Control Flow (051-100)
+- [ ] 051. **[Theory]** Explain the syntax of `if`, `elif`, `else`.
+- [ ] 052. **[Practice]** Write a program to check if a number is even or odd.
+- [ ] 053. **[Practice]** Implement a "FizzBuzz" program (1 to 100).
+- [ ] 054. **[Theory]** What is the ternary operator in Python? Write an example.
+- [ ] 055. **[Practice]** Use a `match` / `case` statement (Python 3.10+).
+- [ ] 056. **[Practice]** Write a `while` loop that counts down from 10.
+- [ ] 057. **[Practice]** Use `break` to exit a loop early.
+- [ ] 058. **[Practice]** Use `continue` to skip an iteration.
+- [ ] 059. **[Theory]** What does the `else` clause do in a `for` loop?
+- [ ] 060. **[Practice]** Implement a `for-else` loop to search for a prime number.
+- [ ] 061. **[Practice]** Iterate over a string character by character.
+- [ ] 062. **[Practice]** Use `range()` with start, stop, and step keys.
+- [ ] 063. **[Practice]** Nested loops to print a multiplication table.
+- [ ] 064. **[Practice]** Use `enumerate()` to get both index and value in a loop.
+- [ ] 065. **[Practice]** Use `zip()` to iterate over two lists simultaneously.
+- [ ] 066. **[Practice]** Use `zip()` with `strict=True`.
+- [ ] 067. **[Practice]** Implement a simple calculator using `match-case`.
+- [ ] 068. **[Theory]** What is an "infinite loop"?
+- [ ] 069. **[Practice]** Create an infinite loop and stop it with Ctrl+C.
+- [ ] 070. **[Practice]** Simulate a `do-while` loop (which Python doesn't have natively).
+- [ ] 071. **[Practice]** Filter a list of numbers using a `for` loop and `if`.
+- [ ] 072. **[Practice]** Sum numbers from 1 to 100 using a loop.
+- [ ] 073. **[Codebase]** Read this snippet: `[x for x in data if x % 2 == 0]`. Rewrite it as a regular loop.
+- [ ] 074. **[Practice]** Check if a year is a leap year using nested ifs.
+- [ ] 075. **[Practice]** Validate a password (length > 8, has number) using loops.
+- [ ] 076. **[Theory]** What is "Short-circuit evaluation"?
+- [ ] 077. **[Practice]** Demonstrate short-circuiting with `or`.
+- [ ] 078. **[Practice]** Demonstrate short-circuiting with `and`.
+- [ ] 079. **[Practice]** Write a loop that modifies the list it is iterating over (and explain why it's bad).
+- [ ] 080. **[Practice]** Correct the above problem by iterating over a slice/copy.
+- [ ] 081. **[Practice]** Identify the maximum value in a list without `max()`.
+- [ ] 082. **[Practice]** Reverse a generic sequence using a loop.
+- [ ] 083. **[Practice]** Count vowels in a string.
+- [ ] 084. **[Practice]** Print the Fibonacci sequence up to N.
+- [ ] 085. **[Practice]** Check if a string is a palindrome.
+- [ ] 086. **[Practice]** Flatten a 2D list using nested loops.
+- [ ] 087. **[Theory]** Time complexity of standard `for` loop?
+- [ ] 088. **[Practice]** Use `pass` as a placeholder.
+- [ ] 089. **[Practice]** Implement a primitive "Guess the Number" game.
+- [ ] 090. **[Practice]** Validate user input until it matches a specific condition (while loop).
+- [ ] 091. **[Practice]** Print a star pyramid pattern.
+- [ ] 092. **[Practice]** Use `itertools.product` to avoid nested loops (Introduction).
+- [ ] 093. **[Theory]** What is `StopIteration`?
+- [ ] 094. **[Practice]** Manually call `next()` on an iterator (from `iter(range(3))`).
+- [ ] 095. **[Codebase]** Analyze: `while (n := n - 1) > 0:`
+- [ ] 096. **[Practice]** Transpose a matrix using loops.
+- [ ] 097. **[Practice]** Find the factorial of a number using a loop.
+- [ ] 098. **[Practice]** Implement Binary Search (Iterative).
+- [ ] 099. **[Theory]** Recursion vs Iteration.
+- [ ] 100. **[Reflect]** Summary: Write a paragraph on when to use `while` vs `for`.
+
+### Section 3: Strings & Text Processing (101-150)
+- [ ] 101. **[Theory]** Are strings mutable in Python?
+- [ ] 102. **[Practice]** Slice a string to get the last 3 characters.
+- [ ] 103. **[Practice]** Reverse a string using slicing `[::-1]`.
+- [ ] 104. **[Practice]** Use `.split()` to turn a sentence into a list of words.
+- [ ] 105. **[Practice]** Use `.join()` to combine a list of words.
+- [ ] 106. **[Practice]** Use `.strip()`, `.lstrip()`, `.rstrip()`.
+- [ ] 107. **[Practice]** Check `startswith()` and `endswith()`.
+- [ ] 108. **[Practice]** Use `.replace()` to swap substrings.
+- [ ] 109. **[Practice]** Find the index of a substring with `.find()` and `.index()`.
+- [ ] 110. **[Practice]** Convert to `.upper()`, `.lower()`, `.title()`.
+- [ ] 111. **[Practice]** Use `in` keyword to check for substring existence.
+- [ ] 112. **[Practice]** Count occurrences of a char with `.count()`.
+- [ ] 113. **[Practice]** Check if string `.isdigit()`, `.isalpha()`, `.isalnum()`.
+- [ ] 114. **[Practice]** Pad a string with zeros using `.zfill()`.
+- [ ] 115. **[Practice]** Center a string using `.center()`.
+- [ ] 116. **[Theory]** What is Unicode? How does Python 3 handle it?
+- [ ] 117. **[Practice]** Encode a string to bytes `.encode('utf-8')`.
+- [ ] 118. **[Practice]** Decode bytes to string `.decode('utf-8')`.
+- [ ] 119. **[Practice]** Use `ord()` and `chr()`.
+- [ ] 120. **[Practice]** Create a translation table with `str.maketrans()` and use `.translate()`.
+- [ ] 121. **[Practice]** Partition a string with `.partition()`.
+- [ ] 122. **[Practice]** Format currency (e.g., $1,000.00) using f-strings.
+- [ ] 123. **[Theory]** What are Regular Expressions?
+- [ ] 124. **[Practice]** Import `re` and find all email addresses in a text.
+- [ ] 125. **[Practice]** Use `re.sub()` to replace patterns.
+- [ ] 126. **[Practice]** Use `re.match()` vs `re.search()`.
+- [ ] 127. **[Practice]** Compile a regex pattern object.
+- [ ] 128. **[Practice]** Extract groups from a regex match object.
+- [ ] 129. **[Practice]** Split a string by regex pattern.
+- [ ] 130. **[Practice]** Check for an anagram.
+- [ ] 131. **[Practice]** Find the longest word in a sentence.
+- [ ] 132. **[Practice]** Implement Caesar Cipher.
+- [ ] 133. **[Practice]** Remove punctuation from a string.
+- [ ] 134. **[Practice]** Capitalize every word in a string manually (without `.title()`).
+- [ ] 135. **[Practice]** Parse a URL string to get domain, path, query.
+- [ ] 136. **[Practice]** Convert Snake_case to CamelCase.
+- [ ] 137. **[Practice]** Check parentheses balance in a string.
+- [ ] 138. **[Practice]** Generate a random password with `string` and `random` modules.
+- [ ] 139. **[Practice]** Use `textwrap` module to shorten text.
+- [ ] 140. **[Practice]** Levenshtein distance (concept/library).
+- [ ] 141. **[Theory]** String interning in Python.
+- [ ] 142. **[Practice]** Use `sys.getsizeof()` on strings.
+- [ ] 143. **[Practice]** Multiline f-strings.
+- [ ] 144. **[Practice]** Format datetime object into string.
+- [ ] 145. **[Practice]** Convert string input "1, 2, 3" into list of integers.
+- [ ] 146. **[Practice]** Remove duplicate characters from a string (preserving order).
+- [ ] 147. **[Practice]** Find the most frequent character.
+- [ ] 148. **[Practice]** Compress a string (e.g., "aaabb" -> "a3b2").
+- [ ] 149. **[Practice]** Expand a compressed string.
+- [ ] 150. **[Codebase]** Analyze a regex pattern for URL validation.
+
+### Section 4: Data Structures: Lists & Tuples (151-200)
+- [ ] 151. **[Theory]** Difference between List and Tuple.
+- [ ] 152. **[Practice]** Create a list and access elements by index.
+- [ ] 153. **[Practice]** Use negative indexing.
+- [ ] 154. **[Practice]** Append vs Extend: Add elements to a list.
+- [ ] 155. **[Practice]** Insert an element at a specific position.
+- [ ] 156. **[Practice]** Remove element by value `.remove()`.
+- [ ] 157. **[Practice]** Remove element by index `.pop()`.
+- [ ] 158. **[Practice]** Clear a list.
+- [ ] 159. **[Practice]** Find index of an item.
+- [ ] 160. **[Practice]** Count occurrences of an item.
+- [ ] 161. **[Practice]** Sort a list in-place `.sort()`.
+- [ ] 162. **[Practice]** Create a new sorted list `sorted()`.
+- [ ] 163. **[Practice]** Reverse a list in-place `.reverse()`.
+- [ ] 164. **[Practice]** Copy a list: Shallow copy (`[:]` or `.copy()`).
+- [ ] 165. **[Practice]** Copy a list: Deep copy (`copy.deepcopy()`).
+- [ ] 166. **[Practice]** List Slicing [start:end:step].
+- [ ] 167. **[Theory]** How lists are implemented in CPython (Dynamic Arrays).
+- [ ] 168. **[Practice]** Create a tuple with one element (syntax trap).
+- [ ] 169. **[Practice]** Unpack a tuple into variables.
+- [ ] 170. **[Practice]** Swap variables using tuple unpacking.
+- [ ] 171. **[Practice]** Use `*` to capture remaining elements in unpacking.
+- [ ] 172. **[Practice]** Convert list to tuple and vice versa.
+- [ ] 173. **[Practice]** Create a List Comprehension (Basic).
+- [ ] 174. **[Practice]** List Comprehension with `if` condition.
+- [ ] 175. **[Practice]** Nested List Comprehension.
+- [ ] 176. **[Practice]** Matrix addition using list comprehensions.
+- [ ] 177. **[Theory]** When to use a Tuple over a List?
+- [ ] 178. **[Practice]** Named Tuples (`collections.namedtuple`).
+- [ ] 179. **[Practice]** Typed Named Tuples (`typing.NamedTuple`).
+- [ ] 180. **[Practice]** Find slice overlap.
+- [ ] 181. **[Practice]** Rotate a list by K positions.
+- [ ] 182. **[Practice]** Interleave two lists.
+- [ ] 183. **[Practice]** Remove duplicates from a list (naive vs set).
+- [ ] 184. **[Practice]** Check if list is sorted.
+- [ ] 185. **[Practice]** Find second largest element.
+- [ ] 186. **[Practice]** Split list into chunks of size N.
+- [ ] 187. **[Practice]** Filter `None` values from a list.
+- [ ] 188. **[Codebase]** Why use `tuple` for dictionary keys?
+- [ ] 189. **[Practice]** Flatten a nested list of arbitrary depth.
+- [ ] 190. **[Practice]** Implement a Stack using List.
+- [ ] 191. **[Practice]** Implement a Queue using List (inefficient) vs `collections.deque`.
+- [ ] 192. **[Practice]** Sort a list of tuples by the second element.
+- [ ] 193. **[Practice]** Use `bisect` for inserting into a sorted list.
+- [ ] 194. **[Practice]** Memory usage: List vs Tuple.
+- [ ] 195. **[Practice]** Create an empty list in two ways (`[]` vs `list()`).
+- [ ] 196. **[Practice]** Find intersection of two lists.
+- [ ] 197. **[Practice]** Difference between `list += [1]` and `list = list + [1]`.
+- [ ] 198. **[Practice]** Zipping three lists.
+- [ ] 199. **[Practice]** Unzipping a list of tuples.
+- [ ] 200. **[Theory]** Time complexity of `len()` for a list.
+
+---
+
+## 🔵 Part 2: Procedural & Functional Mastery (201 - 400)
+
+### Section 5: Dictionaries & Sets (201-250)
+- [ ] 201. **[Theory]** How Dictionaries work (Hash Map).
+- [ ] 202. **[Practice]** Create a dictionary and access values.
+- [ ] 203. **[Practice]** Use `.get()` to access values safely.
+- [ ] 204. **[Practice]** Add and Update key-value pairs.
+- [ ] 205. **[Practice]** Remove a key with `.pop()`.
+- [ ] 206. **[Practice]** Iterate over keys, values, and items (`.items()`).
+- [ ] 207. **[Practice]** Check if key exists in dictionary.
+- [ ] 208. **[Practice]** Dictionary Comprehension.
+- [ ] 209. **[Practice]** Merge two dictionaries (`update()` vs `|` in Python 3.9+).
+- [ ] 210. **[Practice]** Create a `defaultdict` from `collections`.
+- [ ] 211. **[Practice]** Use `setdefault()` method.
+- [ ] 212. **[Practice]** Sort a dictionary by value.
+- [ ] 213. **[Practice]** Create a Set and add elements.
+- [ ] 214. **[Theory]** Why can't a list be a set element? (Hashability).
+- [ ] 215. **[Practice]** Set Union `|`.
+- [ ] 216. **[Practice]** Set Intersection `&`.
+- [ ] 217. **[Practice]** Set Difference `-`.
+- [ ] 218. **[Practice]** Symmetric Difference `^`.
+- [ ] 219. **[Practice]** Check subset/superset.
+- [ ] 220. **[Practice]** Remove duplicates from list using Set.
+- [ ] 221. **[Practice]** FrozenSets (immutable sets).
+- [ ] 222. **[Practice]** `collections.Counter` to count items.
+- [ ] 223. **[Practice]** Find most common elements with Counter.
+- [ ] 224. **[Practice]** `collections.OrderedDict` (vs modern dict).
+- [ ] 225. **[Practice]** Invert a dictionary (swap keys/values).
+- [ ] 226. **[Practice]** Merge list of dicts into one.
+- [ ] 227. **[Practice]** Filter dictionary by value.
+- [ ] 228. **[Practice]** Nested dictionary access.
+- [ ] 229. **[Practice]** Deep copy a dictionary.
+- [ ] 230. **[Practice]** Check if two dictionaries are equal.
+- [ ] 231. **[Practice]** Use dictionary as a switch/case alternative.
+- [ ] 232. **[Theory]** Complexity of lookup in Dict vs List.
+- [ ] 233. **[Practice]** Handle missing keys with `__missing__` (subclass dict).
+- [ ] 234. **[Practice]** Create a dictionary from two lists (keys, values).
+- [ ] 235. **[Practice]** Remove keys with `None` values.
+- [ ] 236. **[Practice]** Find common keys in two dicts.
+- [ ] 237. **[Practice]** Set comprehension.
+- [ ] 238. **[Codebase]** When to use `ChainMap`.
+- [ ] 239. **[Practice]** Implement a cache using a dict.
+- [ ] 240. **[Practice]** Detect if a string has all unique characters using Set.
+- [ ] 241. **[Practice]** Update a specific nested key.
+- [ ] 242. **[Practice]** Pretty print a dict using `json.dumps`.
+- [ ] 243. **[Practice]** Pretty print using `pprint`.
+- [ ] 244. **[Practice]** Convert dict to list of tuples.
+- [ ] 245. **[Practice]** Max key by value key argument.
+- [ ] 246. **[Practice]** Calculate Jaccard Similarity using sets.
+- [ ] 247. **[Practice]** Dictionary with composite keys (tuples).
+- [ ] 248. **[Practice]** Pop arbitrary item `.popitem()`.
+- [ ] 249. **[Theory]** Load factor in Hash Tables.
+- [ ] 250. **[Reflect]** Summary: Mutable vs Immutable keys.
+
+### Section 6: Functions & Functional Programming (251-325)
+- [ ] 251. **[Theory]** Define a function `def`.
+- [ ] 252. **[Practice]** Function with return value vs void (None).
+- [ ] 253. **[Practice]** Positional arguments.
+- [ ] 254. **[Practice]** Keyword arguments.
+- [ ] 255. **[Practice]** Default argument values.
+- [ ] 256. **[Theory]** Danger of mutable default arguments.
+- [ ] 257. **[Practice]** Arbitrary arguments `*args`.
+- [ ] 258. **[Practice]** Arbitrary keyword arguments `**kwargs`.
+- [ ] 259. **[Practice]** Unpacking args/kwargs in function call.
+- [ ] 260. **[Practice]** Keyword-only arguments (`*` separator).
+- [ ] 261. **[Practice]** Positional-only arguments (`/` separator).
+- [ ] 262. **[Theory]** Pass by assignment (Object reference).
+- [ ] 263. **[Practice]** Return multiple values (tuple unpacking).
+- [ ] 264. **[Theory]** Docstrings best practices.
+- [ ] 265. **[Practice]** Type Hinting: basics (`x: int -> str`).
+- [ ] 266. **[Practice]** Type Hinting: `List`, `Dict`, `Optional`.
+- [ ] 267. **[Theory]** Scope: Local vs Global.
+- [ ] 268. **[Practice]** Use `global` keyword.
+- [ ] 269. **[Practice]** Use `nonlocal` keyword (enclosing scope).
+- [ ] 270. **[Theory]** What is a "First-class citizen"?
+- [ ] 271. **[Practice]** Assign function to a variable.
+- [ ] 272. **[Practice]** Pass function as argument to another function.
+- [ ] 273. **[Practice]** Define a function inside a function (Closure).
+- [ ] 274. **[Theory]** What is a Closure?
+- [ ] 275. **[Practice]** Create a closure that retains state.
+- [ ] 276. **[Practice]** Lambda Functions: Basic syntax.
+- [ ] 277. **[Practice]** Use `map()` with lambda.
+- [ ] 278. **[Practice]** Use `filter()` with lambda.
+- [ ] 279. **[Practice]** Use `reduce()` from `functools`.
+- [ ] 280. **[Practice]** Recursion: Factorial.
+- [ ] 281. **[Practice]** Recursion: Fibonacci.
+- [ ] 282. **[Theory]** Recursion vs Loops (Stack overflow risk).
+- [ ] 283. **[Practice]** Tail recursion (Python doesn't optimize, but simulate it).
+- [ ] 284. **[Practice]** Partial functions using `functools.partial`.
+- [ ] 285. **[Practice]** Memoization using mutable default arg (anti-pattern) vs closure.
+- [ ] 286. **[Practice]** Memoization using `functools.lru_cache`.
+- [ ] 287. **[Practice]** Currying (concept in Python).
+- [ ] 288. **[Practice]** Write a clean generic wrapper function.
+- [ ] 289. **[Practice]** Polymorphism with functions (duck typing).
+- [ ] 290. **[Practice]** Dispatch table (dict of functions).
+- [ ] 291. **[Codebase]** Analyzing the `main()` function convention.
+- [ ] 292. **[Practice]** Recursive binary search.
+- [ ] 293. **[Practice]** Recursive directory walker (os.walk alternative).
+- [ ] 294. **[Practice]** Function introspection `inspect` module.
+- [ ] 295. **[Practice]** Get source code of a function programmatically.
+- [ ] 296. **[Practice]** Validate function arguments with decorators.
+- [ ] 297. **[Practice]** Generator function `yield`.
+- [ ] 298. **[Practice]** Yield from `yield from`.
+- [ ] 299. **[Practice]** Coroutines (send values to generators).
+- [ ] 300. **[Practice]** Write a customized `print` function.
+
+### Section 7: Modules, Packages & Virtual Envs (301-350)
+- [ ] 301. **[Practice]** Create a simple module `my_module.py` and import it.
+- [ ] 302. **[Practice]** `from x import y` syntax.
+- [ ] 303. **[Practice]** Aliasing imports `as`.
+- [ ] 304. **[Theory]** What is `__init__.py`?
+- [ ] 305. **[Practice]** Create a package structure.
+- [ ] 306. **[Practice]** Relative imports `.`, `..`.
+- [ ] 307. **[Theory]** Circular imports and how to fix them.
+- [ ] 308. **[Theory]** The `sys.path` list.
+- [ ] 309. **[Practice]** Temporarily add a path to `sys.path`.
+- [ ] 310. **[Theory]** `__name__ == "__main__"`.
+- [ ] 311. **[Practice]** Install a package with `pip`.
+- [ ] 312. **[Practice]** Freeze requirements `pip freeze > requirements.txt`.
+- [ ] 313. **[Practice]** Install from requirements.txt.
+- [ ] 314. **[Theory]** What is `venv`?
+- [ ] 315. **[Theory]** What is `poetry` or `pipenv`? (Modern tools).
+- [ ] 316. **[Practice]** Reload a module using `importlib.reload`.
+- [ ] 317. **[Theory]** Built-in modules overview (os, sys, math, datetime).
+- [ ] 318. **[Practice]** `datetime`: Get current time.
+- [ ] 319. **[Practice]** `datetime`: Format date.
+- [ ] 320. **[Practice]** `datetime`: Date arithmetic (deltas).
+- [ ] 321. **[Practice]** `random`: Seed, choice, shuffle.
+- [ ] 322. **[Practice]** `os`: Check if file exists.
+- [ ] 323. **[Practice]** `sys`: Exit program with status code.
+- [ ] 324. **[Codebase]** Understanding `setup.py` vs `pyproject.toml`.
+- [ ] 325. **[Practice]** Create a simple `pyproject.toml`.
+
+### Section 8: File Handling & IO (351-400)
+- [ ] 351. **[Practice]** Open a file for reading `r`.
+- [ ] 352. **[Practice]** Open a file for writing `w` (overwrite).
+- [ ] 353. **[Practice]** Open a file for appending `a`.
+- [ ] 354. **[Theory]** Explain Context Managers `with open(...)`.
+- [ ] 355. **[Practice]** Read all text `.read()`.
+- [ ] 356. **[Practice]** Read line by line `.readline()`.
+- [ ] 357. **[Practice]** Read all lines into list `.readlines()`.
+- [ ] 358. **[Practice]** Iterate over lines in a loop (memory efficient).
+- [ ] 359. **[Practice]** Write to a file.
+- [ ] 360. **[Practice]** Binary mode `rb`/`wb` for images.
+- [ ] 361. **[Practice]** Copy a file.
+- [ ] 362. **[Practice]** Delete a file `os.remove`.
+- [ ] 363. **[Practice]** Create a directory `os.mkdir`.
+- [ ] 364. **[Practice]** List directory contents `os.listdir`.
+- [ ] 365. **[Practice]** Traverse directory tree `os.walk`.
+- [ ] 366. **[Practice]** `pathlib` module: Path objects.
+- [ ] 367. **[Practice]** `pathlib`: Join paths.
+- [ ] 368. **[Practice]** `pathlib`: Check file existence.
+- [ ] 369. **[Practice]** `pathlib`: Read text directly.
+- [ ] 370. **[Practice]** JSON: Serialize dict to JSON string `json.dumps`.
+- [ ] 371. **[Practice]** JSON: Parse JSON string to dict `json.loads`.
+- [ ] 372. **[Practice]** JSON: Read/Write JSON files `dump`/`load`.
+- [ ] 373. **[Practice]** CSV: Read CSV using `csv` module.
+- [ ] 374. **[Practice]** CSV: Write CSV using `csv.writer`.
+- [ ] 375. **[Practice]** CSV: DictReader and DictWriter.
+- [ ] 376. **[Practice]** Pickle: Serialize Python objects (Warning: security).
+- [ ] 377. **[Practice]** Temporary files `tempfile` module.
+- [ ] 378. **[Practice]** Handle file encoding errors.
+- [ ] 379. **[Practice]** Redirect stdout to a file.
+- [ ] 380. **[Practice]** Watch a file for changes (concept).
+- [ ] 381. **[Practice]** Get file metadata (size, created time).
+- [ ] 382. **[Practice]** Rename a file.
+- [ ] 383. **[Practice]** Shutil: Move files.
+- [ ] 384. **[Practice]** Shutil: Archive (zip) a folder.
+- [ ] 385. **[Practice]** ConfigParser for `.ini` files.
+- [ ] 386. **[Practice]** YAML parsing (requires `pyyaml` library).
+- [ ] 387. **[Practice]** Read large file in chunks.
+- [ ] 388. **[Practice]** Memory map files `mmap`.
+- [ ] 389. **[Practice]** Locking files (filelock).
+- [ ] 390. **[Codebase]** Analyze how logging libraries write to files (rotation).
+- [ ] 391. **[Practice]** Parse XML (ElementTree).
+- [ ] 392. **[Practice]** Parse HTML (basic) or use Beautiful Soup.
+- [ ] 393. **[Practice]** SQLite: Create a db and table.
+- [ ] 394. **[Practice]** SQLite: Insert and Select data.
+- [ ] 395. **[Practice]** Context manager for database connection.
+- [ ] 396. **[Practice]** Use `io.StringIO` for in-memory file streams.
+- [ ] 397. **[Practice]** Handle `FileNotFoundError`.
+- [ ] 398. **[Practice]** Normalize paths `os.path.abspath`.
+- [ ] 399. **[Practice]** Extract file extension.
+- [ ] 400. **[Reflect]** Summary: pathlib vs os.path.
+
+---
+
+## 🟣 Part 3: Object-Oriented paradigm (401 - 600)
+
+### Section 9: Classes & Objects (401-450)
+- [ ] 401. **[Theory]** What is a Class? Object? Instance?
+- [ ] 402. **[Practice]** Define a basic class.
+- [ ] 403. **[Practice]** The `__init__` constructor.
+- [ ] 404. **[Practice]** `self` parameter explained.
+- [ ] 405. **[Practice]** Instance attributes vs Class attributes.
+- [ ] 406. **[Practice]** Create methods.
+- [ ] 407. **[Theory]** Encapsulation: Public, Protected `_`, Private `__`.
+- [ ] 408. **[Practice]** Name mangling with double underscore.
+- [ ] 409. **[Practice]** Create getters and setters (Java style).
+- [ ] 410. **[Practice]** Use `@property` decorator (Pythonic getters).
+- [ ] 411. **[Practice]** Use `@x.setter` for validation.
+- [ ] 412. **[Practice]** `@classmethod` usage.
+- [ ] 413. **[Practice]** `@staticmethod` usage.
+- [ ] 414. **[Theory]** Class Method vs Static Method.
+- [ ] 415. **[Practice]** `__str__` vs `__repr__`.
+- [ ] 416. **[Practice]** Operator overloading (`__add__`, `__sub__`).
+- [ ] 417. **[Practice]** Compare objects (`__eq__`, `__lt__`).
+- [ ] 418. **[Practice]** Make an object callable (`__call__`).
+- [ ] 419. **[Practice]** Destructor `__del__` (rarely used).
+- [ ] 420. **[Practice]** Slots `__slots__` for memory optimization.
+- [ ] 421. **[Practice]** Inner classes.
+- [ ] 422. **[Codebase]** When to use a class vs a dict vs a module?
+- [ ] 423. **[Practice]** Create a Singleton class (Design Pattern).
+- [ ] 424. **[Practice]** Object identity `is`.
+- [ ] 425. **[Practice]** Hashing objects `__hash__` (making objects usable in sets).
+- [ ] 426. **[Practice]** `__bool__` method.
+- [ ] 427. **[Practice]** `__len__` method.
+- [ ] 428. **[Practice]** `__getitem__` and `__setitem__` (indexing).
+- [ ] 429. **[Practice]** `__iter__` and `__next__`.
+- [ ] 430. **[Practice]** `__contains__` (`in` operator).
+- [ ] 431. **[Practice]** Dynamic attribute access `getattr`, `setattr`, `hasattr`.
+- [ ] 432. **[Practice]** `__getattr__` vs `__getattribute__`.
+- [ ] 433. **[Practice]** Data Classes `@dataclass` (Python 3.7+).
+- [ ] 434. **[Practice]** Dictionary to Object conversion.
+- [ ] 435. **[Practice]** Object to Dictionary conversion.
+- [ ] 436. **[Practice]** Weak references `weakref`.
+- [ ] 437. **[Practice]** Copying objects (shallow vs deep).
+- [ ] 438. **[Practice]** Method chaining (return self).
+- [ ] 439. **[Practice]** Factory method pattern.
+- [ ] 440. **[Practice]** Dependency Injection (manual).
+- [ ] 441. **[Practice]** Composition over Inheritance example.
+- [ ] 442. **[Practice]** Aggregation example.
+- [ ] 443. **[Theory]** The "God Object" anti-pattern.
+- [ ] 444. **[Practice]** Immutable objects (frozen dataclass).
+- [ ] 445. **[Practice]** Validation in `__post_init__` (Dataclasses).
+- [ ] 446. **[Practice]** Private methods meant for internal use.
+- [ ] 447. **[Practice]** Patching a class at runtime (Monkey patching).
+- [ ] 448. **[Practice]** `super()` usage in `__init__`.
+- [ ] 449. **[Practice]** Inspecting object methods `dir()`.
+- [ ] 450. **[Reflect]** What makes Python "Object Oriented"?
+
+### Section 10: Inheritance & Polymorphism (451-500)
+- [ ] 451. **[Practice]** Basic inheritance.
+- [ ] 452. **[Practice]** Overriding methods.
+- [ ] 453. **[Practice]** Use `super()` to call parent method.
+- [ ] 454. **[Theory]** Multiple Inheritance.
+- [ ] 455. **[Theory]** Method Resolution Order (MRO).
+- [ ] 456. **[Practice]** Check MRO with `Class.mro()`.
+- [ ] 457. **[Practice]** The Diamond Problem.
+- [ ] 458. **[Practice]** Mixins.
+- [ ] 459. **[Practice]** Checks: `issubclass()`.
+- [ ] 460. **[Theory]** Polymorphism explained.
+- [ ] 461. **[Practice]** Abstract Base Classes (`abc` module).
+- [ ] 462. **[Practice]** Define abstract methods `@abstractmethod`.
+- [ ] 463. **[Practice]** Enforce interface implementation.
+- [ ] 464. **[Practice]** Protocol (Structural subtyping/Static Duck Typing).
+- [ ] 465. **[Practice]** Overriding operators in subclasses.
+- [ ] 466. **[Codebase]** Study `collections.abc`.
+- [ ] 467. **[Practice]** Liskov Substitution Principle (LSP) violation example.
+- [ ] 468. **[Practice]** Delegating to another class.
+- [ ] 469. **[Practice]** `__init_subclass__` hook.
+- [ ] 470. **[Practice]** Metaclasses (Intro): `type` as a class factory.
+- [ ] 471. **[Theory]** Interface vs Abstract Class.
+- [ ] 472. **[Practice]** Extending built-in types (e.g., inherit from `list`).
+- [ ] 473. **[Practice]** `UserList`, `UserDict` from collections.
+- [ ] 474. **[Practice]** Polymorphism without inheritance (Duck typing).
+- [ ] 475. **[Practice]** Create a plug-in system using inheritance.
+- [ ] 476. **[Practice]** Adapters pattern.
+- [ ] 477. **[Practice]** Facade pattern.
+- [ ] 478. **[Practice]** Observer pattern using classes.
+- [ ] 479. **[Practice]** Strategy pattern.
+- [ ] 480. **[Practice]** Command pattern.
+- [ ] 481. **[Practice]** State pattern.
+- [ ] 482. **[Practice]** Template method pattern.
+- [ ] 483. **[Practice]** Proxy pattern.
+- [ ] 484. **[Practice]** Create a custom Iterator class.
+- [ ] 485. **[Practice]** Create a custom Context Manager class.
+- [ ] 486. **[Theory]** Composition vs Inheritance tradeoffs.
+- [ ] 487. **[Practice]** Refactor deep inheritance hierarchy to composition.
+- [ ] 488. **[Practice]** Use `super()` with arguments (Python 2 style vs Python 3).
+- [ ] 489. **[Practice]** Name collision handling in multiple inheritance.
+- [ ] 490. **[Codebase]** Read Django's Class Based Views (CBV) structure implications.
+- [ ] 491. **[Practice]** Interface Segregation Principle.
+- [ ] 492. **[Practice]** Dependency Inversion Principle.
+- [ ] 493. **[Practice]** Open/Closed Principle.
+- [ ] 494. **[Practice]** Single Responsibility Principle.
+- [ ] 495. **[Practice]** DRY (Don't Repeat Yourself).
+- [ ] 496. **[Practice]** KISS (Keep It Simple Stupid).
+- [ ] 497. **[Practice]** YAGNI (You Aren't Gonna Need It).
+- [ ] 498. **[Theory]** "Explicit is better than implicit".
+- [ ] 499. **[Theory]** "Flat is better than nested".
+- [ ] 500. **[Reflect]** Summary: How OOP helps in large codebases.
+
+*(Note: The list continues...)*
+
+## 🔴 Part 4: Advanced Concepts (501 - 750)
+
+### Section 11: Error Handling & Exceptions (501-550)
+- [ ] 501. **[Theory]** Syntax errors vs Exceptions.
+- [ ] 502. **[Practice]** Basic `try`...`except` block.
+- [ ] 503. **[Practice]** Catch specific exception (e.g., `ValueError`).
+- [ ] 504. **[Practice]** Catch multiple exceptions.
+- [ ] 505. **[Practice]** Catch all exceptions (bare `except:`) - why avoid it?
+- [ ] 506. **[Practice]** The `else` block in try-except.
+- [ ] 507. **[Practice]** The `finally` block (cleanup).
+- [ ] 508. **[Practice]** Raise an exception manually `raise`.
+- [ ] 509. **[Practice]** Re-raise an exception.
+- [ ] 510. **[Practice]** Create a custom Exception class.
+- [ ] 511. **[Practice]** Add attributes to custom exceptions.
+- [ ] 512. **[Practice]** Exception hierarchy (inherit from `Exception` vs `BaseException`).
+- [ ] 513. **[Theory]** Why not inherit from `BaseException` directly?
+- [ ] 514. **[Practice]** Obtain exception message/args (`as e`).
+- [ ] 515. **[Practice]** Chain exceptions `raise ... from ...`.
+- [ ] 516. **[Practice]** Assertions `assert` for debugging.
+- [ ] 517. **[Practice]** Disable assertions with `-O` flag.
+- [ ] 518. **[Practice]** Warn users with `warnings` module.
+- [ ] 519. **[Practice]** Suppress specific warnings.
+- [ ] 520. **[Codebase]** LBYL (Look Before You Leap) vs EAFP (Easier to Ask Forgiveness than Permission).
+- [ ] 521. **[Practice]** Implement EAFP style file reading.
+- [ ] 522. **[Practice]** Implement LBYL style file reading.
+- [ ] 523. **[Practice]** Context manager that suppresses exceptions (`contextlib.suppress`).
+- [ ] 524. **[Practice]** Identify `traceback` object.
+- [ ] 525. **[Practice]** Print full traceback string.
+- [ ] 526. **[Practice]** Log an exception with `logging.exception`.
+- [ ] 527. **[Practice]** Handle `KeyboardInterrupt` gracefully.
+- [ ] 528. **[Practice]** Retry logic with loops and try-except.
+- [ ] 529. **[Practice]** Define a global exception handler (sys.excepthook).
+- [ ] 530. **[Theory]** Cost of using exceptions for control flow.
+- [ ] 531. **[Practice]** Catch `ImportError` or `ModuleNotFoundError`.
+- [ ] 532. **[Practice]** Catch `KeyError` vs using `.get()`.
+- [ ] 533. **[Practice]** Catch `IndexError`.
+- [ ] 534. **[Practice]** Catch `AttributeError`.
+- [ ] 535. **[Practice]** Catch `ZeroDivisionError`.
+- [ ] 536. **[Practice]** Handle `RecursionError`.
+- [ ] 537. **[Practice]** Handle `MemoryError` (theory/simulation).
+- [ ] 538. **[Practice]** Handle `TimeoutError`.
+- [ ] 539. **[Practice]** Group exceptions (Python 3.11 `ExceptionGroup`).
+- [ ] 540. **[Practice]** Try-except inside a list comprehension (Function wrapper).
+- [ ] 541. **[Practice]** Exception arguments inspection.
+- [ ] 542. **[Practice]** Raising `NotImplementedError` in abstract methods.
+- [ ] 543. **[Practice]** Designing an API error wrapper.
+- [ ] 544. **[Practice]** Clean up resources when exception occurs (without `with`).
+- [ ] 545. **[Practice]** Validate input data and raise meaningful errors.
+- [ ] 546. **[Practice]** Exception inside a generator.
+- [ ] 547. **[Practice]** `generator.throw()`.
+- [ ] 548. **[Practice]** `generator.close()`.
+- [ ] 549. **[Theory]** Differences in Exception handling Python 2 vs 3.
+- [ ] 550. **[Reflect]** Summary: How to write robust error handling.
+
+### Section 12: Advanced Core (Decorators, Generators) (551-650)
+- [ ] 551. **[Theory]** What is a Decorator?
+- [ ] 552. **[Practice]** Write a simple function decorator.
+- [ ] 553. **[Practice]** Use `functools.wraps` to preserve metadata.
+- [ ] 554. **[Practice]** Decorator that accepts arguments.
+- [ ] 555. **[Practice]** Stack multiple decorators.
+- [ ] 556. **[Practice]** Class Decorators.
+- [ ] 557. **[Practice]** Decorator usage for logging.
+- [ ] 558. **[Practice]** Decorator usage for timing/benchmarking.
+- [ ] 559. **[Practice]** Decorator usage for authentication check.
+- [ ] 560. **[Practice]** Decorator usage for caching (memoization implementation).
+- [ ] 561. **[Practice]** Decorator usage for retrying operations.
+- [ ] 562. **[Practice]** Decorator usage for input validation.
+- [ ] 563. **[Practice]** Decorator to register functions (plugins).
+- [ ] 564. **[Practice]** Descriptor protocol `__get__`, `__set__`.
+- [ ] 565. **[Practice]** Implement a property using Descriptors.
+- [ ] 566. **[Practice]** `__delete__` in descriptors.
+- [ ] 567. **[Theory]** What is a Generator?
+- [ ] 568. **[Practice]** Create a generator function with `yield`.
+- [ ] 569. **[Practice]** Generator Expression `(x for x in data)`.
+- [ ] 570. **[Practice]** Difference between Generator and List efficiency.
+- [ ] 571. **[Practice]** Create an infinite generator.
+- [ ] 572. **[Practice]** Pipeline of generators.
+- [ ] 573. **[Practice]** Send values to a generator `.send()`.
+- [ ] 574. **[Practice]** `yield from` sub-generators.
+- [ ] 575. **[Practice]** Create a custom `range` generator.
+- [ ] 576. **[Practice]** Implement `contextmanager` using generator (`@contextlib.contextmanager`).
+- [ ] 577. **[Theory]** Iterables vs Iterators.
+- [ ] 578. **[Practice]** Make a class iterable (`__iter__`).
+- [ ] 579. **[Practice]** Make a class an iterator (`__next__`).
+- [ ] 580. **[Practice]** `itertools.count`.
+- [ ] 581. **[Practice]** `itertools.cycle`.
+- [ ] 582. **[Practice]** `itertools.repeat`.
+- [ ] 583. **[Practice]** `itertools.chain`.
+- [ ] 584. **[Practice]** `itertools.islice`.
+- [ ] 585. **[Practice]** `itertools.compress`.
+- [ ] 586. **[Practice]** `itertools.dropwhile` and `takewhile`.
+- [ ] 587. **[Practice]** `itertools.groupby`.
+- [ ] 588. **[Practice]** `itertools.starmap`.
+- [ ] 589. **[Practice]** `itertools.tee`.
+- [ ] 590. **[Practice]** `itertools.zip_longest`.
+- [ ] 591. **[Practice]** `functools.partial`.
+- [ ] 592. **[Practice]** `functools.reduce` examples.
+- [ ] 593. **[Practice]** `functools.cmp_to_key`.
+- [ ] 594. **[Practice]** Single Dispatch Generic Functions `functools.singledispatch`.
+- [ ] 595. **[Practice]** `collections.defaultdict` deep dive.
+- [ ] 596. **[Practice]** `collections.deque` (double-ended queue).
+- [ ] 597. **[Practice]** `collections.namedtuple`.
+- [ ] 598. **[Practice]** `collections.Counter` operations.
+- [ ] 599. **[Practice]** `collections.ChainMap`.
+- [ ] 600. **[Practice]** `collections.UserDict`/`UserList`.
+- [ ] 601. **[Theory]** Metaclasses `__new__` vs `__init__`.
+- [ ] 602. **[Practice]** Create a simple Metaclass (e.g., enforces uppercase attributes).
+- [ ] 603. **[Practice]** Registering classes via Metaclass.
+- [ ] 604. **[Practice]** The `type()` function used dynamically.
+- [ ] 605. **[Practice]** Abstract Base Class as a metaclass.
+- [ ] 606. **[Theory]** Order of execution in class creation.
+- [ ] 607. **[Practice]** Dynamic code execution `exec()`.
+- [ ] 608. **[Practice]** Evaluate string expression `eval()` (and security risks).
+- [ ] 609. **[Practice]** `globals()` and `locals()`.
+- [ ] 610. **[Practice]** `__import__` function dynamic import.
+- [ ] 611. **[Practice]** Monkey patching a library function.
+- [ ] 612. **[Practice]** Weak references for caches `weakref.WeakValueDictionary`.
+- [ ] 613. **[Practice]** `__slots__` inheritance nuances.
+- [ ] 614. **[Theory]** Garbage Collection in Python (Ref counting + Generational).
+- [ ] 615. **[Practice]** `gc` module inspection.
+- [ ] 616. **[Practice]** Force garbage collection `gc.collect()`.
+- [ ] 617. **[Practice]** Circular references and memory leaks.
+- [ ] 618. **[Practice]** `sys.setrecursionlimit`.
+- [ ] 619. **[Practice]** `sys.getsizeof`.
+- [ ] 620. **[Practice]** Bytecode inspection `dis` module.
+- [ ] 621. **[Practice]** Compile python code object.
+- [ ] 622. **[Practice]** AST (Abstract Syntax Tree) parsing `ast` module.
+- [ ] 623. **[Practice]** Modify AST (basic example).
+- [ ] 624. **[Practice]** Frame inspection `inspect.currentframe()`.
+- [ ] 625. **[Practice]** Trace execution `sys.settrace`.
+- [ ] 626. **[Practice]** Profiling with `cProfile`.
+- [ ] 627. **[Practice]** Time execution with `timeit`.
+- [ ] 628. **[Practice]** Hashability of custom objects.
+- [ ] 629. **[Practice]** `__hash__` and `__eq__` consistency.
+- [ ] 630. **[Practice]** Copy module: `copy` vs `deepcopy` with cyclic references.
+- [ ] 631. **[Practice]** `__copy__` and `__deepcopy__` customization.
+- [ ] 632. **[Practice]** Serialization with `pickle` custom reducers.
+- [ ] 633. **[Theory]** The `buffer` protocol.
+- [ ] 634. **[Practice]** `memoryview` objects.
+- [ ] 635. **[Practice]** Structural Pattern Matching (advanced classes).
+- [ ] 636. **[Practice]** Context Variables `contextvars` (for async).
+- [ ] 637. **[Practice]** Operator module functions (e.g., `operator.itemgetter`).
+- [ ] 638. **[Practice]** `__subclasshook__` for virtual subclasses.
+- [ ] 639. **[Practice]** `__prepare__` in metaclasses.
+- [ ] 640. **[Practice]** Class Decorator vs Metaclass.
+- [ ] 641. **[Codebase]** ORM pattern implementation concepts (like SQLAlchemy).
+- [ ] 642. **[Codebase]** WSGI/ASGI protocol concepts.
+- [ ] 643. **[Practice]** Writing a C-extension (concept/stub).
+- [ ] 644. **[Practice]** Using `ctypes` to call shared libraries.
+- [ ] 645. **[Practice]** Using `cffi`.
+- [ ] 646. **[Practice]** `__class_getitem__` for generic types.
+- [ ] 647. **[Practice]** `typing.TypeVar`.
+- [ ] 648. **[Practice]** `typing.Generic`.
+- [ ] 649. **[Practice]** `typing.Protocol` (Runtime checkable).
+- [ ] 650. **[Reflect]** Summary: Meta-programming use cases.
+
+### Section 13: Standard Library Power (651-700)
+- [ ] 651. **[Practice]** `math`: Advanced functions (trig, log).
+- [ ] 652. **[Practice]** `statistics`: Mean, Median, Mode.
+- [ ] 653. **[Practice]** `decimal`: High precision arithmetic.
+- [ ] 654. **[Practice]** `fractions`: Rational numbers.
+- [ ] 655. **[Practice]** `random`: Secure random `secrets` module.
+- [ ] 656. **[Practice]** `hashlib`: Hashing strings (MD5, SHA).
+- [ ] 657. **[Practice]** `hmac`: Message authentication.
+- [ ] 658. **[Practice]** `base64`: Encoding/Decoding data.
+- [ ] 659. **[Practice]** `uuid`: Generating unique IDs.
+- [ ] 660. **[Practice]** `time`: Epoch time, sleep.
+- [ ] 661. **[Practice]** `calendar`: Print a calendar.
+- [ ] 662. **[Practice]** `argparse`: Building CLI tools.
+- [ ] 663. **[Practice]** `configparser`: Reading .ini config files.
+- [ ] 664. **[Practice]** `shlex`: Lexical analysis for shell.
+- [ ] 665. **[Practice]** `subprocess`: Running shell commands.
+- [ ] 666. **[Practice]** `subprocess`: Capturing output (pipes).
+- [ ] 667. **[Practice]** `signal`: Handling process signals.
+- [ ] 668. **[Practice]** `platform`: System information.
+- [ ] 669. **[Practice]** `shutil`: Disk usage.
+- [ ] 670. **[Practice]** `tarfile`: Read/Write .tar files.
+- [ ] 671. **[Practice]** `zipfile`: Read/Write .zip files.
+- [ ] 672. **[Practice]** `gzip`: Read/Write .gz files.
+- [ ] 673. **[Practice]** `bz2` / `lzma`: Compression.
+- [ ] 674. **[Practice]** `csv`: Custom dialects.
+- [ ] 675. **[Practice]** `json`: Custom encoders/decoders.
+- [ ] 676. **[Practice]** `xml.etree.ElementTree` parsing.
+- [ ] 677. **[Practice]** `html.parser`.
+- [ ] 678. **[Practice]** `urllib`: Basic requests.
+- [ ] 679. **[Practice]** `http.server`: Simple local server.
+- [ ] 680. **[Practice]** `ftplib`: FTP client (basic).
+- [ ] 681. **[Practice]** `smtplib`: Sending emails.
+- [ ] 682. **[Practice]** `imaplib`: Reading emails.
+- [ ] 683. **[Practice]** `poplib`.
+- [ ] 684. **[Practice]** `socket`: Low level networking (TCP).
+- [ ] 685. **[Practice]** `socket`: UDP server/client.
+- [ ] 686. **[Practice]** `select` module for I/O multiplexing.
+- [ ] 687. **[Practice]** `ssl`: Secure sockets context.
+- [ ] 688. **[Practice]** `ipaddress`: Manipulate IP addresses.
+- [ ] 689. **[Practice]** `queue`: Thread-safe queues (`Queue`, `LifoQueue`, `PriorityQueue`).
+- [ ] 690. **[Practice]** `multiprocessing`: Shared memory `Value`, `Array`.
+- [ ] 691. **[Practice]** `mmap` for file mapping.
+- [ ] 692. **[Practice]** `tempfile` customization.
+- [ ] 693. **[Practice]** `glob`: Path pattern matching `*.py`.
+- [ ] 694. **[Practice]** `fnmatch`.
+- [ ] 695. **[Practice]** `linecache`: Read random lines efficiently.
+- [ ] 696. **[Practice]** `difflib`: Compare sequences/text.
+- [ ] 697. **[Practice]** `textwrap`: Formatting text.
+- [ ] 698. **[Practice]** `string`: Templates.
+- [ ] 699. **[Practice]** `locale`: Internationalization settings.
+- [ ] 700. **[Reflect]** Summary: The "Batteries Included" philosophy.
+
+### Section 14: Concurrency (Async, Threading, MP) (701-750)
+- [ ] 701. **[Theory]** Process vs Thread.
+- [ ] 702. **[Theory]** Concurrency vs Parallelism.
+- [ ] 703. **[Theory]** The GIL (Global Interpreter Lock) revisited.
+- [ ] 704. **[Practice]** `threading`: Create and start a thread.
+- [ ] 705. **[Practice]** `threading`: Join a thread.
+- [ ] 706. **[Practice]** Daemon threads.
+- [ ] 707. **[Practice]** Race conditions (simulate one).
+- [ ] 708. **[Practice]** `threading.Lock` (Mutex).
+- [ ] 709. **[Practice]** `threading.RLock` (Reentrant Lock).
+- [ ] 710. **[Practice]** `threading.Semaphore`.
+- [ ] 711. **[Practice]** `threading.Event`.
+- [ ] 712. **[Practice]** `threading.Condition`.
+- [ ] 713. **[Practice]** `threading.Timer`.
+- [ ] 714. **[Practice]** `threading.Barrier`.
+- [ ] 715. **[Practice]** ThreadPoolExecutor (`concurrent.futures`).
+- [ ] 716. **[Practice]** Map function with ThreadPoolExecutor.
+- [ ] 717. **[Theory]** CPU-bound vs I/O-bound tasks.
+- [ ] 718. **[Practice]** `multiprocessing`: Create a process.
+- [ ] 719. **[Practice]** `multiprocessing`: Queue for IPC.
+- [ ] 720. **[Practice]** `multiprocessing`: Pipe.
+- [ ] 721. **[Practice]** `multiprocessing`: Pool map.
+- [ ] 722. **[Practice]** `multiprocessing`: Manager for shared state.
+- [ ] 723. **[Practice]** ProcessPoolExecutor.
+- [ ] 724. **[Theory]** AsyncIO event loop concept.
+- [ ] 725. **[Practice]** `async def` and `await`.
+- [ ] 726. **[Practice]** `asyncio.run()`.
+- [ ] 727. **[Practice]** `asyncio.sleep()`.
+- [ ] 728. **[Practice]** Run coroutines concurrently `asyncio.gather`.
+- [ ] 729. **[Practice]** Manage tasks `asyncio.create_task`.
+- [ ] 730. **[Practice]** Timeout `asyncio.wait_for`.
+- [ ] 731. **[Practice]** `asyncio.Future`.
+- [ ] 732. **[Practice]** `asyncio.Queue`.
+- [ ] 733. **[Practice]** `asyncio.Lock`.
+- [ ] 734. **[Practice]** Running blocking code in executors `run_in_executor`.
+- [ ] 735. **[Practice]** Subprocesses with asyncio.
+- [ ] 736. **[Practice]** Async context managers `async with`.
+- [ ] 737. **[Practice]** Async iterators `async for`.
+- [ ] 738. **[Practice]** Async generators `yield` in async def.
+- [ ] 739. **[Practice]** `asyncio.Event`.
+- [ ] 740. **[Theory]** Cooperative multitasking.
+- [ ] 741. **[Codebase]** Analyze a simple chat server (socket or async).
+- [ ] 742. **[Practice]** Shared memory (Python 3.8+ `multiprocessing.shared_memory`).
+- [ ] 743. **[Practice]** Deadlock simulation.
+- [ ] 744. **[Practice]** Livelock concept.
+- [ ] 745. **[Practice]** Starvation concept.
+- [ ] 746. **[Practice]** `queue.Queue` vs `asyncio.Queue` vs `multiprocessing.Queue`.
+- [ ] 747. **[Practice]** Green threads (gevent/eventlet mentions).
+- [ ] 748. **[Theory]** Amdahl's Law.
+- [ ] 749. **[Theory]** Gustafson's Law.
+- [ ] 750. **[Reflect]** Summary: When to use Threads vs Async vs Multiprocessing.
+
+*(Part 3 continues...)*
+
+## 🟢 Part 5: Professional Practices & Systems (751 - 1000)
+
+### Section 15: Testing, Debugging & QA (751-800)
+- [ ] 751. **[Theory]** TDD (Test Driven Development).
+- [ ] 752. **[Practice]** `unittest`: Create a TestCase.
+- [ ] 753. **[Practice]** `unittest`: assertions (`assertEqual`, `assertTrue`).
+- [ ] 754. **[Practice]** `unittest`: `setUp` and `tearDown`.
+- [ ] 755. **[Practice]** `unittest`: `setUpClass` and `tearDownClass`.
+- [ ] 756. **[Practice]** `unittest`: Skipping tests `@unittest.skip`.
+- [ ] 757. **[Practice]** `unittest`: Expected failures.
+- [ ] 758. **[Practice]** Mocking: `unittest.mock`.
+- [ ] 759. **[Practice]** Mock a return value.
+- [ ] 760. **[Practice]** Mock a side effect (exception).
+- [ ] 761. **[Practice]** `patch` decorator.
+- [ ] 762. **[Practice]** `pytest`: Installation and basic test execution.
+- [ ] 763. **[Practice]** `pytest`: Assertions (simple `assert`).
+- [ ] 764. **[Practice]** `pytest`: Fixtures `@pytest.fixture`.
+- [ ] 765. **[Practice]** `pytest`: Parametrize tests (`@pytest.mark.parametrize`).
+- [ ] 766. **[Practice]** `pytest`: Markers.
+- [ ] 767. **[Practice]** `pytest`: `conftest.py`.
+- [ ] 768. **[Practice]** `doctest`: Write tests in docstrings.
+- [ ] 769. **[Practice]** Run doctests.
+- [ ] 770. **[Practice]** Debugging: `print` debugging (basic).
+- [ ] 771. **[Practice]** Debugging: `pdb` module (`pdb.set_trace()`).
+- [ ] 772. **[Practice]** Debugging: `breakpoint()` (Python 3.7+).
+- [ ] 773. **[Practice]** Debugging: Inspect variables in PDB.
+- [ ] 774. **[Practice]** Debugging: Step over/into/out.
+- [ ] 775. **[Theory]** Static Analysis types.
+- [ ] 776. **[Practice]** `pylint`: Run on a file.
+- [ ] 777. **[Practice]** `flake8`: Run on a file.
+- [ ] 778. **[Practice]** `mypy`: Type checking.
+- [ ] 779. **[Practice]** `black`: Code formatting.
+- [ ] 780. **[Practice]** `isort`: Sort imports.
+- [ ] 781. **[Practice]** Coverage: Install `coverage`.
+- [ ] 782. **[Practice]** Generate coverage report.
+- [ ] 783. **[Practice]** Tox: Automate testing across envs (setup).
+- [ ] 784. **[Practice]** Property-based testing (Hypothesis library concept).
+- [ ] 785. **[Practice]** Mutation testing (concept).
+- [ ] 786. **[Practice]** Integration testing definition.
+- [ ] 787. **[Practice]** End-to-end (E2E) testing definition.
+- [ ] 788. **[Practice]** Continuous Integration (CI) concept (GitHub Actions).
+- [ ] 789. **[Practice]** `pre-commit` hooks.
+- [ ] 790. **[Codebase]** Analyze a test suite in a popular repo (e.g., Requests).
+- [ ] 791. **[Practice]** Write a benchmark test.
+- [ ] 792. **[Practice]** Profile memory usage of a test.
+- [ ] 793. **[Practice]** Check for resource warnings in tests.
+- [ ] 794. **[Practice]** Subtests in unittest.
+- [ ] 795. **[Practice]** Async testing (`pytest-asyncio`).
+- [ ] 796. **[Practice]** Mocking `datetime.now()` (classic hard problem).
+- [ ] 797. **[Practice]** Mocking network calls.
+- [ ] 798. **[Practice]** Mocking file I/O (`mock_open`).
+- [ ] 799. **[Practice]** Fuzz testing (concept).
+- [ ] 800. **[Reflect]** Summary: The importance of high test coverage.
+
+### Section 16: Libraries, Data, & Systems (801-900)
+- [ ] 801. **[Library]** `numpy`: Create an array.
+- [ ] 802. **[Library]** `numpy`: Shape and Reshape.
+- [ ] 803. **[Library]** `numpy`: Broadcasting.
+- [ ] 804. **[Library]** `pandas`: Create a DataFrame.
+- [ ] 805. **[Library]** `pandas`: Read CSV.
+- [ ] 806. **[Library]** `pandas`: Select columns/rows.
+- [ ] 807. **[Library]** `pandas`: Filtering data.
+- [ ] 808. **[Library]** `pandas`: `groupby`.
+- [ ] 809. **[Library]** `requests`: GET request.
+- [ ] 810. **[Library]** `requests`: POST request with JSON.
+- [ ] 811. **[Library]** `requests`: Session object.
+- [ ] 812. **[Library]** `requests`: Handling timeouts.
+- [ ] 813. **[Library]** `BeautifulSoup`: Parse HTML.
+- [ ] 814. **[Library]** `BeautifulSoup`: Find elements by class.
+- [ ] 815. **[Library]** `Click` or `Typer`: Build a CLI app.
+- [ ] 816. **[Library]** `Pillow` (PIL): Open and resize image.
+- [ ] 817. **[Library]** `SQLAlchemy`: Define a model.
+- [ ] 818. **[Library]** `SQLAlchemy`: Session and query.
+- [ ] 819. **[Library]** `Flask`/`FastAPI`: Hello World route.
+- [ ] 820. **[Library]** `FastAPI`: Pydantic model validation.
+- [ ] 821. **[Theory]** Semantic Versioning (SemVer).
+- [ ] 822. **[Practice]** Create a `setup.py`.
+- [ ] 823. **[Practice]** Build a wheel (`python -m build`).
+- [ ] 824. **[Practice]** Upload to TestPyPI (concept).
+- [ ] 825. **[Practice]** `MANIFEST.in`.
+- [ ] 826. **[Practice]** Namespace packages.
+- [ ] 827. **[Codebase]** `pyproject.toml` standard.
+- [ ] 828. **[Practice]** Entry points (console_scripts).
+- [ ] 829. **[Practice]** Logging: Basic config.
+- [ ] 830. **[Practice]** Logging: Log to file.
+- [ ] 831. **[Practice]** Logging: Log levels (DEBUG -> CRITICAL).
+- [ ] 832. **[Practice]** Logging: RotatingFileHandler.
+- [ ] 833. **[Practice]** Logging: Formatters.
+- [ ] 834. **[Practice]** `venv` vs `virtualenv` vs `conda`.
+- [ ] 835. **[Theory]** The `site-packages` directory.
+- [ ] 836. **[Practice]** Implement a Linked List.
+- [ ] 837. **[Practice]** Implement a Binary Search Tree.
+- [ ] 838. **[Practice]** Implement Graph BFS/DFS.
+- [ ] 839. **[Practice]** Sort Algorithms: Bubble Sort.
+- [ ] 840. **[Practice]** Sort Algorithms: Merge Sort.
+- [ ] 841. **[Practice]** Sort Algorithms: Quick Sort.
+- [ ] 842. **[Practice]** Big O Notation for list operations.
+- [ ] 843. **[Practice]** `heapq`: Min-heap operations.
+- [ ] 844. **[Practice]** `heapq`: N largest/smallest.
+- [ ] 845. **[Practice]** Bit manipulation (check if power of 2).
+- [ ] 846. **[Practice]** Base conversion (int to bin/hex).
+- [ ] 847. **[Practice]** Sieve of Eratosthenes (Primes).
+- [ ] 848. **[Practice]** Memoized Fibonacci (Dynamic Programming).
+- [ ] 849. **[Practice]** Matrix multiplication (raw python).
+- [ ] 850. **[Reflect]** Summary: Python performance limits.
+
+### Section 17: Web, Network & Security (851-900)
+- [ ] 851. **[Practice]** Socket client/server echo.
+- [ ] 852. **[Theory]** HTTP Methods (GET, POST, PUT, DELETE, PATCH).
+- [ ] 853. **[Theory]** HTTP Status Codes (2xx, 4xx, 5xx).
+- [ ] 854. **[Practice]** REST API concept.
+- [ ] 855. **[Practice]** Parse query parameters.
+- [ ] 856. **[Theory]** What is WSGI?
+- [ ] 857. **[Theory]** What is ASGI?
+- [ ] 858. **[Practice]** Basic raw WSGI app.
+- [ ] 859. **[Practice]** Handling Cookies.
+- [ ] 860. **[Practice]** JWT (JSON Web Tokens) encoding/decoding.
+- [ ] 861. **[Practice]** Hashing passwords (bcrypt/argon2).
+- [ ] 862. **[Theory]** SQL Injection.
+- [ ] 863. **[Theory]** XSS (Cross Site Scripting).
+- [ ] 864. **[Theory]** CSRF (Cross Site Request Forgery).
+- [ ] 865. **[Practice]** Safe input handling to prevent injection.
+- [ ] 866. **[Theory]** CORS (Cross-Origin Resource Sharing).
+- [ ] 867. **[Practice]** Websockets (concept/library usage).
+- [ ] 868. **[Practice]** Sending an email with attachment.
+- [ ] 869. **[Practice]** Scraping a page requiring login (Session).
+- [ ] 870. **[Practice]** Rate limiting (Leaky bucket concept).
+- [ ] 871. **[Practice]** URL encoding/decoding.
+- [ ] 872. **[Practice]** IP address objects (`ipaddress`).
+- [ ] 873. **[Practice]** Check SSL certificate expiration (ssl module).
+- [ ] 874. **[Practice]** SSH connection (paramiko concept).
+- [ ] 875. **[Practice]** SFTP file transfer.
+- [ ] 876. **[Theory]** Microservices vs Monolith.
+- [ ] 877. **[Practice]** GraphQL (concept/Graphene).
+- [ ] 878. **[Practice]** gRPC (concept).
+- [ ] 879. **[Practice]** Protocol Buffers (protobuf).
+- [ ] 880. **[Practice]** Message Queues (RabbitMQ/Kafka concept).
+- [ ] 881. **[Practice]** Celery: Define a task.
+- [ ] 882. **[Practice]** Redis: Cache set/get.
+- [ ] 883. **[Theory]** Load Balancing.
+- [ ] 884. **[Theory]** Containerization (Docker basics for Python).
+- [ ] 885. **[Practice]** Dockerfile for Python app.
+- [ ] 886. **[Practice]** `requirements.txt` vs `Pipfile`.
+- [ ] 887. **[Practice]** Environment variables `os.environ` for secrets.
+- [ ] 888. **[Practice]** `.env` files (python-dotenv).
+- [ ] 889. **[Practice]** Twelve-Factor App methodology.
+- [ ] 890. **[Codebase]** Django's middleware architecture.
+- [ ] 891. **[Codebase]** Flask's application context.
+- [ ] 892. **[Theory]** ORM N+1 problem.
+- [ ] 893. **[Practice]** Database migration (Alembic/Django).
+- [ ] 894. **[Practice]** Connection pooling.
+- [ ] 895. **[Theory]** ACID properties.
+- [ ] 896. **[Practice]** NoSQL usage (MongoDB example).
+- [ ] 897. **[Practice]** Serverless (AWS Lambda handler).
+- [ ] 898. **[Practice]** Web Scraper (Scrapy basics).
+- [ ] 899. **[Practice]** Browser automation (Selenium/Playwright).
+- [ ] 900. **[Reflect]** Summary: Security best practices.
+
+### Section 18: Open Source Codebase Mastery (901-1000)
+- [ ] 901. **[Codebase]** How to find standard library source code?
+- [ ] 902. **[Practice]** Read `collections` module source.
+- [ ] 903. **[Practice]** Read `functools.py` source.
+- [ ] 904. **[Codebase]** Understanding `__all__` in `__init__.py`.
+- [ ] 905. **[Codebase]** Type stubs (`.pyi` files).
+- [ ] 906. **[Codebase]** Contributing: Forking a repo.
+- [ ] 907. **[Codebase]** Contributing: Cloning and setting up dev env.
+- [ ] 908. **[Codebase]** Contributing: Creating a branch.
+- [ ] 909. **[Codebase]** Contributing: Running the test suite.
+- [ ] 910. **[Codebase]** Contributing: Writing a reproduction script for a bug.
+- [ ] 911. **[Codebase]** Contributing: Submitting a PR.
+- [ ] 912. **[Codebase]** Contributing: Handling Code Review.
+- [ ] 913. **[Analysis]** Read the code of a popular small library (e.g., `bottle.py`).
+- [ ] 914. **[Analysis]** Understand how `requests` handles adapters.
+- [ ] 915. **[Analysis]** Look at `django.core.handlers`.
+- [ ] 916. **[Analysis]** Look at `numpy` C-API usage (intro).
+- [ ] 917. **[Practice]** Navigate a large codebase with `grep`/IDE.
+- [ ] 918. **[Practice]** Use `git blame` to understand history.
+- [ ] 919. **[Practice]** Use `git log -p` to see changes.
+- [ ] 920. **[Practice]** Use `git bisect` to find a regression.
+- [ ] 921. **[Theory]** Licensing (MIT, GPL, Apache).
+- [ ] 922. **[Practice]** Adding a `LICENSE` file.
+- [ ] 923. **[Practice]** Writing a `README.md`.
+- [ ] 924. **[Practice]** Writing a `CHANGELOG.md`.
+- [ ] 925. **[Practice]** Using `towncrier` for changelogs.
+- [ ] 926. **[Theory]** DCO (Developer Certificate of Origin) vs CLA.
+- [ ] 927. **[Practice]** Check code complexity (Cyclomatic complexity).
+- [ ] 928. **[Practice]** Refactoring: Extract Method.
+- [ ] 929. **[Practice]** Refactoring: Extract Class.
+- [ ] 930. **[Practice]** Refactoring: Rename Variable.
+- [ ] 931. **[Practice]** Refactoring: Remove Dead Code.
+- [ ] 932. **[Practice]** Refactoring: Simplify Conditional.
+- [ ] 933. **[Practice]** Feature Flags.
+- [ ] 934. **[Practice]** A/B Testing implementation concepts.
+- [ ] 935. **[Codebase]** Architecture: MVC (Model View Controller).
+- [ ] 936. **[Codebase]** Architecture: MVT (Model View Template - Django).
+- [ ] 937. **[Codebase]** Architecture: Hexagonal/Clean Architecture.
+- [ ] 938. **[Codebase]** Event Driven Architecture.
+- [ ] 939. **[Theory]** Technical Debt.
+- [ ] 940. **[Theory]** Bus Factor.
+- [ ] 941. **[Analysis]** Reviewing a PR check-list.
+- [ ] 942. **[Analysis]** How CPython is built (Makefile).
+- [ ] 943. **[Analysis]** The `Lib/` directory in CPython.
+- [ ] 944. **[Analysis]** The `Objects/` directory in CPython (C source).
+- [ ] 945. **[Analysis]** Python's grammar file (`Grammar/python.gram`).
+- [ ] 946. **[Theory]** PEP process (Python Enhancement Proposal).
+- [ ] 947. **[Practice]** Read PEP 20 (Zen of Python).
+- [ ] 948. **[Practice]** Read PEP 257 (Docstring Conventions).
+- [ ] 949. **[Practice]** Read PEP 484 (Type Hints).
+- [ ] 950. **[Practice]** Read PEP 572 (Assignment Expressions).
+- [ ] 951. **[Practice]** Read PEP 634 (Structural Pattern Matching).
+- [ ] 952. **[Practice]** Write a "Good First Issue" response.
+- [ ] 953. **[Practice]** Set up a GitHub Action workflow.
+- [ ] 954. **[Practice]** Use `dependabot`.
+- [ ] 955. **[Practice]** Publish documentation (ReadTheDocs/MkDocs/Sphinx).
+- [ ] 956. **[Practice]** Sphinx `autodoc`.
+- [ ] 957. **[Practice]** API Versioning strategies.
+- [ ] 958. **[Practice]** Deprecation warnings `warnings.warn(category=DeprecationWarning)`.
+- [ ] 959. **[Practice]** Backward compatibility.
+- [ ] 960. **[Analysis]** Study the `asyncio` evolution.
+- [ ] 961. **[Theory]** The "Pythonic" way.
+- [ ] 962. **[Practice]** Code Golf (Solve a problem in min chars).
+- [ ] 963. **[Practice]** Obfuscating code (what NOT to do).
+- [ ] 964. **[Practice]** Writing readable code (The ultimate goal).
+- [ ] 965. **[Reflect]** What defines a Senior Python Engineer?
+- [ ] 966. **[Challenge]** Build a simple static site generator.
+- [ ] 967. **[Challenge]** Build a template engine (like Jinja2 minimal).
+- [ ] 968. **[Challenge]** Build a routed web framework (like Flask minimal).
+- [ ] 969. **[Challenge]** Build a testing framework (like unittest minimal).
+- [ ] 970. **[Challenge]** Build a JSON parser.
+- [ ] 971. **[Challenge]** Build a CSV parser.
+- [ ] 972. **[Challenge]** Build a chatbot.
+- [ ] 973. **[Challenge]** Build a file explorer CLI.
+- [ ] 974. **[Challenge]** Build a download manager.
+- [ ] 975. **[Challenge]** Build a markdown to HTML converter.
+- [ ] 976. **[Final]** Contribute to an Open Source Project (Typo fix, Doc fix).
+- [ ] 977. **[Final]** Contribute to an Open Source Project (Test coverage).
+- [ ] 978. **[Final]** Contribute to an Open Source Project (Bug fix).
+- [ ] 979. **[Final]** Create your own Open Source Package.
+- [ ] 980. **[Final]** Publish it on PyPI.
+- [ ] 981. **[Meta]** Teach a concept to someone else.
+- [ ] 982. **[Meta]** Write a technical blog post.
+- [ ] 983. **[Meta]** Give a lightning talk.
+- [ ] 984. **[Continuous]** Follow Python Release Notes.
+- [ ] 985. **[Continuous]** Subscribe to Python Weekly/Real Python.
+- [ ] 986. **[Continuous]** Star interesting repos on GitHub.
+- [ ] 987. **[Continuous]** Read "Fluent Python".
+- [ ] 988. **[Continuous]** Read "Effective Python".
+- [ ] 989. **[Continuous]** Read "Python Cookbook".
+- [ ] 990. **[Continuous]** Read "Architecture Patterns with Python".
+- [ ] 991. **[Exam]** Self-Assessment: Basics.
+- [ ] 992. **[Exam]** Self-Assessment: Data Structures.
+- [ ] 993. **[Exam]** Self-Assessment: Functions.
+- [ ] 994. **[Exam]** Self-Assessment: OOP.
+- [ ] 995. **[Exam]** Self-Assessment: Standard Lib.
+- [ ] 996. **[Exam]** Self-Assessment: AsyncIO.
+- [ ] 997. **[Exam]** Self-Assessment: Testing.
+- [ ] 998. **[Exam]** Self-Assessment: Packaging.
+- [ ] 999. **[Exam]** Self-Assessment: Systems Design.
+- [ ] 1000. **[Victory]** Celebrate! You have completed the 1000 items list.
+
+---
