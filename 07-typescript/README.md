@@ -1,1121 +1,555 @@
-### TypeScript Fundamentals
+# TypeScript Mastery: 500 Problems for Perfection
 
-- [ ] 1. What is TypeScript? Is it a language or a superset of JavaScript?
-- [ ] 2. Who created TypeScript and when was it first released?
-- [ ] 3. What problems does TypeScript solve?
-- [ ] 4. What is the difference between TypeScript and JavaScript?
-- [ ] 5. Is TypeScript compiled or interpreted?
-- [ ] 6. What is the TypeScript compiler called?
-- [ ] 7. What file extension do TypeScript files use?
-- [ ] 8. How do you install TypeScript globally?
-- [ ] 9. How do you compile a TypeScript file?
-- [ ] 10. What is the `tsconfig.json` file?
-- [ ] 11. How do you generate a `tsconfig.json` file?
-- [ ] 12. What is type checking in TypeScript?
-- [ ] 13. When does TypeScript perform type checking?
-- [ ] 14. Does TypeScript add any runtime overhead?
-- [ ] 15. What is the difference between compile-time and runtime errors?
-- [ ] 16. Can you run TypeScript directly in the browser?
-- [ ] 17. Can you run TypeScript directly in Node.js?
-- [ ] 18. What is `ts-node` and what does it do?
-- [ ] 19. What is the difference between `.ts` and `.tsx` files?
-- [ ] 20. What is type safety and why is it important?
-- [ ] 21. What are the benefits of using TypeScript?
-- [ ] 22. What are the disadvantages of using TypeScript?
-- [ ] 23. Is TypeScript statically typed or dynamically typed?
-- [ ] 24. What is static type checking?
-- [ ] 25. Can you use JavaScript code in TypeScript files?
-- [ ] 26. Can you use TypeScript code in JavaScript files?
-- [ ] 27. What is gradual typing in TypeScript?
-- [ ] 28. What is type inference in TypeScript?
-- [ ] 29. What is type annotation in TypeScript?
-- [ ] 30. What is the difference between type inference and type annotation?
+### Introduction & Basics
 
----
-
-### Basic Types
-
-- [ ] 31. What are the primitive types in TypeScript?
-- [ ] 32. What is the `string` type?
-- [ ] 33. What is the `number` type?
-- [ ] 34. What is the `boolean` type?
-- [ ] 35. What is the `null` type?
-- [ ] 36. What is the `undefined` type?
-- [ ] 37. What is the `symbol` type?
-- [ ] 38. What is the `bigint` type?
-- [ ] 39. What is the `any` type?
-- [ ] 40. When should you use the `any` type?
-- [ ] 41. What are the dangers of using `any`?
-- [ ] 42. What is the `unknown` type?
-- [ ] 43. What is the difference between `any` and `unknown`?
-- [ ] 44. When should you use `unknown` instead of `any`?
-- [ ] 45. What is the `never` type?
-- [ ] 46. When does TypeScript infer the `never` type?
-- [ ] 47. What is the `void` type?
-- [ ] 48. What is the difference between `void` and `undefined`?
-- [ ] 49. When would you use `void`?
-- [ ] 50. What is the `object` type?
-- [ ] 51. What is the difference between `object` and `Object`?
-- [ ] 52. What is the difference between `{}` and `object`?
-53. 
+- [ ] 1. What is TypeScript and how does it differ from JavaScript?
+- [ ] 2. Explain the concept of "Static Typing" vs "Dynamic Typing". Which one does TS use?
+- [ ] 3. How does the TypeScript compiler (tsc) work? What is "transpilation"?
+- [ ] 4. What is the command to install TypeScript globally?
+- [ ] 5. How do you compile a single TypeScript file named `index.ts` from the command line?
+- [ ] 6. What feature of TypeScript allows it to infer types when they are not explicitly annotated?
+- [ ] 7. Identify the type inferred for `let count = 0;`. Cons can you assign a string to it later?
+- [ ] 8. What are the primitive types available in TypeScript? List them all.
+- [ ] 9. How do you explicitly annotate a variable as a number? Provide syntax.
+- [ ] 10. What is the `any` type in TypeScript? When should you use it (or avoid it)?
+- [ ] 11. What is the `unknown` type? How is it different from `any`?
+- [ ] 12. Explain the `void` type. Where is it commonly used?
+- [ ] 13. What is the difference between `null` and `undefined` in TypeScript?
+- [ ] 14. How does `strictNullChecks` affect how `null` and `undefined` function?
+- [ ] 15. What is the `never` type? Give a concrete example of a function that returns `never`.
+- [ ] 16. Explain the concept of Type Annotation in functions (parameters and return type).
+- [ ] 17. Write a function `add` that takes two numbers and returns their sum, with full type annotations.
+- [ ] 18. What are "Union Types"? How do you denote them?
+- [ ] 19. Write a type annotation for a variable that can be either a `string` or a `number`.
+- [ ] 20. What is "Type Narrowing"? Give an example using `typeof`.
+- [ ] 21. What are "Literal Types"? How can you enforce a variable to only hold the specific string "success" or "error"?
+- [ ] 22. What are "Type Aliases"? Syntax to create one?
+- [ ] 23. Create a type alias `UserID` that can be a string or number.
+- [ ] 24. What is the difference between `type` and `interface` (basics)?
+- [ ] 25. How do you define an Object Type using an inline type annotation?
+- [ ] 26. How do you define an Object Type using a Type Alias?
+- [ ] 27. How do you mark an object property as optional?
+- [ ] 28. What happens if you try to access a property that doesn't exist on a typed object?
+- [ ] 29. How do you make a property "read-only" in an object type?
+- [ ] 30. What are "Intersection Types"? How do they differ from Union Types?
+- [ ] 31. Syntax for Intersection Types (`&`).
+- [ ] 32. Can you combine Union and Intersection types? If so, what is the precedence?
+- [ ] 33. What are Arrays in TypeScript? Two ways to type them (syntax).
+- [ ] 34. How do you define an array of strings?
+- [ ] 35. What is a "Tuple"? How is it different from an Array?
+- [ ] 36. Define a tuple that contains exactly one string followed by one number.
+- [ ] 37. Can you push new elements to a fixed-size Tuple in TypeScript? (Trick question).
+- [ ] 38. What is the `readonly` modifier for Arrays and Tuples?
+- [ ] 39. What are Enums? Syntax for defining a numeric Enum.
+- [ ] 40. How do numeric Enums auto-increment?
+- [ ] 41. What are String Enums?
+- [ ] 42. What are "Heterogeneous Enums"? Are they recommended?
+- [ ] 43. What is a "Const Enum"? How does it differ in compilation?
+- [ ] 44. What key feature differentiates TypeScript Enums from most other TS features regarding runtime code?
+- [ ] 45. What is "Type Assertion" (casting)? Two syntaxes for it (`as` and `<>`).
+- [ ] 46. When would you need to use Type Assertion?
+- [ ] 47. Is Type Assertion distinct from casting in languages like C# or Java? Does it perform runtime checks?
+- [ ] 48. What is "const assertion" (`as const`)? What does it do to an object literal?
+- [ ] 49. How does `as const` affect arrays?
+- [ ] 50. Explain "Function Overloading" in TypeScript.
+- [ ] 51. What is the "Implementation Signature" in function overloading? Is it visible to the caller?
+- [ ] 52. Can you have multiple implementation signatures?
+- [ ] 53. What is the `object` type (lowercase) vs `Object` type (uppercase) vs `{}`?
+- [ ] 54. What are "Rest Parameters" in functions? How do you type them?
+- [ ] 55. What is the `this` parameter in TypeScript function definitions? Where must it be placed?
+- [ ] 56. Analyze this code:
 ```ts
-let x: string = "hello";
-x = 42; // What happens?
+function fail(msg: string): never {
+  throw new Error(msg);
+} 
 ```
-54. 
+Is this correct usage of `never`?
+- [ ] 57. Analyze this code:
 ```ts
-let y; // What is the type of y?
-y = "hello";
-y = 42; // Is this allowed?
+let x: unknown = "hello";
+let y: string = x;
 ```
-55. 
-```ts
-let z = "hello"; // What is the type of z?
-z = 42; // Is this allowed?
-```
+Will this compile? Why or why not?
+- [ ] 58. Fix the code from #57 using Type Assertion.
+- [ ] 59. Fix the code from #57 using Type Narrowing.
+- [ ] 60. How do you allow a function parameter to be `undefined`?
+- [ ] 61. What are "Optional Parameters" in functions? Syntax?
+- [ ] 62. Can a required parameter follow an optional parameter?
+- [ ] 63. How do default parameters interact with type inference?
+- [ ] 64. What is the `BigInt` type in TypeScript?
+- [ ] 65. What is the `symbol` type in TypeScript?
+- [ ] 66. How do you create a unique symbol type?
+- [ ] 67. Explain Structural Typing vs Nominal Typing. Which does TS use?
+- [ ] 68. If Interface A has properties `{ x: number }` and Interface B has `{ x: number, y: number }`, can B be assigned to A?
+- [ ] 69. Can A be assigned to B (from Q68)?
+- [ ] 70. What is "Excess Property Checking"? When does it happen?
+- [ ] 71. How to bypass Excess Property Checking? (3 ways).
+- [ ] 72. What acts as the "top type" in TypeScript?
+- [ ] 73. What acts as the "bottom type" in TypeScript?
+- [ ] 74. Is `void` a subtype of `undefined`?
+- [ ] 75. Is `undefined` a subtype of `void`?
+- [ ] 76. Can you assign `null` to a variable of type `number` if `strictNullChecks` is off?
+- [ ] 77. Can you assign `null` to a variable of type `number` if `strictNullChecks` is on?
+- [ ] 78. What is the Non-null assertion operator (`!`)?
+- [ ] 79. When should you use the `!` operator?
+- [ ] 80. What are "Ambient Contexts"?
+- [ ] 81. What is a `.d.ts` file?
+- [ ] 82. What is `declare var`?
+- [ ] 83. Difference between `tsc` and `ts-node`.
+- [ ] 84. How to initialize a `tsconfig.json` file?
+- [ ] 85. What is the `target` option in `tsconfig.json`?
+- [ ] 86. What is the `module` option in `tsconfig.json`?
+- [ ] 87. What does `lib` option configure?
+- [ ] 88. Explain `noImplicitAny`.
+- [ ] 89. Explain `strict` mode in `tsconfig.json`. What flags does it enable?
+- [ ] 90. What is `rootDir` and `outDir`?
+- [ ] 91. How to exclude files from compilation?
+- [ ] 92. What is `include` array in `tsconfig`?
+- [ ] 93. What is syntax for a Single Line Comment vs Multi Line Comment in TS? (Same as JS).
+- [ ] 94. Does TypeScript code exist at runtime?
+- [ ] 95. What are "Index Signatures"?
+- [ ] 96. Syntax for an object that can have any string key and number value.
+- [ ] 97. Can you have multiple index signatures?
+- [ ] 98. Can index signature keys be anything other than string or number?
+- [ ] 99. Type this: An array of functions that each take a string and return void.
+- [ ] 100. Type this: An object where keys are UserIDs (numbers) and values are User objects.
 
----
+### Interfaces & Classes
 
-### Arrays & Tuples
-
-- [ ] 56. How do you define an array type in TypeScript?
-- [ ] 57. What is the difference between `number[]` and `Array<number>`?
-- [ ] 58. How do you define a readonly array?
-- [ ] 59. What does `ReadonlyArray<number>` do?
-- [ ] 60. What is the difference between `Array<number>` and `ReadonlyArray<number>`?
-- [ ] 61. What is a tuple in TypeScript?
-- [ ] 62. How do you define a tuple?
-63. 
-```ts
-let tuple: [string, number] = ["hello", 42];
-```
-What is the type of `tuple[0]` and `tuple[1]`?
-- [ ] 64. Can you add more elements to a tuple beyond its defined length?
-- [ ] 65. What is a readonly tuple?
-- [ ] 66. How do you define optional elements in a tuple?
-- [ ] 67. What are rest elements in tuples?
-68. 
-```ts
-type StringNumberBooleans = [string, number, ...boolean[]];
-```
-Explain this tuple type.
-- [ ] 69. How do you define labeled tuple elements?
-- [ ] 70. What is the difference between a tuple and an array?
-
----
-
-### Functions
-
-- [ ] 71. How do you type function parameters in TypeScript?
-- [ ] 72. How do you type function return values?
-73. 
-```ts
-function add(a: number, b: number): number {
-  return a + b;
-}
-```
-Explain the type annotations.
-- [ ] 74. What happens if you don't specify a return type?
-- [ ] 75. How do you type optional parameters?
-- [ ] 76. How do you type default parameters?
-- [ ] 77. How do you type rest parameters?
-78. 
-```ts
-function sum(...numbers: number[]): number {
-  return numbers.reduce((a, b) => a + b, 0);
-}
-```
-Explain this function signature.
-- [ ] 79. How do you type arrow functions?
-- [ ] 80. How do you type function expressions?
-- [ ] 81. What is a function type?
-82. 
-```ts
-let myFunc: (a: number, b: number) => number;
-```
-What does this mean?
-- [ ] 83. How do you type callback functions?
-- [ ] 84. What is the `void` return type for functions?
-- [ ] 85. What is the `never` return type for functions?
-- [ ] 86. When would a function return `never`?
-- [ ] 87. How do you type `this` in functions?
-- [ ] 88. What are function overloads in TypeScript?
-- [ ] 89. How do you define function overloads?
-90. 
-```ts
-function makeDate(timestamp: number): Date;
-function makeDate(m: number, d: number, y: number): Date;
-function makeDate(mOrTimestamp: number, d?: number, y?: number): Date {
-  // implementation
-}
-```
-Explain this function overload.
-
----
-
-### Object Types & Interfaces
-
-- [ ] 91. How do you define an object type in TypeScript?
-- [ ] 92. What is an interface in TypeScript?
-- [ ] 93. How do you define an interface?
-- [ ] 94. What is the difference between `type` and `interface`?
-- [ ] 95. When should you use `interface` vs `type`?
-- [ ] 96. Can interfaces be extended?
-- [ ] 97. How do you extend an interface?
-- [ ] 98. Can types be extended?
-- [ ] 99. How do you extend a type alias?
-- [ ] 100. What is interface merging (declaration merging)?
-- [ ] 101. Can type aliases be merged?
-- [ ] 102. How do you define optional properties in an interface?
-- [ ] 103. How do you define readonly properties?
-104. 
-```ts
-interface User {
-  readonly id: number;
-  name: string;
-  age?: number;
-}
-```
-Explain this interface.
-- [ ] 105. What is an index signature?
-106. 
-```ts
-interface StringArray {
-  [index: number]: string;
-}
-```
-What does this mean?
-- [ ] 107. How do you define an object with dynamic keys?
-- [ ] 108. What is the difference between optional properties and properties with `undefined` type?
-- [ ] 109. How do you make all properties of an interface optional?
-- [ ] 110. How do you make all properties of an interface readonly?
-- [ ] 111. What is the `Partial<T>` utility type?
-- [ ] 112. What is the `Required<T>` utility type?
-- [ ] 113. What is the `Readonly<T>` utility type?
-- [ ] 114. Can you have methods in interfaces?
-- [ ] 115. How do you define a method signature in an interface?
-
----
-
-### Union & Intersection Types
-
-- [ ] 116. What is a union type?
-- [ ] 117. How do you define a union type?
-118. 
-```ts
-let value: string | number;
-```
-What can `value` be?
-- [ ] 119. How do you narrow a union type?
-- [ ] 120. What is type narrowing?
-- [ ] 121. What is a type guard?
-- [ ] 122. What is the `typeof` type guard?
-123. 
-```ts
-function print(value: string | number) {
-  if (typeof value === "string") {
-    console.log(value.toUpperCase());
-  } else {
-    console.log(value.toFixed(2));
-  }
-}
-```
-Explain the type narrowing here.
-- [ ] 124. What is the `instanceof` type guard?
-- [ ] 125. What is the `in` operator type guard?
-- [ ] 126. What is a custom type guard?
-- [ ] 127. How do you create a custom type guard?
-128. 
-```ts
-function isString(value: unknown): value is string {
-  return typeof value === "string";
-}
-```
-Explain this type guard.
-- [ ] 129. What is an intersection type?
-- [ ] 130. How do you define an intersection type?
-131. 
-```ts
-type Person = { name: string };
-type Employee = { employeeId: number };
-type Worker = Person & Employee;
-```
-What properties does `Worker` have?
-- [ ] 132. What is the difference between union and intersection types?
-- [ ] 133. What happens when you intersect conflicting types?
-- [ ] 134. What is a discriminated union?
-135. 
-```ts
-type Shape =
-  | { kind: "circle"; radius: number }
-  | { kind: "square"; sideLength: number };
-```
-Explain this discriminated union.
-- [ ] 136. How do you use discriminated unions for type narrowing?
-- [ ] 137. What is exhaustiveness checking in discriminated unions?
-- [ ] 138. How do you implement exhaustiveness checking?
-- [ ] 139. What is the `never` type used for in exhaustiveness checking?
-140. 
-```ts
-function area(shape: Shape): number {
-  switch (shape.kind) {
-    case "circle":
-      return Math.PI * shape.radius ** 2;
-    case "square":
-      return shape.sideLength ** 2;
-    default:
-      const _exhaustive: never = shape;
-      return _exhaustive;
-  }
-}
-```
-Explain the exhaustiveness check.
-
----
-
-### Type Aliases & Literal Types
-
-- [ ] 141. What is a type alias?
-- [ ] 142. How do you create a type alias?
-- [ ] 143. What is the difference between type aliases and interfaces?
-- [ ] 144. Can you use type aliases for primitives?
-- [ ] 145. Can you use type aliases for unions?
-- [ ] 146. What is a literal type?
-147. 
-```ts
-let direction: "north" | "south" | "east" | "west";
-```
-What is this type?
-- [ ] 148. What are string literal types?
-- [ ] 149. What are numeric literal types?
-- [ ] 150. What are boolean literal types?
-- [ ] 151. How do you combine literal types with unions?
-- [ ] 152. What is the `const` assertion?
-153. 
-```ts
-const config = {
-  endpoint: "https://api.example.com",
-  port: 3000,
-} as const;
-```
-What does `as const` do?
-- [ ] 154. What is the difference between `let` and `const` for type inference?
-155. 
-```ts
-let x = "hello"; // type?
-const y = "hello"; // type?
-```
-What are the types of `x` and `y`?
-
----
-
-### Enums
-
-- [ ] 156. What is an enum in TypeScript?
-- [ ] 157. How do you define an enum?
-- [ ] 158. What is a numeric enum?
-159. 
-```ts
-enum Direction {
-  Up,
-  Down,
-  Left,
-  Right,
-}
-```
-What are the values of these enum members?
-- [ ] 160. How do you specify custom values for enum members?
-- [ ] 161. What is a string enum?
-162. 
-```ts
-enum Direction {
-  Up = "UP",
-  Down = "DOWN",
-  Left = "LEFT",
-  Right = "RIGHT",
-}
-```
-When would you use string enums?
-- [ ] 163. What is a heterogeneous enum?
-- [ ] 164. What is a const enum?
-- [ ] 165. What is the difference between regular enums and const enums?
-- [ ] 166. What are the benefits of const enums?
-- [ ] 167. What are the drawbacks of const enums?
-- [ ] 168. How do you get the enum member name from its value?
-- [ ] 169. What is reverse mapping in enums?
-- [ ] 170. Do string enums have reverse mapping?
-
----
+- [ ] 101. Define an interface `Car` with properties `make`, `model`, and optional `year`.
+- [ ] 102. How do you extend an interface? Syntax?
+- [ ] 103. Can an interface extend multiple interfaces?
+- [ ] 104. Can an interface extend a Class?
+- [ ] 105. Difference between `interface` and `type` regarding "Declaration Merging".
+- [ ] 106. Demonstrate Declaration Merging with an example.
+- [ ] 107. Can types implement interfaces?
+- [ ] 108. Syntax for a class implementing an interface.
+- [ ] 109. Can a class implement multiple interfaces?
+- [ ] 110. What are Access Modifiers in Classes? List them.
+- [ ] 111. What is `public` (default)?
+- [ ] 112. What is `private`? Is it private at runtime?
+- [ ] 113. What is `#private` (JS private fields) vs `private` (TS modifier)?
+- [ ] 114. What is `protected`?
+- [ ] 115. What are "Parameter Properties" in constructors? Syntax?
+- [ ] 116. How to define a `readonly` property in a class?
+- [ ] 117. What are Getters and Setters in TS classes?
+- [ ] 118. Can a Setter have a different type than the Getter?
+- [ ] 119. What is an Abstract Class?
+- [ ] 120. Can you instantiate an abstract class?
+- [ ] 121. What is an Abstract Method?
+- [ ] 122. Must concrete subclasses implement all abstract methods?
+- [ ] 123. Can an Interface define a constructor signature?
+- [ ] 124. How to type "Static" properties/methods?
+- [ ] 125. Are static members inherited?
+- [ ] 126. What is the `this` type in classes (polymorphic this)?
+- [ ] 127. Explain `implements` vs `extends`.
+- [ ] 128. Can you override methods in TS?
+- [ ] 129. What is the `override` keyword? Why is it useful?
+- [ ] 130. What is `super`?
+- [ ] 131. If a child class has a constructor, must it call `super()`?
+- [ ] 132. Can you modify `public` properties via a subclass?
+- [ ] 133. Difference between an Interface and an Abstract Class.
+- [ ] 134. Create a Singleton class in TypeScript.
+- [ ] 135. How to prevent inheritance of a class? (Is there a `final` keyword?)
+- [ ] 136. What is the type of a Class Constructor itself?
+- [ ] 137. How to define an interface for a Function?
+- [ ] 138. How to define an interface for a Class Constructor (the "Static Side")?
+- [ ] 139. Explain structural typing with classes with private properties. (Do they compatible if structure is same?)
+- [ ] 140. What is strict property initialization in classes?
+- [ ] 141. How to use the definite assignment assertion operator (`!`) in class properties.
+- [ ] 142. Define a generic class `Box<T>`.
+- [ ] 143. How to constraint a generic type in a class?
+- [ ] 144. Can a static member use the class's generic type parameter `T`? Why not?
+- [ ] 145. Mixins in TypeScript: General concept.
+- [ ] 146. Syntax for a simple Mixin function.
+- [ ] 147. What is `InstanceType<T>` utility?
+- [ ] 148. Using a class as an injection token.
+- [ ] 149. Difference between `typeof ClassName` and `ClassName`.
+- [ ] 150. Code Challenge: Write a class `Bank` with `private _balance`. Add methods `deposit` and `withdraw`. Ensure `withdraw` throws error if insufficient funds.
 
 ### Generics
 
-- [ ] 171. What are generics in TypeScript?
-- [ ] 172. Why do we need generics?
-- [ ] 173. How do you define a generic function?
-174. 
-```ts
-function identity<T>(arg: T): T {
-  return arg;
-}
-```
-Explain this generic function.
-- [ ] 175. How do you call a generic function?
-- [ ] 176. What is a type parameter?
-- [ ] 177. Can you have multiple type parameters?
-178. 
-```ts
-function pair<T, U>(first: T, second: U): [T, U] {
-  return [first, second];
-}
-```
-Explain this function.
-- [ ] 179. What are generic constraints?
-- [ ] 180. How do you constrain a generic type?
-181. 
-```ts
-function longest<T extends { length: number }>(a: T, b: T): T {
-  return a.length > b.length ? a : b;
-}
-```
-Explain the constraint.
-- [ ] 182. What is the `extends` keyword in generics?
-- [ ] 183. How do you define a generic interface?
-184. 
-```ts
-interface Box<T> {
-  value: T;
-}
-```
-How do you use this interface?
-- [ ] 185. How do you define a generic class?
-186. 
-```ts
-class GenericNumber<T> {
-  zeroValue: T;
-  add: (x: T, y: T) => T;
-}
-```
-How do you instantiate this class?
-- [ ] 187. What are generic type aliases?
-- [ ] 188. What is a generic constraint using `keyof`?
-189. 
-```ts
-function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
-  return obj[key];
-}
-```
-Explain this function.
-- [ ] 190. What is the `keyof` operator?
-- [ ] 191. What does `keyof` return?
-192. 
-```ts
-type Person = { name: string; age: number };
-type PersonKeys = keyof Person; // What is this?
-```
-- [ ] 193. What is the `typeof` operator in TypeScript?
-- [ ] 194. How is `typeof` different from JavaScript's `typeof`?
-- [ ] 195. What are conditional types?
-196. 
-```ts
-type IsString<T> = T extends string ? true : false;
-```
-Explain this conditional type.
-- [ ] 197. What is the `infer` keyword?
-198. 
-```ts
-type ReturnType<T> = T extends (...args: any[]) => infer R ? R : never;
-```
-Explain this type.
-- [ ] 199. What are mapped types?
-200. 
-```ts
-type Readonly<T> = {
-  readonly [P in keyof T]: T[P];
-};
-```
-Explain this mapped type.
+- [ ] 151. What are Generics? Why do we use them?
+- [ ] 152. Write a generic identity function that returns whatever is passed to it.
+- [ ] 153. What is the convention for naming generic type parameters (e.g., T, U, V)?
+- [ ] 154. How to pass multiple type arguments to a generic?
+- [ ] 155. Type inference with generics: Do you always need to specify `<number>`?
+- [ ] 156. Constraints: How to ensure `T` has a `.length` property?
+- [ ] 157. Syntax: `function foo<T extends { length: number }>(arg: T)`
+- [ ] 158. Use `keyof` in a generic constraint.
+- [ ] 159. Write a function `getProperty<T, K extends keyof T>(obj: T, key: K)`.
+- [ ] 160. What are Default Type Parameters in generics?
+- [ ] 161. Syntax for default generic type: `<T = string>`.
+- [ ] 162. Generic Classes vs Generic Interfaces.
+- [ ] 163. Can we have generic Enums?
+- [ ] 164. Generic Type Aliases.
+- [ ] 165. Usage of `Array<T>` vs `T[]`.
+- [ ] 166. `Promise<T>`: What does it represent?
+- [ ] 167. How to type an async function's return value?
+- [ ] 168. Recursive generics (e.g., a Tree node).
+- [ ] 169. Analyze `type OrNull<Type> = Type | null;`.
+- [ ] 170. What is "Generic Parameter Defaults"?
+- [ ] 171. When are generic types instantiated?
+- [ ] 172. Can you constrain a generic to be a constructor?
+- [ ] 173. What is the `NonNullable<T>` utility type?
+- [ ] 174. Challenge: Write a Generic Stack class (push, pop, peek).
+- [ ] 175. Variance: Covariance vs Contravariance in Generics (Advanced).
+- [ ] 176. Why is function parameter type bivariant (historically) or contravariant?
+- [ ] 177. How does TS handle generic instantiation inside a function body?
+- [ ] 178. `Record<K, T>` utility type explanation.
+- [ ] 179. `Partial<T>` utility type explanation.
+- [ ] 180. `Required<T>` utility type explanation.
+- [ ] 181. `Readonly<T>` utility type explanation.
+- [ ] 182. `Pick<T, K>` utility type explanation.
+- [ ] 183. `Omit<T, K>` utility type explanation.
+- [ ] 184. `Exclude<T, U>` utility type explanation.
+- [ ] 185. `Extract<T, U>` utility type explanation.
+- [ ] 186. `ReturnType<T>` utility type explanation.
+- [ ] 187. `Parameters<T>` utility type explanation.
+- [ ] 188. `ConstructorParameters<T>` utility type explanation.
+- [ ] 189. `Awaited<T>` utility type explanation.
+- [ ] 190. How to create a custom utility type `MyPick<T, K>`?
+- [ ] 191. How to create `Nullable<T>`?
+- [ ] 192. Explain `type DeepPartial<T>`.
+- [ ] 193. Challenge: Implement `DeepReadonly<T>`.
+- [ ] 194. What is the `ThisType<T>` utility?
+- [ ] 195. How generics interact with Union types (Distributive Conditional Types).
+- [ ] 196. Prevent distribution/splitting in conditional types: `[T] extends [U]`.
+- [ ] 197. Generic arrow function syntax in `.tsx` files (Conflict with JSX).
+- [ ] 198. How to fix `<T>` being interpreted as a tag in JSX? (Use `<T,>`).
+- [ ] 199. Generic Constraints with `new` keyword.
+- [ ] 200. Inference of generic types from arguments.
 
----
+### Advanced Types & Manipulation
 
-### Utility Types
-
-- [ ] 201. What are utility types in TypeScript?
-- [ ] 202. What is `Partial<T>`?
-203. 
-```ts
-interface User {
-  name: string;
-  age: number;
-}
-type PartialUser = Partial<User>;
-```
-What properties does `PartialUser` have?
-- [ ] 204. What is `Required<T>`?
-- [ ] 205. What is `Readonly<T>`?
-- [ ] 206. What is `Record<K, T>`?
-207. 
-```ts
-type PageInfo = Record<"home" | "about" | "contact", { title: string }>;
-```
-What is this type?
-- [ ] 208. What is `Pick<T, K>`?
-209. 
-```ts
-interface User {
-  id: number;
-  name: string;
-  email: string;
-  age: number;
-}
-type UserPreview = Pick<User, "id" | "name">;
-```
-What properties does `UserPreview` have?
-- [ ] 210. What is `Omit<T, K>`?
-211. 
-```ts
-type UserWithoutEmail = Omit<User, "email">;
-```
-What properties does this have?
-- [ ] 212. What is `Exclude<T, U>`?
-213. 
-```ts
-type T = Exclude<"a" | "b" | "c", "a">; // What is T?
-```
-- [ ] 214. What is `Extract<T, U>`?
-215. 
-```ts
-type T = Extract<"a" | "b" | "c", "a" | "f">; // What is T?
-```
-- [ ] 216. What is `NonNullable<T>`?
-- [ ] 217. What is `ReturnType<T>`?
-218. 
-```ts
-function getUser() {
-  return { name: "John", age: 30 };
-}
-type User = ReturnType<typeof getUser>;
-```
-What is the `User` type?
-- [ ] 219. What is `Parameters<T>`?
-220. 
-```ts
-function add(a: number, b: number) {
-  return a + b;
-}
-type AddParams = Parameters<typeof add>;
-```
-What is `AddParams`?
-- [ ] 221. What is `ConstructorParameters<T>`?
-- [ ] 222. What is `InstanceType<T>`?
-- [ ] 223. What is `ThisParameterType<T>`?
-- [ ] 224. What is `OmitThisParameter<T>`?
-- [ ] 225. What is `Awaited<T>`?
-226. 
-```ts
-type A = Awaited<Promise<string>>; // What is A?
-```
-- [ ] 227. How do you create your own utility types?
-- [ ] 228. What is the difference between `Partial` and `Required`?
-- [ ] 229. What is the difference between `Pick` and `Omit`?
-- [ ] 230. What is the difference between `Exclude` and `Extract`?
-
----
-
-### Classes
-
-- [ ] 231. How do you define a class in TypeScript?
-- [ ] 232. How do you type class properties?
-- [ ] 233. How do you type class methods?
-- [ ] 234. What are access modifiers in TypeScript?
-- [ ] 235. What does `public` mean?
-- [ ] 236. What does `private` mean?
-- [ ] 237. What does `protected` mean?
-- [ ] 238. What is the default access modifier?
-239. 
-```ts
-class Person {
-  public name: string;
-  private age: number;
-  protected address: string;
-}
-```
-Explain the access levels.
-- [ ] 240. Can you access private properties outside the class?
-- [ ] 241. Can you access protected properties in a subclass?
-- [ ] 242. What is the `readonly` modifier for class properties?
-- [ ] 243. What is the difference between `readonly` and `const`?
-- [ ] 244. How do you define a constructor in TypeScript?
-- [ ] 245. What are parameter properties?
-246. 
-```ts
-class Person {
-  constructor(public name: string, private age: number) {}
-}
-```
-Explain this shorthand.
-- [ ] 247. What is inheritance in TypeScript?
-- [ ] 248. How do you extend a class?
-- [ ] 249. What is the `super` keyword?
-- [ ] 250. Can you override methods in a subclass?
-- [ ] 251. What are abstract classes?
-- [ ] 252. How do you define an abstract class?
-253. 
-```ts
-abstract class Animal {
-  abstract makeSound(): void;
-  move(): void {
-    console.log("Moving...");
-  }
-}
-```
-Explain this abstract class.
-- [ ] 254. Can you instantiate an abstract class?
-- [ ] 255. What are abstract methods?
-- [ ] 256. What is the difference between an abstract class and an interface?
-- [ ] 257. Can a class implement multiple interfaces?
-- [ ] 258. How do you implement an interface in a class?
-- [ ] 259. What are static members in a class?
-- [ ] 260. How do you define static properties and methods?
-- [ ] 261. What is the difference between instance members and static members?
-- [ ] 262. What are getters and setters in TypeScript?
-- [ ] 263. How do you define a getter?
-- [ ] 264. How do you define a setter?
-- [ ] 265. What is the `implements` keyword?
-- [ ] 266. What is the difference between `extends` and `implements`?
-
----
+- [ ] 201. What is the `keyof` operator?
+- [ ] 202. What does `keyof any` return?
+- [ ] 203. `typeof` operator in Type context vs Value context.
+- [ ] 204. `ReturnType<typeof func>` pattern.
+- [ ] 205. Indexed Access Types (`T[K]`).
+- [ ] 206. Accessing the type of an array element: `MyArray[number]`.
+- [ ] 207. Accessing the type of a specific property: `User["age"]`.
+- [ ] 208. What are Conditional Types? (`T extends U ? X : Y`).
+- [ ] 209. Nested Conditional Types.
+- [ ] 210. What is the `infer` keyword?
+- [ ] 211. Usage of `infer` to get the return type of a function.
+- [ ] 212. Usage of `infer` to get array element type (`Unpacked`).
+- [ ] 213. Distributive Conditional Types explanation.
+- [ ] 214. How to filter unions using conditional types (`Exclude`).
+- [ ] 215. Mapped Types Syntax (`{ [P in K]: T }`).
+- [ ] 216. Use mapped types to make all properties boolean.
+- [ ] 217. Modifiers in Mapped Types: `+` and `-` (e.g., `-readonly`, `-?`).
+- [ ] 218. Removing optional modifier: `{ [P in K]-?: T[P] }`.
+- [ ] 219. Key Remapping via `as`: `{ [P in K as NewKey]: T[P] }`.
+- [ ] 220. Template Literal Types.
+- [ ] 221. Concatenating strings in types: `` `get${Capitalize<string>}` ``.
+- [ ] 222. Intrinsic String Manipulation Types: `Uppercase<S>`, `Lowercase<S>`, `Capitalize<S>`, `Uncapitalize<S>`.
+- [ ] 223. Recursive Type Aliases.
+- [ ] 224. Typing JSON data (Recursive union).
+- [ ] 225. Discriminated Unions (Tagged Unions).
+- [ ] 226. What makes a union "Discriminated"?
+- [ ] 227. Exhaustiveness handling with `never`.
+- [ ] 228. Implementing a `switch` statement that ensures all cases of a discriminated union are handled.
+- [ ] 229. Intersection of object types vs Interface extension.
+- [ ] 230. Meaning of `type T = {}`.
+- [ ] 231. Meaning of `type T = object`.
+- [ ] 232. Meaning of `type T = unknown`.
+- [ ] 233. How TypeScript determines "Best Common Type".
+- [ ] 234. Contextual Typing.
+- [ ] 235. What is "Type Widening"?
+- [ ] 236. User-Defined Type Guards (`arg is Type`).
+- [ ] 237. Write a type guard `isString(val: any): val is string`.
+- [ ] 238. Assertion Functions (`asserts condition`).
+- [ ] 239. Variadic Tuple Types.
+- [ ] 240. Labelled Tuple Elements.
+- [ ] 241. Spread features in tuples.
+- [ ] 242. Optional tuple elements.
+- [ ] 243. Const assertions and tuples.
+- [ ] 244. `satisfies` operator (TS 4.9).
+- [ ] 245. Difference between `satisfies` and `as`.
+- [ ] 246. `satisfies` enables validation without widening.
+- [ ] 247. Triple-slash directives (`/// <reference path="..." />`).
+- [ ] 248. Module augmentation (`declare module`).
+- [ ] 249. Global augmentation (`declare global`).
+- [ ] 250. How to extend the `Window` interface globally.
 
 ### Modules & Namespaces
 
-- [ ] 267. What are modules in TypeScript?
-- [ ] 268. How do you export from a module?
-- [ ] 269. How do you import from a module?
-- [ ] 270. What is the difference between named exports and default exports?
-- [ ] 271. How do you export a type?
-- [ ] 272. How do you import a type?
-- [ ] 273. What is the `export type` syntax?
-- [ ] 274. What is the `import type` syntax?
-- [ ] 275. Why would you use `import type`?
-- [ ] 276. What are namespaces in TypeScript?
-- [ ] 277. How do you define a namespace?
-- [ ] 278. What is the difference between modules and namespaces?
-- [ ] 279. Should you use namespaces in modern TypeScript?
-- [ ] 280. What is the `declare` keyword?
-- [ ] 281. What are ambient declarations?
-- [ ] 282. What is a `.d.ts` file?
-- [ ] 283. What are declaration files used for?
-- [ ] 284. How do you create a declaration file?
-- [ ] 285. What is the `@types` package?
-- [ ] 286. How do you install type definitions for a library?
-- [ ] 287. What is DefinitelyTyped?
-- [ ] 288. How do you declare global types?
-- [ ] 289. What is module augmentation?
-- [ ] 290. How do you augment an existing module?
+- [ ] 251. Difference between "Internal Modules" (Namespaces) and "External Modules" (Modules).
+- [ ] 252. Syntax for exporting a namespace.
+- [ ] 253. When should you use Namespaces today? (Rarely).
+- [ ] 254. ES Modules syntax (`import` / `export`).
+- [ ] 255. `default` export vs named exports.
+- [ ] 256. `export type` and `import type`.
+- [ ] 257. Why use `import type`? (Elision).
+- [ ] 258. `export =` and `import = require()` (CommonJS legacy).
+- [ ] 259. `esModuleInterop` flag.
+- [ ] 260. `allowSyntheticDefaultImports` flag.
+- [ ] 261. `isolatedModules` flag.
+- [ ] 262. `moduleResolution`: `node` vs `classic`.
+- [ ] 263. Path mapping in `tsconfig.json` (`paths`).
+- [ ] 264. `baseUrl` configuration.
+- [ ] 265. Loading `.json` files in TypeScript (`resolveJsonModule`).
+- [ ] 266. Dynamic imports `import()`.
+- [ ] 267. Tree Shaking and Modules.
+- [ ] 268. Circular dependencies in TS.
+- [ ] 269. Barrel files (`index.ts` exporting everything).
+- [ ] 270. Type-only imports (TS 3.8).
 
----
+### TypeScript & React (Or Web)
 
-### Advanced Types
+- [ ] 271. File extension for React components (`.tsx`).
+- [ ] 272. Defining Props interface.
+- [ ] 273. `React.FC` / `React.FunctionComponent` type.
+- [ ] 274. Why is `React.FC` sometimes discouraged? (Implicit children).
+- [ ] 275. Typing `children` explicitly.
+- [ ] 276. `React.ReactNode` vs `JSX.Element`.
+- [ ] 277. Typing `useState<T>`.
+- [ ] 278. Typing `useReducer`.
+- [ ] 279. Typing `useRef` (Mutable vs Immutable).
+- [ ] 280. `useRef<HTMLDivElement>(null)`.
+- [ ] 281. Typing Event Handlers (`React.ChangeEvent<HTMLInputElement>`).
+- [ ] 282. Typing `onSubmit` in Forms.
+- [ ] 283. `ComponentProps<T>` utility.
+- [ ] 284. Extending HTML Element props (`HTMLAttributes`).
+- [ ] 285. Polymorphic Components (advanced pattern).
+- [ ] 286. Typing `forwardRef`.
+- [ ] 287. Generics in React Components.
+- [ ] 288. `React.Component` vs `React.PureComponent` types.
+- [ ] 289. Context API typing.
+- [ ] 290. Typing Custom Hooks.
+- [ ] 291. CSS Properties typing (`React.CSSProperties`).
+- [ ] 292. How to handle `defaultProps` in TS.
+- [ ] 293. Type checking for Styled Components or Emotion.
+- [ ] 294. Global state management typing (Redux/Zustand basics).
+- [ ] 295. Discriminated unions for Redux Actions.
+- [ ] 296. Thunks typing.
+- [ ] 297. Typing React Router parameters.
+- [ ] 298. Error Boundaries typing.
+- [ ] 299. Server Components vs Client Components types (Next.js context).
+- [ ] 300. Testing React Components with TS.
 
-- [ ] 291. What is type assertion?
-- [ ] 292. How do you perform type assertion?
-- [ ] 293. What is the `as` keyword?
-- [ ] 294. What is the angle-bracket syntax for type assertion?
-295. 
-```ts
-let value: unknown = "hello";
-let length = (value as string).length;
-```
-Explain this assertion.
-- [ ] 296. What is the difference between type assertion and type casting?
-- [ ] 297. What is a non-null assertion?
-- [ ] 298. What is the `!` operator?
-299. 
-```ts
-let name: string | null = getName();
-console.log(name!.toUpperCase());
-```
-What does `!` do here?
-- [ ] 300. When should you use non-null assertions?
-- [ ] 301. What are template literal types?
-302. 
-```ts
-type Greeting = `Hello ${string}`;
-```
-What is this type?
-- [ ] 303. How do you use template literal types with unions?
-- [ ] 304. What are intrinsic string manipulation types?
-- [ ] 305. What is `Uppercase<T>`?
-- [ ] 306. What is `Lowercase<T>`?
-- [ ] 307. What is `Capitalize<T>`?
-- [ ] 308. What is `Uncapitalize<T>`?
-- [ ] 309. What is the `satisfies` operator?
-310. 
-```ts
-const config = {
-  endpoint: "https://api.example.com",
-  port: 3000,
-} satisfies Config;
-```
-What does `satisfies` do?
-- [ ] 311. What is the difference between `as` and `satisfies`?
-- [ ] 312. What are index accessed types?
-313. 
-```ts
-type Person = { name: string; age: number };
-type Age = Person["age"]; // What is this?
-```
-- [ ] 314. What is the `this` type in classes?
-- [ ] 315. What are recursive types?
-316. 
-```ts
-type Json = string | number | boolean | null | Json[] | { [key: string]: Json };
-```
-Explain this recursive type.
-- [ ] 317. What are variadic tuple types?
-- [ ] 318. What are named tuples?
-- [ ] 319. What is type variance?
-- [ ] 320. What is covariance and contravariance?
+### Node.js & Backend
 
----
+- [ ] 301. `ts-node` vs `tsc` + `node` in production.
+- [ ] 302. Typing `process.env` in Node.js.
+- [ ] 303. Typing Express `Request` and `Response`.
+- [ ] 304. Extending Express Request interface (Declaration Merging via global).
+- [ ] 305. Typing Middleware functions in Express.
+- [ ] 306. Error Handling Middleware typing in Express.
+- [ ] 307. Controller typing patterns.
+- [ ] 308. TypeORM basics: Defining Entities with Decorators.
+- [ ] 309. Prisma basics: How are types generated?
+- [ ] 310. NestJS: How it leverages TS Decorators & Reflection.
+- [ ] 311. Types for File Uploads (e.g., `Multer.File`).
+- [ ] 312. WebSockets / Socket.io events typing.
+- [ ] 313. JWT payload typing definition.
+- [ ] 314. Passport.js strategies typing strategies.
+- [ ] 315. Node.js Streams and Buffer typing.
+- [ ] 316. Working with `fs` module promises and types.
+- [ ] 317. Child Process typing.
+- [ ] 318. Cluster module typing.
+- [ ] 319. Worker Threads typing.
+- [ ] 320. Strong typing for Event Emitters (`TypedEmitter`).
 
-### TypeScript Configuration
+### Testing types
 
-- [ ] 321. What is `tsconfig.json`?
-- [ ] 322. What is the `compilerOptions` section?
-- [ ] 323. What does `target` specify?
-- [ ] 324. What does `module` specify?
-- [ ] 325. What is the difference between `"module": "commonjs"` and `"module": "esnext"`?
-- [ ] 326. What does `lib` specify?
-- [ ] 327. What does `strict` do?
-- [ ] 328. What are the strict mode flags?
-- [ ] 329. What does `strictNullChecks` do?
-- [ ] 330. What does `strictFunctionTypes` do?
-- [ ] 331. What does `strictBindCallApply` do?
-- [ ] 332. What does `strictPropertyInitialization` do?
-- [ ] 333. What does `noImplicitAny` do?
-- [ ] 334. What does `noImplicitThis` do?
-- [ ] 335. What does `alwaysStrict` do?
-- [ ] 336. What does `esModuleInterop` do?
-- [ ] 337. What does `allowSyntheticDefaultImports` do?
-- [ ] 338. What does `skipLibCheck` do?
-- [ ] 339. What does `forceConsistentCasingInFileNames` do?
-- [ ] 340. What does `resolveJsonModule` do?
-- [ ] 341. What does `outDir` specify?
-- [ ] 342. What does `rootDir` specify?
-- [ ] 343. What does `include` specify?
-- [ ] 344. What does `exclude` specify?
-- [ ] 345. What does `files` specify?
-- [ ] 346. What does `declaration` do?
-- [ ] 347. What does `declarationMap` do?
-- [ ] 348. What does `sourceMap` do?
-- [ ] 349. What does `removeComments` do?
-- [ ] 350. What does `noEmit` do?
-- [ ] 351. What does `noEmitOnError` do?
-- [ ] 352. What does `isolatedModules` do?
-- [ ] 353. What does `allowJs` do?
-- [ ] 354. What does `checkJs` do?
-- [ ] 355. What does `jsx` specify?
-- [ ] 356. What are the different `jsx` options?
-- [ ] 357. What does `moduleResolution` specify?
-- [ ] 358. What is the difference between `"node"` and `"bundler"` module resolution?
-- [ ] 359. What does `baseUrl` do?
-- [ ] 360. What does `paths` do?
-- [ ] 361. How do you configure path aliases?
-- [ ] 362. What does `types` specify?
-- [ ] 363. What does `typeRoots` specify?
-- [ ] 364. What does `experimentalDecorators` do?
-- [ ] 365. What does `emitDecoratorMetadata` do?
+- [ ] 321. Jest: Typing `describe`, `it`, and `expect` (Globals vs Imported).
+- [ ] 322. Typing Mock functions (`jest.Mock` or `jest.MockedFunction`).
+- [ ] 323. Mocking modules with types (e.g. `jest.mocked()`).
+- [ ] 324. `jest.spyOn` typing and usage.
+- [ ] 325. Strategies for testing private methods (Is casting to `any` acceptable?).
+- [ ] 326. Snapshot testing types.
+- [ ] 327. Vitest compatibility and differences in typing.
+- [ ] 328. Cypress / Playwright E2E commands typing.
+- [ ] 329. Testing async functions/Promises.
+- [ ] 330. Coverage reports terminology.
 
----
+### Configuration & Tooling
 
-### Decorators
+- [ ] 331. ESLint with TypeScript (`@typescript-eslint/parser` and `plugin`).
+- [ ] 332. Prettier integration with ESLint.
+- [ ] 333. `tsconfig` `paths` alias configuration.
+- [ ] 334. Problem with `paths` at runtime? (Difference between tsc and webpack/vite resolution).
+- [ ] 335. `composite` projects (Project References) - why use them?
+- [ ] 336. `incremental` builds explanation.
+- [ ] 337. `ts-loader` vs `babel-loader` for Webpack.
+- [ ] 338. `esbuild` speed and limitations (no type checking).
+- [ ] 339. `swc` integration.
+- [ ] 340. Monorepo setup (Turborepo/Nx) with shared `tsconfig`.
 
-- [ ] 366. What are decorators in TypeScript?
-- [ ] 367. How do you enable decorators?
-- [ ] 368. What is a class decorator?
-- [ ] 369. How do you define a class decorator?
-- [ ] 370. What is a method decorator?
-- [ ] 371. What is a property decorator?
-- [ ] 372. What is a parameter decorator?
-- [ ] 373. What is a accessor decorator?
-374. 
-```ts
-function sealed(constructor: Function) {
-  Object.seal(constructor);
-  Object.seal(constructor.prototype);
-}
+### Design Patterns in TS
 
-@sealed
-class Greeter {
-  greeting: string;
-}
-```
-Explain this decorator.
-- [ ] 375. What are decorator factories?
-- [ ] 376. How do you pass parameters to decorators?
-- [ ] 377. What is the execution order of decorators?
-- [ ] 378. Are decorators a stable feature in TypeScript?
-- [ ] 379. What is the difference between legacy decorators and stage 3 decorators?
-- [ ] 380. What are some common use cases for decorators?
+- [ ] 341. Singleton Pattern implementation in TS.
+- [ ] 342. Factory Pattern with Generics.
+- [ ] 343. Observer Pattern with Interfaces.
+- [ ] 344. Strategy Pattern.
+- [ ] 345. Decorator Pattern (Classic GoF vs TS Decorators).
+- [ ] 346. Adapter Pattern.
+- [ ] 347. Facade Pattern.
+- [ ] 348. Dependency Injection (DI) basics.
+- [ ] 349. Inversion of Control (IoC).
+- [ ] 350. Builder Pattern with method chaining.
 
----
+### Ecosystem & Libraries
 
-### TypeScript with React
+- [ ] 351. Zod: Defining schemas and inferring types.
+- [ ] 352. `z.infer<typeof schema>`.
+- [ ] 353. Yup vs Zod vs io-ts.
+- [ ] 354. RxJS Observables typing.
+- [ ] 355. Redux Toolkit: `createSlice`, `PayloadAction` types.
+- [ ] 356. Styled-components `DefaultTheme` declaration merging.
+- [ ] 357. GraphQL Code Generator (codegen) - Why it's essential.
+- [ ] 358. Apollo Client hooks typing (`useQuery<Data, Vars>`).
+- [ ] 359. tRPC basics: Type safety without schemas.
+- [ ] 360. TanStack Query (React Query) keys and return types.
 
-- [ ] 381. How do you type React functional components?
-- [ ] 382. What is `React.FC` or `React.FunctionComponent`?
-- [ ] 383. Should you use `React.FC`? Why or why not?
-- [ ] 384. How do you type component props?
-385. 
-```tsx
-interface Props {
-  name: string;
-  age: number;
-}
+### Advanced Concepts & Esoterica
 
-function User({ name, age }: Props) {
-  return <div>{name} is {age} years old</div>;
-}
-```
-Explain this typing.
-- [ ] 386. How do you type `children` prop?
-- [ ] 387. How do you type `useState`?
-388. 
-```tsx
-const [count, setCount] = useState<number>(0);
-```
-Is the type annotation necessary here?
-- [ ] 389. How do you type `useRef`?
-390. 
-```tsx
-const inputRef = useRef<HTMLInputElement>(null);
-```
-Explain this typing.
-- [ ] 391. How do you type `useContext`?
-- [ ] 392. How do you type `useReducer`?
-- [ ] 393. How do you type event handlers?
-394. 
-```tsx
-const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-  console.log(e.currentTarget);
-};
-```
-Explain this typing.
-- [ ] 395. How do you type form events?
-- [ ] 396. What is `React.ChangeEvent`?
-- [ ] 397. What is `React.FormEvent`?
-- [ ] 398. How do you type custom hooks?
-- [ ] 399. How do you type generic components?
-- [ ] 400. How do you type HOCs (Higher-Order Components)?
-- [ ] 401. How do you type render props?
-- [ ] 402. How do you type context providers?
-- [ ] 403. How do you type forwarded refs?
-- [ ] 404. What is `React.ComponentProps`?
-- [ ] 405. What is `React.ComponentPropsWithoutRef`?
+- [ ] 361. Experimental Decorators (`"experimentalDecorators": true`).
+- [ ] 362. Stage 3 Decorators (2023 standard) - The future.
+- [ ] 363. Metadata Reflection API (`reflect-metadata`).
+- [ ] 364. `declare global` augmenting global scope.
+- [ ] 365. `dts-gen` tool (generating types from JS).
+- [ ] 366. Recursion limits in Conditional Types.
+- [ ] 367. Tail-recursion optimization in Types?
+- [ ] 368. Variadic Tuples usage.
+- [ ] 369. `satisfies` vs `as const` deep dive.
+- [ ] 370. `const` Type Parameters (TS 5.0) - `function foo<const T>(arg: T)`.
+- [ ] 371. Performance of Enum vs Object as const.
+- [ ] 372. `export type *` syntax.
+- [ ] 373. `import type` elision and build tools optimization.
+- [ ] 374. `verbatimModuleSyntax` flag.
+- [ ] 375. `module: nodenext` and ESM resolution handling.
+- [ ] 376. Covariance and Contravariance in-depth.
+- [ ] 377. Bivariance in method arguments vs function properties.
+- [ ] 378. Brand Types (Branded primitives) for nominal typing simulation.
+- [ ] 379. Opaque Types.
+- [ ] 380. Currying and Partial Application typing.
 
----
+### Security, Performance & Publishing
 
-### TypeScript with Node.js & Express
+- [ ] 381. Formatting package.json `exports` for TS.
+- [ ] 382. `main` vs `types` vs `typings`.
+- [ ] 383. `prepublishOnly` script usage.
+- [ ] 384. Source Maps (`sourceMap` flag) - Security implications?
+- [ ] 385. Type Stripping performance cost.
+- [ ] 386. Does TypeScript prevent XSS? (No).
+- [ ] 387. Does TypeScript prevent SQL Injection? (No).
+- [ ] 388. How to type-safe SQL queries (e.g. pg-typed, kysely).
+- [ ] 389. `skipLibCheck` flag optimization.
+- [ ] 390. `ts-prune` to find unused exports.
 
-- [ ] 406. How do you set up TypeScript with Node.js?
-- [ ] 407. What is `@types/node`?
-- [ ] 408. How do you type Express request and response?
-409. 
-```ts
-app.get("/user/:id", (req: Request, res: Response) => {
-  res.json({ id: req.params.id });
-});
-```
-How do you type `req.params`?
-- [ ] 410. How do you type request body?
-- [ ] 411. How do you type query parameters?
-- [ ] 412. How do you create custom types for Express?
-413. 
-```ts
-interface UserRequest extends Request {
-  user?: User;
-}
-```
-How do you use this custom request type?
-- [ ] 414. How do you type middleware?
-- [ ] 415. How do you type error handling middleware?
-- [ ] 416. How do you type async route handlers?
-- [ ] 417. What is `@types/express`?
-- [ ] 418. How do you type environment variables?
-- [ ] 419. How do you extend the `ProcessEnv` interface?
-- [ ] 420. How do you type MongoDB models with Mongoose?
+### Open Source, Codebases & Analysis
 
----
+- [ ] 391. How to read TypeScript source code on GitHub.
+- [ ] 392. Analyzing a complex generic type from a library (e.g. Redux's `connect`).
+- [ ] 393. Contributing to `DefinitelyTyped` (`@types/package`).
+- [ ] 394. Workflow for adding missing types to a DT package.
+- [ ] 395. Debugging "Type instantiation is excessively deep".
+- [ ] 396. Debugging "Type 'X' is not assignable to type 'Y'".
+- [ ] 397. Best practices for library authors exposing types.
+- [ ] 398. Semantic Versioning for Types (Breaking changes in types).
+- [ ] 399. Strategies for Migrating a large JS codebases to TS.
+- [ ] 400. "Loose" conversion (allowJs, checkJs) vs "Strict" conversion.
+- [ ] 401. Challenge: Analyze the type definition of `Promise.all`.
+- [ ] 402. Challenge: Analyze the type definition of `Array.prototype.map`.
+- [ ] 403. Challenge: Create a type `Zip<T, U>` that zips two tuples.
+- [ ] 404. Challenge: Create a type `CamelCase<S>` using Template Literals.
+- [ ] 405. Challenge: Create a type `Join<Array, Separator>`.
+- [ ] 406. Challenge: Create a type `DeepMutable<T>`.
+- [ ] 407. Challenge: Create a type `Getters<T>` that extracts getters from a class.
+- [ ] 408. Challenge: Implement a type-safe `EventEmitter`.
+- [ ] 409. Challenge: Implement a type-safe `router` (like Express) using Template Literals.
+- [ ] 410. Challenge: Typing a plugin system.
+- [ ] 411. How to debug types using VS Code hover?
+- [ ] 412. How to use VScode "Go to Type Definition".
+- [ ] 413. What is the TypeScript Language Server?
+- [ ] 414. How plugins like `ts-plugin-styled-components` work.
+- [ ] 415. What is `typescript-eslint`'s role in code analysis?
+- [ ] 416. Understanding `lib.d.ts` versions.
+- [ ] 417. How to polyfill types for older TS versions.
+- [ ] 418. `typesVersions` field in package.json.
+- [ ] 419. How to use `tsc --traceResolution`.
+- [ ] 420. How to use `tsc --extendedDiagnostics`.
+- [ ] 421. `tsc --noEmit`: Checking types without building.
+- [ ] 422. `tsc --watch`: Watch mode.
+- [ ] 423. `tsc --build`: Build mode for references.
+- [ ] 424. Using `JSDoc` to type JS files in a TS project (`allowJs`).
+- [ ] 425. `@ts-check` in JS files.
+- [ ] 426. Explain `@ts-ignore` vs `@ts-expect-error`.
+- [ ] 427. Why prefer `@ts-expect-error`?
+- [ ] 428. `@ts-nocheck` usage.
+- [ ] 429. Using `// @ts-ignore` for line vs block (trick).
+- [ ] 430. Formatting: Prettier vs ESLint for TS.
+- [ ] 431. Analysis: How React's `RefObject` is defined.
+- [ ] 432. Analysis: How Vue's `ref` is defined.
+- [ ] 433. Analysis: How Angular's `Observable` integration works.
+- [ ] 434. Analysis: How Svelte's `writable` stores are typed.
+- [ ] 435. Analysis: How `zod` handles recursive schemas.
+- [ ] 436. Analysis: How `trpc` infers backend types on frontend.
+- [ ] 437. Analysis: How `prisma` generates the client client types.
+- [ ] 438. Analysis: How `graphql-codegen` maps GQL types to TS.
+- [ ] 439. Analysis: How `jest` extends global environment.
+- [ ] 440. Analysis: How `styled-components` theming works via declaration merging.
+- [ ] 441. Practice: Clone a small TS repo and build it.
+- [ ] 442. Practice: Run tests in a TS repo.
+- [ ] 443. Practice: Change a type in a library and see what breaks.
+- [ ] 444. Practice: Write a definition file (`.d.ts`) for a small untyped JS library.
+- [ ] 445. Practice: publish a scoped package `@me/utils` written in TS.
+- [ ] 446. Practice: Use `npm link` to test your package locally.
+- [ ] 447. Practice: Configure GitHub Actions for TS type checking.
+- [ ] 448. Practice: Set up a pre-commit hook (husky) for `tsc`.
+- [ ] 449. Practice: Use VS Code debugger with TS source maps.
+- [ ] 450. Practice: Debug a TS node process using Chrome DevTools.
+- [ ] 451. Advanced: Covariant return types in classes.
+- [ ] 452. Advanced: Contravariant arguments in function overloads.
+- [ ] 453. Advanced: Why `Promise.all` result is a tuple?
+- [ ] 454. Advanced: Why `keyof any` is `string | number | symbol`?
+- [ ] 455. Advanced: Why `Object.keys` returns `string[]` not `keyof T[]`?
+- [ ] 456. Advanced: Explanation of "Soundness" in TS (Is TS sound?).
+- [ ] 457. Advanced: Unsound behaviors used for convenience (e.g. array covariance).
+- [ ] 458. Advanced: Void function assignability.
+- [ ] 459. Advanced: Class property initialization strictness.
+- [ ] 460. Advanced: `exactOptionalPropertyTypes` (TS 4.4).
+- [ ] 461. Advanced: `noPropertyAccessFromIndexSignature` (TS 4.2).
+- [ ] 462. Advanced: `noUncheckedIndexedAccess`.
+- [ ] 463. Advanced: `useUnknownInCatchVariables` (TS 4.4).
+- [ ] 464. Advanced: `preserveValueImports` (TS 4.5).
+- [ ] 465. Advanced: `allowArbitraryExtensions` (TS 5.0).
+- [ ] 466. Advanced: `customConditions`.
+- [ ] 467. Advanced: `resolvePackageJsonExports`.
+- [ ] 468. Advanced: `resolvePackageJsonImports`.
+- [ ] 469. Advanced: `moduleDetection`.
+- [ ] 470. Advanced: `api-extractor` from Microsoft.
+- [ ] 471. Final Concept: "Type-Level Programming".
+- [ ] 472. Final Concept: "Runtime Type Checking" (io-ts/zod).
+- [ ] 473. Final Concept: "Nominal Typing" pattern matching.
+- [ ] 474. Final Concept: "Higher Kinded Types" (HKT) simulation.
+- [ ] 475. Final Concept: "Module Augmentation" for plugins.
+- [ ] 476. Project Idea: Build a CLI tool in TS.
+- [ ] 477. Project Idea: Build a TS Express API.
+- [ ] 478. Project Idea: Build a generic Form component in React+TS.
+- [ ] 479. Project Idea: Build a typed Event Emitter library.
+- [ ] 480. Project Idea: Build a simple ORM wrapper.
+- [ ] 481. Project Idea: Create a "Zod-like" validaion library (simple version).
+- [ ] 482. Project Idea: Contribution to an Open Source TS project.
+- [ ] 483. Project Idea: Migrate a small JS project to TS.
+- [ ] 484. Reflection: What is the biggest benefit of TS in your opinion?
+- [ ] 485. Reflection: What is the biggest pain point of TS?
+- [ ] 486. Reflection: Do you prefer Types or Interfaces?
+- [ ] 487. Reflection: How has TS improved your JS coding?
+- [ ] 488. Reflection: Do you use `any`? Be honest.
+- [ ] 489. Reflection: How do you handle 3rd party libs without types?
+- [ ] 490. Reflection: Thoughts on TS vs JSDoc.
+- [ ] 491. Final Boss: Explain `T extends infer U ? U : never`.
+- [ ] 492. Final Boss: Explain `(-readonly [P in keyof T]-?: T[P])`.
+- [ ] 493. Final Boss: Write a type to parse a URL string parameters.
+- [ ] 494. Final Boss: Write a type to parse JSON string (conceptually).
+- [ ] 495. Final Boss: Implement a type-safe `pipe` function.
+- [ ] 496. Final Boss: Implement a type-safe `compose` function.
+- [ ] 497. Final Boss: Implement `Curry<F>` type.
+- [ ] 498. Final Boss: Creating a recursive immutable type.
+- [ ] 499. Final Boss: The "Halting Problem" in TS Type System.
+- [ ] 500. Congratulations! You have completed the list. Mark this done.
 
-### Error Handling & Debugging
-
-- [ ] 421. What are TypeScript compiler errors?
-- [ ] 422. What are common TypeScript errors?
-- [ ] 423. What does "Type 'X' is not assignable to type 'Y'" mean?
-- [ ] 424. What does "Property 'X' does not exist on type 'Y'" mean?
-- [ ] 425. What does "Object is possibly 'null'" mean?
-- [ ] 426. What does "Object is possibly 'undefined'" mean?
-- [ ] 427. How do you fix "Cannot find module" errors?
-- [ ] 428. What does "Argument of type 'X' is not assignable to parameter of type 'Y'" mean?
-- [ ] 429. What does "Type 'X' has no call signatures" mean?
-- [ ] 430. What does "Index signature is missing in type 'X'" mean?
-- [ ] 431. How do you debug TypeScript code?
-- [ ] 432. How do you use source maps?
-- [ ] 433. What is the `debugger` statement?
-- [ ] 434. How do you set up debugging in VS Code?
-- [ ] 435. What are type guards and how do they help with errors?
-- [ ] 436. How do you handle errors with `unknown` type?
-- [ ] 437. What is the `Error` type in TypeScript?
-- [ ] 438. How do you create custom error types?
-- [ ] 439. How do you type try-catch blocks?
-440. 
-```ts
-try {
-  // code
-} catch (error) {
-  // What is the type of error?
-}
-```
-
----
-
-### Best Practices & Patterns
-
-- [ ] 441. What are TypeScript best practices?
-- [ ] 442. Should you use `any`? When is it acceptable?
-- [ ] 443. Should you use `unknown` instead of `any`?
-- [ ] 444. Should you enable strict mode?
-- [ ] 445. Should you use interfaces or type aliases?
-- [ ] 446. When should you use `readonly`?
-- [ ] 447. When should you use `const` assertions?
-- [ ] 448. How do you avoid type assertions?
-- [ ] 449. How do you make your code more type-safe?
-- [ ] 450. What is the principle of least privilege in TypeScript?
-- [ ] 451. How do you organize types in a project?
-- [ ] 452. Should you create separate files for types?
-- [ ] 453. What is the naming convention for types and interfaces?
-- [ ] 454. Should you prefix interfaces with `I`?
-- [ ] 455. How do you handle third-party libraries without types?
-- [ ] 456. How do you gradually migrate JavaScript to TypeScript?
-- [ ] 457. What is the `allowJs` option used for?
-- [ ] 458. How do you type legacy JavaScript code?
-- [ ] 459. What are some common TypeScript anti-patterns?
-- [ ] 460. How do you avoid circular dependencies?
-- [ ] 461. How do you handle complex types?
-- [ ] 462. When should you use generics?
-- [ ] 463. How do you make types reusable?
-- [ ] 464. What is type composition?
-- [ ] 465. How do you use discriminated unions effectively?
-- [ ] 466. How do you handle optional chaining with types?
-- [ ] 467. How do you handle nullish coalescing with types?
-- [ ] 468. What is defensive programming in TypeScript?
-- [ ] 469. How do you document types?
-- [ ] 470. Should you use JSDoc with TypeScript?
-
----
-
-### Advanced Patterns & Techniques
-
-- [ ] 471. What is branded types (nominal typing)?
-472. 
-```ts
-type UserId = string & { readonly brand: unique symbol };
-```
-Explain this pattern.
-- [ ] 473. What are phantom types?
-- [ ] 474. What is the builder pattern in TypeScript?
-- [ ] 475. What is the factory pattern in TypeScript?
-- [ ] 476. What is the singleton pattern in TypeScript?
-- [ ] 477. What is dependency injection in TypeScript?
-- [ ] 478. How do you implement dependency injection?
-- [ ] 479. What are mixins in TypeScript?
-- [ ] 480. How do you create mixins?
-- [ ] 481. What is the decorator pattern?
-- [ ] 482. What is the observer pattern?
-- [ ] 483. What is the strategy pattern?
-- [ ] 484. What are type-level programming techniques?
-- [ ] 485. What are conditional types used for?
-- [ ] 486. How do you create complex mapped types?
-- [ ] 487. What is the `infer` keyword used for?
-- [ ] 488. How do you extract types from arrays?
-489. 
-```ts
-const fruits = ["apple", "banana", "orange"] as const;
-type Fruit = typeof fruits[number]; // What is this?
-```
-- [ ] 490. How do you create a deep readonly type?
-- [ ] 491. How do you create a deep partial type?
-- [ ] 492. What is the `Prettify` utility type?
-493. 
-```ts
-type Prettify<T> = {
-  [K in keyof T]: T[K];
-} & {};
-```
-What does this do?
-- [ ] 494. How do you create a union from object values?
-- [ ] 495. How do you create a type-safe event emitter?
-- [ ] 496. How do you implement a type-safe state machine?
-- [ ] 497. What are higher-kinded types?
-- [ ] 498. Does TypeScript support higher-kinded types?
-- [ ] 499. What is the `Opaque` type pattern?
-- [ ] 500. How do you create exhaustive type checking?
-
----
-
-### Performance & Optimization
-
-- [ ] 501. How does TypeScript affect build performance?
-- [ ] 502. How do you optimize TypeScript compilation speed?
-- [ ] 503. What is incremental compilation?
-- [ ] 504. What does `incremental: true` do?
-- [ ] 505. What is the `tsBuildInfoFile`?
-- [ ] 506. What is project references?
-- [ ] 507. How do you use project references?
-- [ ] 508. What are composite projects?
-- [ ] 509. How do you split a large TypeScript project?
-- [ ] 510. What is the impact of `skipLibCheck`?
-- [ ] 511. Should you always use `skipLibCheck`?
-- [ ] 512. How do you reduce type checking time?
-- [ ] 513. What is the cost of complex types?
-- [ ] 514. How do you avoid type instantiation depth errors?
-- [ ] 515. What is the type instantiation depth limit?
-- [ ] 516. How do you optimize generic types?
-- [ ] 517. Should you use type aliases for complex types?
-- [ ] 518. How do you profile TypeScript compilation?
-- [ ] 519. What is the `--diagnostics` flag?
-- [ ] 520. What is the `--extendedDiagnostics` flag?
-
----
-
-### Testing with TypeScript
-
-- [ ] 521. How do you set up Jest with TypeScript?
-- [ ] 522. What is `ts-jest`?
-- [ ] 523. How do you type Jest tests?
-- [ ] 524. How do you type Jest mocks?
-525. 
-```ts
-const mockFn = jest.fn<ReturnType, Args>();
-```
-How do you type this?
-- [ ] 526. How do you type test fixtures?
-- [ ] 527. How do you use TypeScript with Vitest?
-- [ ] 528. How do you use TypeScript with Mocha?
-- [ ] 529. How do you type Chai assertions?
-- [ ] 530. How do you create type-safe test factories?
-- [ ] 531. How do you test types themselves?
-- [ ] 532. What is `tsd` for type testing?
-- [ ] 533. What is `expect-type` for type testing?
-- [ ] 534. How do you assert types in tests?
-535. 
-```ts
-import { expectType } from 'tsd';
-expectType<string>(myFunction());
-```
-What does this do?
-
----
-
-### TypeScript Ecosystem & Tools
-
-- [ ] 536. What is TSLint?
-- [ ] 537. What is ESLint with TypeScript?
-- [ ] 538. What is `@typescript-eslint/parser`?
-- [ ] 539. What is `@typescript-eslint/eslint-plugin`?
-- [ ] 540. How do you configure ESLint for TypeScript?
-- [ ] 541. What is Prettier and how does it work with TypeScript?
-- [ ] 542. What is ts-node?
-- [ ] 543. What is tsx?
-- [ ] 544. What is the difference between ts-node and tsx?
-- [ ] 545. What is Deno and how does it relate to TypeScript?
-- [ ] 546. What is Bun and its TypeScript support?
-- [ ] 547. What is esbuild?
-- [ ] 548. What is swc?
-- [ ] 549. How do these tools compare to tsc?
-- [ ] 550. What is Vite's TypeScript support?
-- [ ] 551. What is webpack's ts-loader?
-- [ ] 552. What is the difference between ts-loader and babel-loader?
-- [ ] 553. What is fork-ts-checker-webpack-plugin?
-- [ ] 554. What is Rollup's TypeScript plugin?
-- [ ] 555. What is Parcel's TypeScript support?
-
----
-
-### TypeScript Versions & Features
-
-- [ ] 556. What major features were added in TypeScript 4.0?
-- [ ] 557. What are variadic tuple types?
-- [ ] 558. What are labeled tuple elements?
-- [ ] 559. What major features were added in TypeScript 4.1?
-- [ ] 560. What are template literal types?
-- [ ] 561. What are key remapping in mapped types?
-- [ ] 562. What major features were added in TypeScript 4.4?
-- [ ] 563. What is control flow analysis for aliased conditions?
-- [ ] 564. What major features were added in TypeScript 4.5?
-- [ ] 565. What is the `Awaited` type?
-- [ ] 566. What major features were added in TypeScript 4.7?
-- [ ] 567. What is the `infer` extends clause?
-- [ ] 568. What major features were added in TypeScript 4.8?
-- [ ] 569. What are improved intersection reduction?
-- [ ] 570. What major features were added in TypeScript 4.9?
-- [ ] 571. What is the `satisfies` operator?
-- [ ] 572. What major features were added in TypeScript 5.0?
-- [ ] 573. What are decorators in TypeScript 5.0?
-- [ ] 574. What is const type parameters?
-- [ ] 575. What major features were added in TypeScript 5.1?
-- [ ] 576. What major features were added in TypeScript 5.2?
-- [ ] 577. What is the `using` keyword?
-- [ ] 578. What major features were added in TypeScript 5.3?
-- [ ] 579. What major features were added in TypeScript 5.4?
-- [ ] 580. What is the future roadmap of TypeScript?
-
----
-
-### Real-World Scenarios & Code Examples
-
-- [ ] 581. How do you type a REST API response?
-- [ ] 582. How do you type a GraphQL query result?
-- [ ] 583. How do you type a Redux store?
-- [ ] 584. How do you type Redux actions?
-- [ ] 585. How do you type Redux reducers?
-- [ ] 586. How do you type async thunks?
-- [ ] 587. How do you type a Zustand store?
-- [ ] 588. How do you type React Query hooks?
-- [ ] 589. How do you type form data?
-- [ ] 590. How do you type validation schemas (Zod, Yup)?
-- [ ] 591. How do you type database models?
-- [ ] 592. How do you type Prisma models?
-- [ ] 593. How do you type API route handlers?
-- [ ] 594. How do you type WebSocket messages?
-- [ ] 595. How do you type authentication tokens?
-- [ ] 596. How do you type user permissions?
-- [ ] 597. How do you type configuration objects?
-- [ ] 598. How do you type plugin systems?
-- [ ] 599. How do you type event handlers?
-- [ ] 600. How do you create a type-safe router?
-
----
-
-### Practical Challenges
-
-- [ ] 601. Create a type that makes all nested properties optional.
-- [ ] 602. Create a type that makes all nested properties readonly.
-- [ ] 603. Create a type that extracts all string keys from an object.
-- [ ] 604. Create a type that converts a union to an intersection.
-- [ ] 605. Create a type that gets the return type of all methods in a class.
-- [ ] 606. Create a type-safe event emitter.
-- [ ] 607. Create a type-safe builder pattern.
-- [ ] 608. Create a type that validates email strings at compile time.
-- [ ] 609. Create a type that enforces minimum array length.
-- [ ] 610. Create a type that creates a union from array values.
-- [ ] 611. Create a type that makes specific properties required.
-- [ ] 612. Create a type that excludes methods from an interface.
-- [ ] 613. Create a type that gets all optional keys.
-- [ ] 614. Create a type that gets all required keys.
-- [ ] 615. Create a type-safe state machine.
-- [ ] 616. Create a type that flattens nested objects.
-- [ ] 617. Create a type that merges two object types.
-- [ ] 618. Create a type that creates a readonly tuple from an array.
-- [ ] 619. Create a type that validates JSON structure.
-- [ ] 620. Create a type-safe dependency injection container.
