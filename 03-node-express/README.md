@@ -1,333 +1,254 @@
-### Node.js Fundamentals
+# Node.js and Express.js Mastery
 
-- [ ] 1. What is Node.js? Is it a language, a library, or a runtime?
-- [ ] 2. Which engine does Node.js use to execute JavaScript?
-- [ ] 3. Is Node.js single-threaded or multi-threaded? Explain how it handles multiple concurrent requests without blocking.
-- [ ] 4. Explain the Node.js Event Loop in detail. What are its different phases (Timers, Pending Callbacks, Idle/Prepare, Poll, Check, Close Callbacks)?
-- [ ] 5. What is Libuv and what is its role in Node.js architecture?
-- [ ] 6. Explain the concept of "Non-blocking I/O" and "Asynchronous" programming.
-- [ ] 7. What is the difference between `process.nextTick()` and `setImmediate()`?
-- [ ] 8. What is the difference between `setTimeout(fn, 0)` and `setImmediate()`?
-- [ ] 9. What are `__dirname` and `__filename` global variables?
-- [ ] 10. Explain the module system in Node.js. Difference between `module.exports` and `exports`. 
-- [ ] 11. What are the differences between CommonJS (`require`) and ES Modules (`import/export`) in Node.js?
-- [ ] 12. What is REPL in Node.js?
-- [ ] 13. List some core modules of Node.js and their purposes (fs, path, os, http, events).
-- [ ] 14. Explain the `fs` (File System) module. What is the difference between `fs.readFile()` and `fs.readFileSync()`?
-- [ ] 15. What is a Buffer in Node.js? Why is it needed?
-- [ ] 16. What are Streams? Why are they useful for handling large amounts of data?
-- [ ] 17. Name and explain the four types of streams in Node.js (Readable, Writable, Duplex, Transform).
-- [ ] 18. What is the `.pipe()` method in streams? Give a code example.
-- [ ] 19. What is the difference between `path.join()` and `path.resolve()`?
-- [ ] 20. Explain the `events` module and the `EventEmitter` class. How do you create and emit custom events?
-- [ ] 21. What is "backpressure" in Node.js streams and how do you handle it?
-- [ ] 22. How do you handle uncaught exceptions and unhandled promise rejections in Node?
-- [ ] 23. What is the purpose of the `package.json` file? Explain `dependencies` vs `devDependencies`.
-- [ ] 24. Explain the role of `package-lock.json`. Why should it be committed to version control?
-- [ ] 25. What is the difference between `npm install` and `npm ci`?
-- [ ] 26. What is the `process` object? List some useful properties like `env`, `argv`, `pid`, `cwd()`.
-- [ ] 27. How do you pass command-line arguments to a Node.js script? How do you access them?
-- [ ] 28. What are Worker Threads? When should you use them instead of the main event loop?
-- [ ] 29. What is the `cluster` module and how does it help in utilizing multi-core systems?
-- [ ] 30. Explain the difference between `spawn()`, `exec()`, and `fork()` in the `child_process` module.
+A comprehensive collection of 200 theoretical and practical problems to master Node.js and Express.js, covering basics, internals, advanced concepts, and real-world patterns.
 
----
+## Node.js Internals & Architecture
 
-### Express.js Fundamentals
+1. [ ] **Theory:** Explain the Node.js architecture. What role do V8 and Libuv play?
+2. [ ] **Theory:** Describe the Node.js Event Loop in detail. What are the specific phases (Timers, Pending Callbacks, Idle/Prepare, Poll, Check, Close)?
+3. [ ] **Practice:** Write a script to demonstrate the execution order of `setTimeout`, `setImmediate`, `process.nextTick`, and `Promise`.
+4. [ ] **Theory:** Why is Node.js called "single-threaded"? How does it handle concurrency?
+5. [ ] **Theory:** What is the reactor pattern in Node.js?
+6. [ ] **Theory:** Explain the difference between blocking and non-blocking I/O code with examples.
+7. [ ] **Theory:** What is the Thread Pool in Libuv? Which operations use it?
+8. [ ] **Practice:** Create a CPU-intensive task that blocks the event loop and observe its effect on other incoming requests.
+9. [ ] **Theory:** What is `process.nextTick()` used for? How is it different from `setImmediate()`?
+10. [ ] **Practice:** Refactor the blocking CPU task from problem #8 using the `worker_threads` module to avoid blocking the main thread.
+11. [ ] **Theory:** What are "Event Emitters"? How do they work internally?
+12. [ ] **Practice:** Build a custom `EventEmitter` class from scratch that supports `.on()`, `.emit()`, and `.off()`.
+13. [ ] **Theory:** Explain the concept of "Backpressure" in streams.
+14. [ ] **Theory:** What are the different types of Streams in Node.js (Readable, Writable, Duplex, Transform)?
+15. [ ] **Practice:** Create a script that pipes a large file from one location to another using Streams to minimize memory usage.
+16. [ ] **Practice:** Implement a Transform stream that compresses text (gzip) on the fly.
+17. [ ] **Theory:** What is the global `process` object? List 5 useful properties/methods.
+18. [ ] **Practice:** Write a CLI tool that accepts arguments via `process.argv` and processes them.
+19. [ ] **Theory:** How does Garbage Collection work in V8? What are Young and Old generations?
+20. [ ] **Theory:** Explain how `module.exports` and `require` work under the hood (CommonJS wrapper function).
 
-- [ ] 31. What is Express.js? Why is it often called a "minimalist" framework?
-- [ ] 32. How do you create a basic "Hello World" server using Express?
-- [ ] 33. What is Middleware in Express? Explain the Request-Response cycle.
-- [ ] 34. What is the purpose of the `next()` function in middleware?
-- [ ] 35. What happens if you forget to call `next()` or send a response in a middleware function?
-- [ ] 36. Describe the different types of middleware:
-    - Application-level middleware
-    - Router-level middleware
-    - Error-handling middleware
-    - Built-in middleware
-    - Third-party middleware
-- [ ] 33. How do you write an error-handling middleware? What are its 4 arguments?
-- [ ] 34. Explain the difference between `res.send()`, `res.json()`, and `res.end()`.
-- [ ] 35. What is the difference between `res.redirect()` and `res.render()`?
-- [ ] 36. How do you access "Route Parameters" (e.g., `/users/:id`)?
-- [ ] 37. How do you access "Query Parameters" (e.g., `/search?q=term`)?
-- [ ] 38. How do you access the "Request Body" in a POST/PUT request? Which built-in middleware is required for this?
-- [ ] 39. What is `app.use()` and how is it different from `app.get()` or `app.post()`?
-- [ ] 40. How do you serve static files (images, CSS, JS) in Express?
-- [ ] 41. What is `Express.Router` and how does it help in organizing a complex application?
-- [ ] 42. How do you handle "404 Not Found" errors in Express?
-- [ ] 43. What are Template Engines? Name some popular ones used with Express (EJS, Pug, Handlebars).
-- [ ] 44. How do you set up a template engine in Express (e.g., using `app.set('view engine', ...)`).
-- [ ] 45. What is CORS (Cross-Origin Resource Sharing)? How do you enable it in an Express app?
-- [ ] 46. What is the purpose of the `cookie-parser` middleware?
-- [ ] 47. How do you handle file uploads in Express? Which library is commonly used (e.g., Multer)?
-- [ ] 48. What is the difference between `app.get()` and `app.all()`?
-- [ ] 49. How do you implement "Route Chaining" (using `app.route()`)?
-- [ ] 50. What is Environment Variable? How do you use the `dotenv` library in a Node/Express project?
-- [ ] 51. What is JWT (JSON Web Token)? How do you use it for authentication in Express?
-- [ ] 52. Explain the difference between Session-based and Token-based authentication.
-- [ ] 53. What is Helmet.js and why should you use it in Express?
-- [ ] 54. How do you implement rate limiting in an Express application?
-- [ ] 55. What is the purpose of the `compression` middleware?
-- [ ] 56. How do you handle asynchronous errors in Express routes (especially before Express 5)?
-- [ ] 57. What is the difference between `req.params`, `req.query`, and `req.body`?
-- [ ] 58. How do you retrieve request headers in Express?
-- [ ] 59. How do you set a custom response header?
-- [ ] 60. What is the difference between `res.sendFile()` and `res.download()`?
-- [ ] 61. What is a "Virtual Path Prefix" for static files?
-- [ ] 62. What does it mean to "Mount" a router?
-- [ ] 63. Explain how to handle "preflight" (OPTIONS) requests in CORS.
-- [ ] 64. How do you debug an Express application using the `DEBUG` environment variable?
-- [ ] 65. How do you implement logging in Express (e.g., using `morgan` or `winston`)?
+## Modules, NPM & Package Management
 
----
+21. [ ] **Theory:** Difference between CommonJS (`require`) and ES Modules (`import`).
+22. [ ] **Practice:** Convert a project from CommonJS to ES Modules (using `"type": "module"` in package.json).
+23. [ ] **Theory:** What is the algorithm Node.js uses to resolve modules (`node_modules`, standard library, relative files)?
+24. [ ] **Theory:** Explain Semantic Versioning (SemVer) (e.g., `^1.0.0` vs `~1.0.0`).
+25. [ ] **Practice:** Create a local NPM package and install it in another project using `npm link`.
+26. [ ] **Theory:** What is a `package-lock.json` file and why is it crucial?
+27. [ ] **Theory:** What are "peerDependencies"? When should you use them?
+28. [ ] **Practice:** Write a script that detects circular dependencies in a set of modules.
+29. [ ] **Theory:** Contrast `dependencies` vs `devDependencies`.
+30. [ ] **Practice:** Use `npm audit` to identify and fix security vulnerabilities in a project.
 
-### Advanced & Database Integration
+## File System & OS
 
-- [ ] 66. Explain the difference between SQL and NoSQL databases in the context of Node.js.
-- [ ] 67. What is an ORM (Object-Relational Mapping) and an ODM (Object-Document Mapping)? Give examples (Sequelize, Prisma, Mongoose).
-- [ ] 68. How do you connect Express to MongoDB using Mongoose?
-- [ ] 69. What is a "Schema" and a "Model" in Mongoose?
-- [ ] 70. What are Mongoose "Hooks" (Middleware)?
-- [ ] 71. Explain "Population" in Mongoose (similar to Joins in SQL).
-- [ ] 72. How do you handle different environments (development, production) using `process.env.NODE_ENV`?
-- [ ] 73. What is PM2 and why is it essential for production Node.js apps?
-- [ ] 74. Explain "Graceful Shutdown" of a Node.js server.
-- [ ] 75. What is the purpose of `express-session` middleware?
-- [ ] 76. In a production environment, why should you avoid using the default in-memory session store? What are the alternatives (e.g., Redis)?
-- [ ] 77. What is Socket.io? How is it different from standard HTTP requests?
-- [ ] 78. Explain the "Microservices" architecture and how Node.js is well-suited for it.
-- [ ] 79. What is "Server-Side Rendering" (SSR) vs "Client-Side Rendering" (CSR)?
-- [ ] 80. What is the difference between `npm update` and `npm install`?
-- [ ] 81. What is the purpose of `npx`?
-- [ ] 82. What is a "Memory Leak" in Node.js? How can you detect it (e.g., using `--inspect` and Chrome DevTools)?
-- [ ] 83. Explain "SQL Injection" and how to prevent it in Node.js applications.
-- [ ] 84. Explain "XSS" (Cross-Site Scripting) and how to prevent it in Express.
-- [ ] 85. What is "Hashing" and how do you store passwords securely (e.g., using `bcrypt`)?
+31. [ ] **Theory:** Synchronous vs Asynchronous `fs` methods. When to use which?
+32. [ ] **Practice:** Write a script to recursively list all files in a directory tree (handling subdirectories).
+33. [ ] **Practice:** Build a file watcher that logs "File changed" whenever a file is modified (use `fs.watch` or `fs.watchFile`).
+34. [ ] **Theory:** What are file descriptors in Unix/Linux systems?
+35. [ ] **Practice:** Open a file, write to a specific buffer offset, and read from it without closing.
+36. [ ] **Theory:** Explain usage of the `path` module (`path.join`, `path.resolve`, `path.basename`).
+37. [ ] **Practice:** Create a script that organizes files in a folder by extension (moves `.jpg` to `/images`, `.txt` to `/docs`).
+38. [ ] **Theory:** What is the `os` module? How can you find the number of CPU cores?
+39. [ ] **Practice:** Write a script that prints memory usage (total vs free) and load averages every 5 seconds.
+40. [ ] **Practice:** Implement a simple log rotation system (rename `app.log` to `app.log.1` when it exceeds 1MB).
 
----
+## Networking (HTTP, TCP, UDP)
 
-### Code Snippets & Practical Questions
+41. [ ] **Theory:** How does the `http` module work? Anatomy of `http.createServer`.
+42. [ ] **Practice:** Build a raw HTTP server without frameworks that handles `/home` and `/about` routes.
+43. [ ] **Theory:** What is `keep-alive` in HTTP? How does Node handles it?
+44. [ ] **Practice:** Implement a TCP server using `net` module that echoes back any data sent to it.
+45. [ ] **Theory:** Difference between TCP and UDP. When to use `dgram` module?
+46. [ ] **Practice:** Build a simple UDP chat server.
+47. [ ] **Theory:** What is TLS/SSL? How to implement HTTPS in Node.js?
+48. [ ] **Practice:** Create a self-signed certificate and run a secure HTTPS server using the `https` module.
+49. [ ] **Theory:** Explain CORS (Cross-Origin Resource Sharing). How to handle it manually?
+50. [ ] **Practice:** Write a script that makes 100 concurrent HTTP requests to a server and measures response time.
 
-- [ ] 86. 
-```js
-const express = require('express');
-const app = express();
-app.get('/user/:id', (req, res) => {
-  res.send(req.params.id);
-});
-```
-What will be the output if you visit `/user/42?name=admin`?
+## Express.js Basics
 
-- [ ] 87.
-```js
-const fs = require('fs');
-console.log('Start');
-fs.readFile('data.txt', () => console.log('File Read'));
-setTimeout(() => console.log('Timeout'), 0);
-setImmediate(() => console.log('Immediate'));
-console.log('End');
-```
-Assuming the file read takes some time, what is the most likely order of logs?
+51. [ ] **Theory:** What is Express.js? How does it simplify the raw `http` module?
+52. [ ] **Theory:** Explain the concept of "Middleware" in Express. Types of middleware (Application-level, Router-level, Error-handling).
+53. [ ] **Practice:** create a middleware that logs the Request Method, URL, and Timestamp for every incoming request.
+54. [ ] **Theory:** What is the difference between `app.use()`, `app.get()`, `app.all()`?
+55. [ ] **Practice:** Create a simple REST API for a "To-Do List" (GET, POST, PUT, DELETE).
+56. [ ] **Theory:** Handling URL parameters (`:id`) and Query parameters (`?sort=asc`).
+57. [ ] **Practice:** Implement a route that accepts a dynamic user ID and returns data for that user.
+58. [ ] **Theory:** How does `res.json()` differ from `res.send()`?
+59. [ ] **Practice:** Serve static files (images, CSS) using `express.static`.
+60. [ ] **Theory:** What is the "Request" object (`req`)? List 5 key properties.
+61. [ ] **Theory:** What is the "Response" object (`res`)? List 5 key methods.
+62. [ ] **Practice:** Implement a form submission using `express.urlencoded` body parser.
+63. [ ] **Practice:** Handle 404 errors by creating a catch-all middleware at the end of the stack.
+64. [ ] **Theory:** How routing works internally in Express (Layer, Route, Stack).
+65. [ ] **Practice:** Use `express.Router()` to modularize routes into separate files (e.g., `routes/users.js`, `routes/products.js`).
 
-- [ ] 88.
-```js
-app.get('/test', (req, res, next) => {
-  console.log('Step 1');
-  next();
-}, (req, res) => {
-  console.log('Step 2');
-  res.send('Success');
-});
-```
-What is logged in the console when `/test` is visited?
+## Express.js Advanced & Security
 
-- [ ] 89.
-```js
-app.use((req, res, next) => {
-  const err = new Error('Not Found');
-  err.status = 404;
-  next(err);
-});
+66. [ ] **Theory:** Explain the Error Handling middleware signature `(err, req, res, next)`.
+67. [ ] **Practice:** Create a global error handler that catches exceptions and sends a standard JSON error response.
+68. [ ] **Theory:** What is `helmet` middleware? What security headers does it set?
+69. [ ] **Practice:** Implement Rate Limiting to prevent DDoS attacks (use `express-rate-limit`).
+70. [ ] **Theory:** What is Cross-Site Scripting (XSS) and how to prevent it in Express?
+71. [ ] **Theory:** What is CSRF (Cross-Site Request Forgery)? Prevention techniques?
+72. [ ] **Practice:** Use `cors` middleware to whitelist specific domains.
+73. [ ] **Theory:** Explain Template Engines (EJS, Pug, Handlebars). Server-side rendering vs API.
+74. [ ] **Practice:** Render a dynamic HTML page using EJS with data passed from the server.
+75. [ ] **Practice:** Handle file uploads using `multer`. Validation of file type and size.
+76. [ ] **Theory:** Cookie management in Express (`cookie-parser`). Signed vs Unsigned cookies.
+77. [ ] **Practice:** Implement a generic "Async Handler" wrapper to avoid `try-catch` blocks in every route.
+78. [ ] **Theory:** Session management. How `express-session` works (Store, Secret, Cookie).
+79. [ ] **Practice:** Store sessions in Redis instead of Memory (using `connect-redis`).
+80. [ ] **Theory:** Input Validation. Why validate on server side?
 
-app.use((err, req, res, next) => {
-  res.status(err.status || 500).json({ error: err.message });
-});
-```
-Explain what this code block does.
+## Databases & ORMs
 
-- [ ] 90.
-```js
-const buffer = Buffer.from('Node');
-console.log(buffer.toJSON());
-```
-What will be the output format of `buffer.toJSON()`?
+81. [ ] **Theory:** SQL vs NoSQL. When to use Node with MongoDB vs PostgreSQL?
+82. [ ] **Practice:** Connect Node.js to MongoDB using the native driver. Perform CRUD.
+83. [ ] **Theory:** What is Mongoose? Schemas, Models, and Document middleware.
+84. [ ] **Practice:** Define a Mongoose schema with validation (required, unique, default values).
+85. [ ] **Practice:** Implement "Population" in Mongoose (referencing other documents).
+86. [ ] **Theory:** Connect Node.js to PostgreSQL using `pg` library.
+87. [ ] **Practice:** Build a Transaction using SQL (BEGIN, COMMIT, ROLLBACK) in Node.js.
+88. [ ] **Theory:** What is an ORM (Sequelize, TypeORM, Prisma)? Pros and Cons.
+89. [ ] **Practice:** Setup Prisma with a SQLite database and run migrations.
+90. [ ] **Practice:** Implement Pagination for an API endpoint (limit, offset/cursor).
+91. [ ] **Practice:** Implement Filtering and Sorting for an API endpoint based on query params.
+92. [ ] **Theory:** Connection Pooling. Why is it important?
+93. [ ] **Practice:** Handle database connection failures gracefully (retries/logging).
+94. [ ] **Theory:** What is "N+1 Problem" in database queries? How to solve it?
+95. [ ] **Practice:** Use Redis for caching API responses to reduce database load.
 
-- [ ] 91. 
-```js
-const fs = require('fs');
+## Authentication & Authorization
 
-fs.readFile(__filename, () => {
-  setTimeout(() => console.log('timeout'), 0);
-  setImmediate(() => console.log('immediate'));
-});
-```
-In this specific case (inside an I/O callback), which one will always run first and why?
+96. [ ] **Theory:** Difference between Authentication and Authorization.
+97. [ ] **Theory:** Explain JWT (Json Web Token) structure. Header, Payload, Signature.
+98. [ ] **Practice:** Implement a Signup/Login flow. Hash passwords using `bcrypt`.
+99. [ ] **Practice:** Generate a JWT upon login and send it to the client.
+100. [ ] **Practice:** Create a middleware `authenticateToken` that verifies the JWT for protected routes.
+101. [ ] **Theory:** Access Tokens vs Refresh Tokens. Why use Refresh Tokens?
+102. [ ] **Practice:** Implement a Refresh Token rotation mechanism.
+103. [ ] **Theory:** What is OAuth 2.0? Describe the flow.
+104. [ ] **Practice:** Implement specific social login (e.g., Log in with Google) using `passport.js`.
+105. [ ] **Theory:** Role-Based Access Control (RBAC).
+106. [ ] **Practice:** Implement an RBAC middleware: `authorize(['admin', 'editor'])`.
+107. [ ] **Theory:** Session-based auth vs Token-based auth. Comparison.
+108. [ ] **Practice:** Implement "Forgot Password" flow (send email with reset token).
+109. [ ] **Practice:** Securely store API keys and secrets using `.env` (dotenv).
+110. [ ] **Theory:** Best practices for storing passwords (Salting, Hashing, Argpn2/Bcrypt).
 
-- [ ] 92. How do you create a custom middleware that logs the request method and URL for every incoming request?
+## Real-Time Communication
 
-- [ ] 93. Write a small Express route that validates a "username" from `req.body` ensuring it is a string and has at least 5 characters.
+111. [ ] **Theory:** Polling vs Long Polling vs WebSockets.
+112. [ ] **Theory:** What is `socket.io`? How does it differ from native `ws`?
+113. [ ] **Practice:** Build a basic real-time Chat Application using `socket.io`.
+114. [ ] **Practice:** Implement "Rooms" in Socket.io (private chat functionality).
+115. [ ] **Practice:** Broadcast a notification to all connected clients except the sender.
+116. [ ] **Theory:** Scaling WebSockets. How to use Redis Adapter for multiple nodes?
+117. [ ] **Practice:** Create a real-time progress bar for a long-running background task.
+118. [ ] **Theory:** Server-Sent Events (SSE). When to use SSE over WebSockets?
+119. [ ] **Practice:** Implement an SSE endpoint that streams stock price updates every second.
+120. [ ] **Practice:** Handle WebSocket disconnection and reconnection strategies on the client.
 
-- [ ] 94. How do you implement a "Global Error Handler" in Express?
+## Testing Node.js Applications
 
-- [ ] 95. 
-```js
-const eventEmitter = require('events');
-const myEmitter = new eventEmitter();
+121. [ ] **Theory:** Unit Testing vs Integration Testing vs End-to-End Testing.
+122. [ ] **Theory:** Introduction to Jest/Mocha/Chai.
+123. [ ] **Practice:** Write a Unit Test for a simple utility function using Jest.
+124. [ ] **Practice:** Mock a database dependency using `jest.mock`.
+125. [ ] **Theory:** What is Supertest?
+126. [ ] **Practice:** Write an Integration Test for an API endpoint using Supertest (test status code and response body).
+127. [ ] **Practice:** Test an authenticated route (mock the auth middleware or generate a test token).
+128. [ ] **Theory:** What is Code Coverage inside testing?
+129. [ ] **Practice:** Setup a pre-commit hook (using `husky`) to run tests before committing code.
+130. [ ] **Practice:** Debug a failing test using the Node.js debugger or VS Code debugger.
 
-myEmitter.on('greet', (name) => {
-  console.log(`Hello ${name}`);
-});
+## Performance & Scalability
 
-myEmitter.emit('greet', 'Node Enthusiast');
-```
-What is the output of this code?
+131. [ ] **Theory:** What is Clustering in Node.js? How to fork processes?
+132. [ ] **Practice:** Use the `cluster` module to spawn a worker for each CPU core.
+133. [ ] **Theory:** What is a Reverse Proxy (Nginx)? Why put it in front of Node?
+134. [ ] **Practice:** Set up PM2 to manage Node processes (restart, logs, monitoring).
+135. [ ] **Theory:** Identifying Memory Leaks. Tools (Chrome DevTools, heapdump).
+136. [ ] **Practice:** Simulate a memory leak (global variable reference) and detect it.
+137. [ ] **Theory:** Caching strategies (Client-side, Server-side, Database-side).
+138. [ ] **Practice:** implement route-level caching using simple in-memory object (valid for 60s).
+139. [ ] **Theory:** Explain Horizontal vs Vertical Scaling.
+140. [ ] **Theory:** Load Balancing concepts.
 
-- [ ] 96. Explain the difference between `res.json(data)` and `res.send(data)` when `data` is an object.
+## Architecture & Design Patterns
 
-- [ ] 97. How do you set the HTTP status code of a response to 201 (Created) in Express?
+141. [ ] **Theory:** MVC Pattern in Node.js (Model-View-Controller).
+142. [ ] **Practice:** Refactor a monolithic `app.js` into Controllers, Services, and Data Access Layers (DAL).
+143. [ ] **Theory:** Dependency Injection (DI) in Node.js. Why is it useful?
+144. [ ] **Practice:** Implement a simple DI container or use a library (e.g., InversifyJS basics).
+145. [ ] **Theory:** Singleton Pattern in Node.js modules.
+146. [ ] **Theory:** Factory functions vs Classes.
+147. [ ] **Practice:** Implement the Repository Pattern to abstract database logic.
+148. [ ] **Theory:** What is Microservices architecture? Node.js fit for it?
+149. [ ] **Theory:** Message Queues (RabbitMQ, Kafka). Why use them?
+150. [ ] **Practice:** Implement a simple producer/consumer setup using a Redis list as a queue.
 
-- [ ] 98. What is the role of the `cluster.isMaster` (or `cluster.isPrimary`) property?
+## Debugging & Tooling
 
-- [ ] 99. 
-```js
-const path = require('path');
-console.log(path.join('/a', 'b', 'c/d', '..'));
-```
-What is the output?
+151. [ ] **Theory:** How to use the built-in `debugger`.
+152. [ ] **Practice:** Debug a logic error using `node inspect`.
+153. [ ] **Theory:** Logging best practices. Why `console.log` is bad in production?
+154. [ ] **Practice:** Integrate a proper logger (Winston or Pino) with different log levels (info, error, debug).
+155. [ ] **Practice:** Configure the logger to save logs to a file and rotate them.
+156. [ ] **Theory:** Profiling Node.js applications.
+157. [ ] **Practice:** Generate a Flame Graph or CPU profile.
+158. [ ] **Practice:** Use `nodemon` for development and configure it to ignore test files.
+159. [ ] **Theory:** Linting and Formatting (ESLint, Prettier).
+160. [ ] **Practice:** Setup ESLint with the Airbnb style guide in a project.
 
-- [ ] 100. Write a function that uses the `fs` module to check if a file exists asynchronously without using the deprecated `fs.exists()`.
+## Advanced Topics & Internals II
 
----
+161. [ ] **Theory:** Buffers in depth. Allocation, concatenation.
+162. [ ] **Practice:** Convert an image file to Base64 string and back to binary using Buffer.
+163. [ ] **Theory:** Character Sets and Encoding (UTF-8, ASCII).
+164. [ ] **Theory:** `child_process` module: `spawn` vs `exec` vs `fork`.
+165. [ ] **Practice:** Spawn a Python script from Node.js, pass data to it, and read the result.
+166. [ ] **Theory:** What are "addons" in Node.js (C++ integration)?
+167. [ ] **Theory:** How `util.promisify` works.
+168. [ ] **Practice:** Convert legacy callback-based functions (e.g., `fs.readFile`) to Promises manually and via `util.promisify`.
+169. [ ] **Theory:** What are 'vm' (Virtual Machine) module capabilities? Sandbox execution.
+170. [ ] **Practice:** Execute a string of JavaScript code safely within a sandboxed context.
 
-### Deep Dive: Node.js Core & Express Internals
+## GraphQL (Bonus/Related)
 
-- [ ] 101. What is the difference between `fs.promises.readFile()` and `fs.readFile()`?
-- [ ] 102. Explain the `util.promisify()` function and why it was widely used before `fs.promises`.
-- [ ] 103. What is the `buffer.alloc()` vs `buffer.allocUnsafe()`? Why is the latter "unsafe"?
-- [ ] 104. How do you convert a Buffer to a Base64 string?
-- [ ] 105. Explain the `crypto` module. How do you generate a random string or a hash?
-- [ ] 106. What is the `zlib` module used for? How do you compress a file using streams?
-- [ ] 107. Explain the `url` module. What is the difference between the legacy API and the WHATWG URL API?
-- [ ] 108. What is the `querystring` module and how is it different from `URLSearchParams`?
-- [ ] 109. How does Node.js handle circular dependencies between modules?
-- [ ] 110. What is the `vm` (Virtual Machine) module in Node.js?
-- [ ] 111. Explain the `perf_hooks` module for performance measurement.
-- [ ] 112. What are "Internal Slots" in Node.js modules?
-- [ ] 113. How do you use the `v8` core module to get heap statistics?
-- [ ] 114. What is the `async_hooks` module and what is its primary use case?
-- [ ] 115. Explain the `domain` module (deprecated) and what replaced it.
-- [ ] 116. What is the difference between `Resumable` and `Non-resumable` streams?
-- [ ] 117. How do you implement a custom `Readable` stream?
-- [ ] 118. What is the `highWaterMark` option in streams?
-- [ ] 119. Explain "Object Mode" in Node.js streams.
-- [ ] 120. How do you use `pipeline()` from the `stream` module instead of `.pipe()`? Why is it better?
+171. [ ] **Theory:** REST vs GraphQL. Pros and cons.
+172. [ ] **Practice:** Set up a basic Apollo Server with Express.
+173. [ ] **Practice:** Define a GraphQL Schema (typedefs) and Resolvers.
+174. [ ] **Practice:** Implement a Query to fetch data and a Mutation to modify data.
+175. [ ] **Theory:** Solving the N+1 problem in GraphQL (DataLoader).
 
-- [ ] 121. In Express, what is `res.locals` and why is it useful for template engines?
-- [ ] 122. What is `app.locals` and how is it different from `res.locals`?
-- [ ] 123. Explain `req.xhr`. What does it detect?
-- [ ] 124. What is `req.fresh` vs `req.stale`?
-- [ ] 125. How do you change the default "views" directory in Express?
-- [ ] 126. Explain `app.set('trust proxy', true)`. When do you need this?
-- [ ] 127. How do you enable "Strict Routing" and "Case Sensitive Routing" in Express?
-- [ ] 128. What is the purpose of `res.vary()`?
-- [ ] 129. How do you use `res.format()` to send different responses based on the `Accept` header (JSON, HTML, Text)?
-- [ ] 130. What is a "Sub-app" in Express? How do you mount one Express app inside another?
-- [ ] 131. How do you override the default Error Handler in Express?
-- [ ] 132. What is the difference between `res.location()` and `res.redirect()`?
-- [ ] 133. How do you use the `method-override` middleware and why?
-- [ ] 134. Explain the "Revealing Module Pattern" in the context of Node.js.
-- [ ] 135. How do you secure Express cookies? (secure, httpOnly, sameSite flags).
-- [ ] 136. What is a "Signing" a cookie? How does it differ from encrypting?
-- [ ] 137. Explain `req.signedCookies`.
-- [ ] 138. How do you implement a "Heartbeat" or "Health Check" endpoint?
-- [ ] 139. What is the "Etag" header and how does Express handle it by default?
-- [ ] 140. How do you disable the `X-Powered-By` header in Express for security?
-- [ ] 141. What is the difference between `app.param()` and standard middleware?
-- [ ] 142. How do you handle "Long Polling" in Node.js?
-- [ ] 143. Explain the "Request ID" pattern for logging and tracing.
-- [ ] 144. What is "Dependency Injection" and how can you implement it in an Express app?
-- [ ] 145. How do you test Express routes using `Supertest` and `Jest`?
-- [ ] 146. Explain the concept of "Idempotency" in REST APIs.
-- [ ] 147. What is "HATEOAS" in the context of REST?
-- [ ] 148. Explain the "Circuit Breaker" pattern in Node.js microservices.
-- [ ] 149. What is "Service Discovery" and why is it needed?
-- [ ] 150. How do you optimize a Node.js application for a Docker container?
+## Deployment & DevOps
 
----
+176. [ ] **Theory:** Why Dockerize a Node app?
+177. [ ] **Practice:** Write a `Dockerfile` for a Node/Express app (optimized multi-stage build).
+178. [ ] **Practice:** Use `docker-compose` to spin up Node App + MongoDB.
+179. [ ] **Theory:** CI/CD pipelines (GitHub Actions, GitLab CI). basic steps for Node.
+180. [ ] **Practice:** Create a GitHub Action that runs `npm test` on every push.
+181. [ ] **Theory:** Environment Variables management in production (System envs vs .env).
+182. [ ] **Theory:** Serverless (AWS Lambda, Vercel). How Node runs there.
+183. [ ] **Practice:** Deploy a simple Express function to Vercel or similar platform.
+184. [ ] **Theory:** Health Checks and graceful shutdown (handling SIGTERM/SIGINT).
+185. [ ] **Practice:** Implement code to close DB connections and server when receiving SIGTERM.
 
-### Modern Node.js (v18+) & Advanced Architecture
+## Open Source Codebase & Patterns
 
-- [ ] 151. What is the built-in `fetch()` API introduced in Node.js 18? How does it differ from the browser's `fetch`?
-- [ ] 152. Explain the Node.js Permission Model (`--allow-fs-read`, `--allow-net`, etc.) introduced in recent versions.
-- [ ] 153. What is the built-in Test Runner in Node.js (`node --test`)? How do you use it without external libraries like Jest?
-- [ ] 154. Explain the `util.parseArgs()` function for parsing command-line arguments.
-- [ ] 155. What is `import.meta.url` in ES Modules and what is its equivalent in CommonJS?
-- [ ] 156. How do you use the built-in `.env` file support (`node --env-file=.env`) introduced in Node.js 20?
-- [ ] 157. Explain the "Single Executable Applications" (SEA) feature in Node.js.
-- [ ] 158. What is the `navigator` object in Node.js and why was it added?
-- [ ] 159. How do you use `Aborting` in asynchronous operations using `AbortController`?
-- [ ] 160. What are `AsyncLocalStorage` and `AsyncResource` from the `async_hooks` module? Use case?
-
-- [ ] 161. Explain the "Clean Architecture" pattern in an Express application.
-- [ ] 162. What is "Vertical Slice Architecture" vs "Layered Architecture"?
-- [ ] 163. How do you implement "Global Dependency Injection" using a container or simple JS patterns?
-- [ ] 164. What is "Command Query Responsibility Segregation" (CQRS) and is it relevant for Node apps?
-- [ ] 165. Explain the "Backends for Frontends" (BFF) pattern.
-
-### Performance, Debugging & Monitoring
-
-- [ ] 166. How do you use the `--inspect` flag to debug a Node.js process using Chrome DevTools?
-- [ ] 167. What are "Flame Graphs" and how do they help in finding performance bottlenecks?
-- [ ] 168. Explain the difference between "Heap" and "Stack" memory in Node.js.
-- [ ] 169. How do you detect a memory leak using "Heap Snapshots"?
-- [ ] 170. What is "Garbage Collection" (GC) trashing and how can it slow down your app?
-- [ ] 171. How do you use `process.on('warning', ...)` to catch performance warnings?
-- [ ] 172. What are "Orphaned Promises" and how do they affect Node.js performance?
-- [ ] 173. Explain the "Event Loop Lag". How do you measure it?
-- [ ] 174. How do you optimize "Heavy Computation" in Node.js without blocking the event loop?
-- [ ] 175. What is the difference between `setImmediate` and `nextTick` in terms of the event loop starvation risk?
-
-### Security Hardening (OWASP for Node)
-
-- [ ] 176. What is "ReDoS" (Regular Expression Denial of Service) and how do you prevent it?
-- [ ] 177. Explain "Prototype Pollution" and how it can lead to Remote Code Execution (RCE).
-- [ ] 178. How do you prevent "Directory Traversal" attacks when serving files?
-- [ ] 179. Explain "Broken Access Control" in an Express app and how to fix it.
-- [ ] 180. What is "Insecure Deserialization" in Node.js?
-- [ ] 181. How does the `cors` package handle the `Origin` header?
-- [ ] 182. Explain the difference between "Blacklisting" and "Whitelisting" in security.
-- [ ] 183. What is "CSRF" (Cross-Site Request Forgery) and how does the `csurf` library (or similar) prevent it?
-- [ ] 184. How do you secure a Node.js API against "Brute Force" attacks?
-- [ ] 185. Explain "Mass Assignment" vulnerability and how it relates to `req.body` in MongoDB/SQL.
-
-### Scaling & DevOps
-
-- [ ] 186. What is "Stateful" vs "Stateless" architecture? Why is stateless preferred for scaling?
-- [ ] 187. Explain "Sticky Sessions" and when they are necessary.
-- [ ] 188. How do you handle "Database Migrations" in a production Node.js environment?
-- [ ] 189. What is "Blue-Green Deployment" and "Canary Release"?
-- [ ] 190. How do you implement "Automated API Documentation" using Swagger (OpenAPI)?
-- [ ] 191. Explain the role of an "API Gateway" (like Kong or Nginx) in front of Node.js services.
-- [ ] 192. What are "Sidecar Containers" and "Service Meshes" (Istio/Linkerd)?
-- [ ] 193. How do you perform "Stress Testing" on a Node.js server (e.g., using `Autocannon` or `Artillery`)?
-- [ ] 194. Explain "Log aggregation" (ELK Stack - Elasticsearch, Logstash, Kibana).
-- [ ] 195. What is "Distributed Tracing" (Jaeger/Zipkin) and why is it important for Node microservices?
-
-### Final Coding Challenges & Scenarios
-
-- [ ] 196. Write an Express middleware that measures the response time of every request and sends it as a `X-Response-Time` header.
-- [ ] 197. Use the `cluster` module to spawn workers equal to the number of CPU cores.
-- [ ] 198. Write a function that reads a 5GB file line-by-line using `readline` and `streams` without crashing.
-- [ ] 199. Create a simple "Broadcaster" using `EventEmitter` where one module sends data and multiple subscribers log it.
-- [ ] 200. Describe how you would build a "Real-time Notification System" using Node.js Redis Pub/Sub, and Socket.io.
+186. [ ] **Study:** **Express.js Source Code**: Look at `application.js` and `router/index.js` in the Express repo. How is the `app` object created?
+187. [ ] **Study:** **Axios**: How does it handle Interceptors? (Chain of promises pattern).
+188. [ ] **Study:** **Redux (if applicable) or similar state libs**: How middleware (thunk/saga) is composed. Same pattern applies to backend middleware chains.
+189. [ ] **Study:** Analyse how `NestJS` uses decorators (pattern study).
+190. [ ] **Study:** Look at `Socket.io` implementation of packet encoding.
+191. [ ] **Practice:** Implement a "Plugin System" for your app where external modules can extend functionality (like Fastify plugins).
+192. [ ] **Theory:** Dependency Inversion vs Dependency Injection.
+193. [ ] **Practice:** Create a config manager that reads from environment, defaults, and command line args (Precedence pattern).
+194. [ ] **Theory:** The "Circuit Breaker" pattern for microservices.
+195. [ ] **Practice:** Implement a simple Circuit Breaker for an external API call.
+196. [ ] **Theory:** Domain-Driven Design (DDD) basics in context of Node backend.
+197. [ ] **Practice:** Structure a small feature using DDD (Domain, Infra, Application layers).
+198. [ ] **Theory:** Event Sourcing concept.
+199. [ ] **Practice:** Build a task queue using `Bull` or `BullMQ` (Redis based).
+200. [ ] **Capstone:** **Build a Mini-Clone of a popular tool**: Create a simplified version of `git` or a `static site generator` using Node.js filesystem and CLI capabilities.
